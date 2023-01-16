@@ -5,7 +5,7 @@
 double** initialization(int);
 void fill_vectors(double*, int);
 void print_matrix(double** , int);
-double* trace (double** , int, double*);
+double* trace (double** , int, double*) ;
 
 // The main program.
 int main()

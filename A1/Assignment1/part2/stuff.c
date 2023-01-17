@@ -12,7 +12,7 @@ void print_pyramid(int pyramidSize) {
     /* stars */
     nStars = 2*i + 1;
     for(k = 0; k < nStars; k++)
-      printf("*");
+      printf("*") ;
     printf("\n");
   }
 }

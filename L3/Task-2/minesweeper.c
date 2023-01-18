@@ -26,13 +26,13 @@ int main(int argc, char const *argv[])
           "If no bomb is revealed, a digit displayed \n"
           "indicates how many adjacent squares contain bombs.\n");
    printf("The player wins when all squares without bombs are opened.\n\n");
-
+   
    if (argc != 4)
    {
       fprintf(stderr, "Usage: %s n m k, where (n,m) is a field size and k is a number of bombs\n", argv[0]);
       return -1;
    }
-
+   
    n = atoi(argv[1]);
    m = atoi(argv[2]);
    k = atoi(argv[3]);
@@ -50,19 +50,22 @@ int main(int argc, char const *argv[])
    }
 
   // ALLOCATE MEMORY FOR A 2D ARRAY field WITH SIZE (n, m)
-  int **field;
+  //int **field;
    /*
        YOUR CODE
   */
+   int **field = (int**) malloc(n*sizeof(int*));
+   for (int i = 0; i < n; i++){
+   	field[i] = (int*)malloc(m*sizeof(int));
 
-
+   }
    fill_field(field, n, m, k);
    print_field(field, n, m);
 
    while (1)
    {
       printf("\nEnter coordinates: ");
-      scanf("%d %d", &x, &y);
+      scanf(" %d %d", &x, &y);
       if ((x < 0) || (y < 0) || (x >= n) || (y >= m))
       {
          printf("Wrong coordinates!");
@@ -96,7 +99,8 @@ int main(int argc, char const *argv[])
    // FREE MEMORY ALLLOCATED FOR A 2D ARRAY field WITH SIZE (n, m)
     /*
         YOUR CODE
-   */
+   */  
+   for(int i = 0; i < n; i++)  free(field[i]);
 
    return 0;
 }

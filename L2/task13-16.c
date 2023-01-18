@@ -32,4 +32,5 @@ int main(int argc, char const *argv[]){
 		printf("Product: %s, Price: %lf \n", product, price);
 		count++;
 	}
+	return 0;
 }

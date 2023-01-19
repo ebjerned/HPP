@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int (*f)(const void*, const void*);
+void qsort (void*, size_t, size_t, int (*compar)());
+int compareDouble (const void*, const void*);
+
+
+int main(){
+	int arr[3]={1, 2, 3}; 
+	f = &compareDouble;
+	qsort(arr, 3, sizeof(int), (*f));
+
+	return 0;
+}
+int compareDouble(const void* p1, const void* p2){
+	if (*(double*)p1 < *(double*)p2)  return -1;
+	if (*(double*)p1 == *(double*)p2) return 0;
+	if (*(double*)p1 > *(double*)p2) return 1;
+	return 0;
+
+}
+void qsort (void* base, size_t num, size_t size, int (*compar)()){
+	int* ptr = base;
+	int* next = base;
+	for (int i = 0; i < num; i++){
+		
+		int result = compar(ptr, ptr++);
+		printf("%i",
+	}
+}
+
+
+
+
+
+
+
+
+
+

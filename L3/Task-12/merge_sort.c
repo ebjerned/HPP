@@ -113,6 +113,6 @@ int main(int argc, char const *argv[])
    mergeSort(a, 0, n - 1);
    printf("Array is sorted!\n");
    for (int i = 0; i < n; i++) printf("%i", a[i]);
-
+   free(a); // ADDED, use valgrind to find leak
    return 0;
 }

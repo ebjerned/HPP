@@ -4,7 +4,7 @@
 #include "myfuncs.h"
 
 int main(int argc, char* argv[]) {
-  const int N = 88;
+  const int N = 88000; // Valgrind gives about 15x slow down
   float* v = (float*)malloc(N*sizeof(float));
   int k;
   for(k = 0; k < N; k++)

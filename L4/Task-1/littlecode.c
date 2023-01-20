@@ -9,7 +9,7 @@ int gg(int a) {
   int r = p + a;
   r += q;
   char c;
-  for(c = 0; c<100; c++) {
+  for(c = 0; c<200; c++) {
     r += 5;
     if(r == q)
       r--;

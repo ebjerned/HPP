@@ -10,6 +10,7 @@ float fun1(float* p, int k) {
   sum = 0;
   for(i = 0; i < k; i++)
     sum += tmp[i];
+//  int temp = tmp[k];
   free(tmp);
   return sum;
 }

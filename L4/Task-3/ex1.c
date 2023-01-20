@@ -11,10 +11,10 @@ int function77(int N) {
     arr2[i] = arr1[i] + 7;
   }
   sum = 0;
-  for (i = 0; i <= N; i++)
+  for (i = 0; i < N; i++)
     sum += arr2[i] - arr1[i];
   free(arr1);
-  free(arr1);
+  free(arr2);
   return sum;
 }
 
@@ -32,7 +32,7 @@ int main(){
   /* initialize random seed */
   srand (time(NULL));
 
-  for (i = 0; i <= N; i++){
+  for (i = 0; i < N; i++){
     array[i] = rand() % 100;
   }
 
@@ -41,8 +41,8 @@ int main(){
   }
   printf("\n");
 
-  // int x = function66(N);
-  // printf("function66 result: %d\n", x);
-
+  int x = function66(N);
+  printf("function66 result: %d\n", x);
+  free(array);
   return 0;
 }

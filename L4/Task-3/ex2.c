@@ -16,14 +16,15 @@ int main(){
   B* b = (B*)malloc(sizeof(B));
 
   a->x = 7;
-  for(int i = 0; i < 8; i++)
+  for(int i = 0; i < 9; i++)
     a->arr[i] = -1;
-  printf("a->x = %d\n", a->x);
-
+  printf("a->x = %ld\n", a->x);
+  // The print out is changed since it changes the next value in the struct which is x, 
+  // the values seems to be from some overflow not allowing negative numbers.
   b->x = 7;
-  for(int i = 0; i < 8; i++)
+  for(int i = 0; i < 9; i++)
     b->arr[i] = -1;
-  printf("b->x = %d\n", b->x);
+  printf("b->x = %ld\n", b->x);
 
   free(a);
   free(b);

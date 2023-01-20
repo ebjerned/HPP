@@ -109,10 +109,10 @@ int main(int argc, char const *argv[])
    fill_in_array(a, n);
 
    printf("Array is created.\n");
-
+   for (int i = 0; i < n; i++) printf("%i", a[i]);
    mergeSort(a, 0, n - 1);
-
    printf("Array is sorted!\n");
+   for (int i = 0; i < n; i++) printf("%i", a[i]);
 
    return 0;
 }

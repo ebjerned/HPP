@@ -4,6 +4,7 @@
 
 /*
  * Sort an array using bubble sort algorithm.
+ * C: Complexity O(N^2)
  */
 
 /* Swap values pointed by x and y */

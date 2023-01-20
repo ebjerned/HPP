@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <string.h>
 
+// Computational complexity: O(n!)
+// Time complexity : ~O(10^n)
+
 /*
 Find all permutations of a string.
 

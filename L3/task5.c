@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-int (*f)(const char**, const char**);
-int compareString(const char**, const char**);
+int (*f)(const void*, const void*);
+int compareString(const void*, const void*);
 
 int main(){
 
@@ -17,7 +17,8 @@ int main(){
 	return 0;
 } 
 
-int compareString(const char** p1, const char** p2){
-	return strcmp(*p1, *p2);
+int compareString(const void* p1, const void* p2){
+	
+	return strcmp(*(const char**)p1, *(const char**)p2);
 
 }

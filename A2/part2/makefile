@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall
+CFLAGS = -Wall -g
 RM = /bin/rm -f
 OBJS = readfile.o
 EXECUTABLE = readfile

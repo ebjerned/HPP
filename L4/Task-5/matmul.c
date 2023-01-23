@@ -27,7 +27,7 @@ void free_mem(int** arr, int n)
   free(arr);
 }
 
-/* kij */
+/* kij */ //Most efficent in L1 cache, since this multiplication only need to fetch the value of b at each iteration of the most inner loop. The assignement of x is move up a loop which reduces the amount of changes in cachememory.
 void mul_kij(int n, int **a, int **b, int **c)
 {
   int i, j, k;

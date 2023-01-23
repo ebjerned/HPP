@@ -26,15 +26,18 @@ int main()
 	int* int_p=malloc(sizeof(int));
 	fread(int_p, sizeof(int), 1, file);
 	printf("Int: %i \n", *int_p);
-	fseek(file, sizeof(int), SEEK_SET);
+
+	//fseek(file, 4, SEEK_SET);
 	double* double_p =malloc(sizeof(double));
 	fread(double_p, sizeof(double), 1,file);
 	printf("Double: %lf \n", *double_p);
-	fseek(file, sizeof(double), SEEK_SET);
+
+	//fseek(file, 12, SEEK_SET);
 	char* char_p =malloc(sizeof(char));
-	fread(char_p, sizeof(double), 1,file);
+	fread(char_p, sizeof(char), 1,file);
 	printf("Char: %c \n", *char_p);
-	fseek(file, sizeof(char), SEEK_SET);
+
+	//fseek(file, 13, SEEK_SET);
 	float* float_p =malloc(sizeof(float));
 	fread(float_p, sizeof(float), 1,file);
 	printf("Float: %f \n", *float_p);

@@ -8,7 +8,7 @@ int main(){
 	FILE* file = fopen(PATH, "rb");
 	int size_buffer[4] = {4, 8, 1, 4};
 	//TODO: Since the adress has to be return to original pos, implement easy way to check sum of size_buffer to replace all 17s with
-	void* adress =(void*) malloc(17);
+	void* adress = malloc(17);
 	for(int i = 0; i < 4; i++){
 		fread(adress, size_buffer[i], 1, file);
 		switch (i){

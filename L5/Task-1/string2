@@ -1,0 +1,203 @@
+	.file	"string_loop.c"
+# GNU C17 (Ubuntu 11.3.0-1ubuntu1~22.04) version 11.3.0 (x86_64-linux-gnu)
+#	compiled by GNU C version 11.3.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+
+# GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+# options passed: -mtune=generic -march=x86-64 -O3 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection
+	.text
+	.p2align 4
+	.globl	lowercase
+	.type	lowercase, @function
+lowercase:
+.LFB39:
+	.cfi_startproc
+	endbr64	
+# string_loop.c:14: 	*(p++) |= 0x20;
+	movdqa	.LC0(%rip), %xmm0	#, tmp98
+	movdqu	16(%rdi), %xmm5	# MEM <vector(16) char> [(char *)p_6(D) + 16B], vect__2.13
+	movdqu	32(%rdi), %xmm4	# MEM <vector(16) char> [(char *)p_6(D) + 32B], vect__2.13
+	movdqu	48(%rdi), %xmm3	# MEM <vector(16) char> [(char *)p_6(D) + 48B], vect__2.13
+	movdqu	64(%rdi), %xmm2	# MEM <vector(16) char> [(char *)p_6(D) + 64B], vect__2.13
+	movdqu	80(%rdi), %xmm1	# MEM <vector(16) char> [(char *)p_6(D) + 80B], vect__2.13
+	por	%xmm0, %xmm5	# tmp98, vect__2.13
+	movdqu	(%rdi), %xmm6	# MEM <vector(16) char> [(char *)p_6(D)], tmp117
+	por	%xmm0, %xmm4	# tmp98, vect__2.13
+	por	%xmm0, %xmm3	# tmp98, vect__2.13
+	movups	%xmm5, 16(%rdi)	# vect__2.13, MEM <vector(16) char> [(char *)p_6(D) + 16B]
+	por	%xmm0, %xmm2	# tmp98, vect__2.13
+	por	%xmm0, %xmm1	# tmp98, vect__2.13
+	orl	$538976288, 96(%rdi)	#, MEM <unsigned int> [(char *)p_6(D) + 96B]
+	por	%xmm6, %xmm0	# tmp117, vect__2.13
+	movups	%xmm4, 32(%rdi)	# vect__2.13, MEM <vector(16) char> [(char *)p_6(D) + 32B]
+	movups	%xmm0, (%rdi)	# vect__2.13, MEM <vector(16) char> [(char *)p_6(D)]
+	movups	%xmm3, 48(%rdi)	# vect__2.13, MEM <vector(16) char> [(char *)p_6(D) + 48B]
+	movups	%xmm2, 64(%rdi)	# vect__2.13, MEM <vector(16) char> [(char *)p_6(D) + 64B]
+	movups	%xmm1, 80(%rdi)	# vect__2.13, MEM <vector(16) char> [(char *)p_6(D) + 80B]
+# string_loop.c:16: }
+	ret	
+	.cfi_endproc
+.LFE39:
+	.size	lowercase, .-lowercase
+	.section	.rodata.str1.1,"aMS",@progbits,1
+.LC2:
+	.string	"done"
+	.section	.text.startup,"ax",@progbits
+	.p2align 4
+	.globl	main
+	.type	main, @function
+main:
+.LFB40:
+	.cfi_startproc
+	endbr64	
+	subq	$120, %rsp	#,
+	.cfi_def_cfa_offset 128
+# string_loop.c:39:    string[99] = '\0';		/* null-terminate the string */
+	movdqa	.LC1(%rip), %xmm0	#, vect__14.26
+	movdqa	.LC0(%rip), %xmm1	#, tmp150
+# string_loop.c:41:    for(i=0; i<numiters; i++)
+	xorl	%esi, %esi	# i
+# string_loop.c:29: {
+	movq	%fs:40, %rax	# MEM[(<address-space-1> long unsigned int *)40B], tmp160
+	movq	%rax, 104(%rsp)	# tmp160, D.3285
+	xorl	%eax, %eax	# tmp160
+# string_loop.c:37:       string[i] = 'A';
+	movl	$16705, %eax	#,
+	movb	$65, 98(%rsp)	#, MEM <char[1:99]> [(void *)&string]
+	movw	%ax, 96(%rsp)	#, MEM <char[1:99]> [(void *)&string]
+# string_loop.c:39:    string[99] = '\0';		/* null-terminate the string */
+	movdqa	%xmm0, %xmm6	# vect__14.26, string__lsm.66
+	movdqa	%xmm0, %xmm5	# vect__14.26, string__lsm.65
+	movdqa	%xmm0, %xmm4	# vect__14.26, string__lsm.64
+	movb	$0, 99(%rsp)	#, string[99]
+	movdqa	%xmm0, %xmm2	# vect__14.26, string__lsm.63
+	movdqa	%xmm0, %xmm3	# vect__14.26, string__lsm.62
+.L4:
+# string_loop.c:14: 	*(p++) |= 0x20;
+	movzbl	96(%rsp), %edx	# MEM[(char *)&string + 96B], tmp130
+	xorl	%eax, %eax	# tmp129
+	movzbl	99(%rsp), %ecx	# MEM[(char *)&string + 99B], tmp140
+	addl	$2, %esi	#, i
+	por	%xmm1, %xmm3	# tmp150, string__lsm.62
+	por	%xmm1, %xmm2	# tmp150, string__lsm.63
+	por	%xmm1, %xmm4	# tmp150, string__lsm.64
+	orl	$32, %edx	#, tmp130
+	por	%xmm1, %xmm5	# tmp150, string__lsm.65
+	por	%xmm1, %xmm6	# tmp150, string__lsm.66
+	orl	$32, %ecx	#, tmp140
+	movb	%dl, %al	# tmp130, tmp129
+	movzbl	97(%rsp), %edx	# MEM[(char *)&string + 97B], tmp132
+	sall	$24, %ecx	#, tmp143
+	por	%xmm1, %xmm0	# tmp150, vect__14.26
+	orl	$32, %edx	#, tmp132
+	movb	%dl, %ah	# tmp132, tmp129
+	movzbl	98(%rsp), %edx	# MEM[(char *)&string + 98B], tmp134
+	movzwl	%ax, %eax	# tmp129, tmp139
+	orl	$32, %edx	#, tmp134
+	movzbl	%dl, %edx	# tmp134, tmp136
+	sall	$16, %edx	#, tmp137
+	orl	%edx, %eax	# tmp137, tmp144
+	orl	%ecx, %eax	# tmp143, tmp145
+	movl	%eax, 96(%rsp)	# tmp145, MEM <vector(4) char> [(char *)&string + 96B]
+	cmpl	$9999998, %esi	#, i
+	jne	.L4	#,
+	movaps	%xmm3, (%rsp)	# string__lsm.62, MEM <vector(16) char> [(char *)&string]
+	movq	%rsp, %rcx	#, p
+	leaq	100(%rsp), %rsi	#, tmp149
+	movaps	%xmm2, 16(%rsp)	# string__lsm.63, MEM <vector(16) char> [(char *)&string + 16B]
+	movaps	%xmm4, 32(%rsp)	# string__lsm.64, MEM <vector(16) char> [(char *)&string + 32B]
+	movaps	%xmm5, 48(%rsp)	# string__lsm.65, MEM <vector(16) char> [(char *)&string + 48B]
+	movaps	%xmm6, 64(%rsp)	# string__lsm.66, MEM <vector(16) char> [(char *)&string + 64B]
+	movaps	%xmm0, 80(%rsp)	# vect__14.26, MEM <vector(16) char> [(char *)&string + 80B]
+.L6:
+	movzbl	(%rcx), %eax	# MEM[(char *)p_10], p__lsm0.36
+	movl	$2, %edx	#, ivtmp_54
+	jmp	.L5	#
+	.p2align 4,,10
+	.p2align 3
+.L10:
+# string_loop.c:13:    for (i = 100; i>0; i--)
+	movl	$1, %edx	#, ivtmp_54
+.L5:
+# string_loop.c:14: 	*(p++) |= 0x20;
+	orl	$32, %eax	#, p__lsm0.36
+# string_loop.c:13:    for (i = 100; i>0; i--)
+	cmpl	$1, %edx	#, ivtmp_54
+	jne	.L10	#,
+	movb	%al, (%rcx)	# p__lsm0.36, MEM[(char *)p_10]
+# string_loop.c:41:    for(i=0; i<numiters; i++)
+	addq	$1, %rcx	#, p
+	cmpq	%rsi, %rcx	# tmp149, p
+	jne	.L6	#,
+# /usr/include/x86_64-linux-gnu/bits/stdio2.h:112:   return __printf_chk (__USE_FORTIFY_LEVEL - 1, __fmt, __va_arg_pack ());
+	leaq	.LC2(%rip), %rdi	#, tmp146
+	call	puts@PLT	#
+# string_loop.c:48: }
+	movq	104(%rsp), %rax	# D.3285, tmp161
+	subq	%fs:40, %rax	# MEM[(<address-space-1> long unsigned int *)40B], tmp161
+	jne	.L16	#,
+	xorl	%eax, %eax	#
+	addq	$120, %rsp	#,
+	.cfi_remember_state
+	.cfi_def_cfa_offset 8
+	ret	
+.L16:
+	.cfi_restore_state
+	call	__stack_chk_fail@PLT	#
+	.cfi_endproc
+.LFE40:
+	.size	main, .-main
+	.section	.rodata.cst16,"aM",@progbits,16
+	.align 16
+.LC0:
+	.byte	32
+	.byte	32
+	.byte	32
+	.byte	32
+	.byte	32
+	.byte	32
+	.byte	32
+	.byte	32
+	.byte	32
+	.byte	32
+	.byte	32
+	.byte	32
+	.byte	32
+	.byte	32
+	.byte	32
+	.byte	32
+	.align 16
+.LC1:
+	.byte	65
+	.byte	65
+	.byte	65
+	.byte	65
+	.byte	65
+	.byte	65
+	.byte	65
+	.byte	65
+	.byte	65
+	.byte	65
+	.byte	65
+	.byte	65
+	.byte	65
+	.byte	65
+	.byte	65
+	.byte	65
+	.ident	"GCC: (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0"
+	.section	.note.GNU-stack,"",@progbits
+	.section	.note.gnu.property,"a"
+	.align 8
+	.long	1f - 0f
+	.long	4f - 1f
+	.long	5
+0:
+	.string	"GNU"
+1:
+	.align 8
+	.long	0xc0000002
+	.long	3f - 2f
+2:
+	.long	0x3
+3:
+	.align 8
+4:

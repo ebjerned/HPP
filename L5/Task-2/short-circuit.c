@@ -28,14 +28,14 @@ int main(int argc, char **argv)
    {
       foo = 0;
       /* improve the following if-statements with boolean short-circuits. */
-      if(isMostlyFalse() || isMostlyTrue())
+      if(isMostlyTrue() || isMostlyFalse())
          foo += 1;
-      
-      if(isMostlyTrue() && isMostlyFalse())
+
+      if(isMostlyFalse() && isMostlyTrue())
          foo += 2;
 
-      if( (isFiftyFifty()&&isMostlyFalse()) || (isFiftyFifty()&&isMostlyTrue()) )
-         foo += 4;                
+      if( (isFiftyFifty()&&isMostlyTrue()) || (isMostlyFalse()&&isFiftyFifty()) )
+         foo += 4;
    }
    printf("foo = %d\n", foo);
    return 0;

@@ -4,7 +4,7 @@
 
 /* From A. Fog: Example 7.33. */
 
-#define FAST 0
+#define FAST 1
 
 int main(int argc, char** argv)
 {
@@ -16,8 +16,8 @@ int main(int argc, char** argv)
      /* set a to zero. */
       memset(a, 0, sizeof(a));
       /* copy a to b. */
-      /* memcpy(b, a, sizeof(b)); */  /* memcpy okay to use for non-overlapping arrays. */
-      memmove(b, a, sizeof(b));	/* memmove always okay to use. */
+	memcpy(b, a, sizeof(b));   /* memcpy okay to use for non-overlapping arrays. */
+ /*     memmove(b, a, sizeof(b));*/	/* memmove always okay to use. */
 #else
       /* set a to zero. */
       for (i = 0; i < size; i++) 

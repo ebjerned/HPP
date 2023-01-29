@@ -4,7 +4,7 @@
 int main(int argc, char **argv)
 {
    int i;
-   float tiny = 1e-39;
+   float tiny = 1e-50;
 
    printf("%e\n", tiny);
 

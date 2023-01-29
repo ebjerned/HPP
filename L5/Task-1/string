@@ -1,0 +1,137 @@
+	.file	"string_loop.c"
+# GNU C17 (Ubuntu 11.3.0-1ubuntu1~22.04) version 11.3.0 (x86_64-linux-gnu)
+#	compiled by GNU C version 11.3.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+
+# GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+# options passed: -mtune=generic -march=x86-64 -O3 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection
+	.text
+	.p2align 4
+	.globl	lowercase
+	.type	lowercase, @function
+lowercase:
+.LFB39:
+	.cfi_startproc
+	endbr64	
+	jmp	.L8	#
+	.p2align 4,,10
+	.p2align 3
+.L3:
+# string_loop.c:23: 	*(p++) |= 0x20;
+	addq	$1, %rdi	#, p
+# string_loop.c:23: 	*(p++) |= 0x20;
+	orl	$32, %eax	#, tmp85
+	movb	%al, -1(%rdi)	# tmp85, MEM[(char *)p_7 + -1B]
+.L8:
+# string_loop.c:22:    while (*p != 0)
+	movzbl	(%rdi), %eax	#* p, _2
+# string_loop.c:22:    while (*p != 0)
+	testb	%al, %al	# _2
+	jne	.L3	#,
+# string_loop.c:24: }
+	ret	
+	.cfi_endproc
+.LFE39:
+	.size	lowercase, .-lowercase
+	.section	.rodata.str1.1,"aMS",@progbits,1
+.LC0:
+	.string	"done"
+	.section	.text.startup,"ax",@progbits
+	.p2align 4
+	.globl	main
+	.type	main, @function
+main:
+.LFB40:
+	.cfi_startproc
+	endbr64	
+	subq	$120, %rsp	#,
+	.cfi_def_cfa_offset 128
+# string_loop.c:37:       string[i] = 'A';
+	movdqa	.LC1(%rip), %xmm0	#, tmp95
+# string_loop.c:39:    string[99] = '\0';		/* null-terminate the string */
+	movl	$10000000, %ecx	#, ivtmp_15
+# string_loop.c:29: {
+	movq	%fs:40, %rax	# MEM[(<address-space-1> long unsigned int *)40B], tmp101
+	movq	%rax, 104(%rsp)	# tmp101, D.3239
+	xorl	%eax, %eax	# tmp101
+# string_loop.c:37:       string[i] = 'A';
+	movl	$16705, %eax	#,
+	movb	$65, 98(%rsp)	#, MEM <char[1:99]> [(void *)&string]
+	movw	%ax, 96(%rsp)	#, MEM <char[1:99]> [(void *)&string]
+# string_loop.c:39:    string[99] = '\0';		/* null-terminate the string */
+	movb	$0, 99(%rsp)	#, string[99]
+# string_loop.c:37:       string[i] = 'A';
+	movaps	%xmm0, (%rsp)	# tmp95, MEM <char[1:99]> [(void *)&string]
+	movaps	%xmm0, 16(%rsp)	# tmp95, MEM <char[1:99]> [(void *)&string]
+	movaps	%xmm0, 32(%rsp)	# tmp95, MEM <char[1:99]> [(void *)&string]
+	movaps	%xmm0, 48(%rsp)	# tmp95, MEM <char[1:99]> [(void *)&string]
+	movaps	%xmm0, 64(%rsp)	# tmp95, MEM <char[1:99]> [(void *)&string]
+	movaps	%xmm0, 80(%rsp)	# tmp95, MEM <char[1:99]> [(void *)&string]
+	.p2align 4,,10
+	.p2align 3
+.L11:
+# string_loop.c:22:    while (*p != 0)
+	movzbl	(%rsp), %eax	# MEM[(char *)&string], _13
+# string_loop.c:22:    while (*p != 0)
+	testb	%al, %al	# _13
+	je	.L14	#,
+	movq	%rsp, %rdx	#, p
+	.p2align 4,,10
+	.p2align 3
+.L12:
+# string_loop.c:23: 	*(p++) |= 0x20;
+	addq	$1, %rdx	#, p
+# string_loop.c:23: 	*(p++) |= 0x20;
+	orl	$32, %eax	#, tmp91
+	movb	%al, -1(%rdx)	# tmp91, MEM[(char *)p_12 + -1B]
+# string_loop.c:22:    while (*p != 0)
+	movzbl	(%rdx), %eax	# MEM[(char *)p_12], _13
+# string_loop.c:22:    while (*p != 0)
+	testb	%al, %al	# _13
+	jne	.L12	#,
+# string_loop.c:41:    for(i=0; i<numiters; i++)
+	subl	$1, %ecx	#, ivtmp_15
+	jne	.L11	#,
+	.p2align 4,,10
+	.p2align 3
+.L14:
+# /usr/include/x86_64-linux-gnu/bits/stdio2.h:112:   return __printf_chk (__USE_FORTIFY_LEVEL - 1, __fmt, __va_arg_pack ());
+	leaq	.LC0(%rip), %rdi	#, tmp92
+	call	puts@PLT	#
+# string_loop.c:48: }
+	movq	104(%rsp), %rax	# D.3239, tmp102
+	subq	%fs:40, %rax	# MEM[(<address-space-1> long unsigned int *)40B], tmp102
+	jne	.L22	#,
+	xorl	%eax, %eax	#
+	addq	$120, %rsp	#,
+	.cfi_remember_state
+	.cfi_def_cfa_offset 8
+	ret	
+.L22:
+	.cfi_restore_state
+	call	__stack_chk_fail@PLT	#
+	.cfi_endproc
+.LFE40:
+	.size	main, .-main
+	.section	.rodata.cst16,"aM",@progbits,16
+	.align 16
+.LC1:
+	.quad	4702111234474983745
+	.quad	4702111234474983745
+	.ident	"GCC: (Ubuntu 11.3.0-1ubuntu1~22.04) 11.3.0"
+	.section	.note.GNU-stack,"",@progbits
+	.section	.note.gnu.property,"a"
+	.align 8
+	.long	1f - 0f
+	.long	4f - 1f
+	.long	5
+0:
+	.string	"GNU"
+1:
+	.align 8
+	.long	0xc0000002
+	.long	3f - 2f
+2:
+	.long	0x3
+3:
+	.align 8
+4:

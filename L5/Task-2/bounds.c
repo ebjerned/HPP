@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#define FAST 0
+#define FAST 1
 
 /* From A. Fog: Example 14.4. */
 
@@ -16,8 +16,9 @@ int main(int argc, char **argv)
     for(j = 0; j<numiters; j++)
     {
        i = foo(j,size);
+
 #if FAST
-       if (0 /*put faster array bounds checking here*/) 
+       if ((unsigned int)i >= size /*put faster array bounds checking here*/) 
        {
           printf("Error: Index out of range");
        }

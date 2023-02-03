@@ -19,7 +19,7 @@ double f_std(const double * a, int N) {
 
 double f_opt(const double * a, int N) {
   int i;
-  double sum = (a[3]>0.5) ? 0.1*a[3] : 0;
+  double sum = (a[3] > 0.5 && N >= 3) ? 0.1*a[3] : 0;
   for(i = 0; i < N; i++) 
     sum += 0.3*a[i] + a[i]*a[i];
 

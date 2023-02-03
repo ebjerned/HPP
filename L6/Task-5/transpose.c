@@ -11,7 +11,7 @@ void do_transpose_standard (double* B, const double* A, int N) {
 // 150 and 250 seems to perform well
 
 void do_transpose_optimized(double* B, const double* A, int N) {
-  const int blockSz = 250;
+  const int blockSz = 10;
   double subMat[blockSz*blockSz];
   if(N % blockSz != 0) {
     printf("Error: N not divisible by blockSz.\n");

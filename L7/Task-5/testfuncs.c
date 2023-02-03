@@ -1,6 +1,6 @@
 #include "testfuncs.h"
 
-// Runnning with a = [0,0.5] gives tihe time 0.5s istad of 1.6s
+// Runnning with a = [0, 0.5] gives tihe time 0.5s instead of 1.6s
 
 double f_std(const double * a, int N) {
   int i;

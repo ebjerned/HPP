@@ -1,0 +1,104 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+double* read_input(char* path);
+
+
+double* p_x, p_y, mass, v_x, v_y, brightness;
+
+
+
+
+int main(int argc, char* argv[]){
+	if(argc != 6){
+		printf("Not enough arguments. Input arguments: 'N', 'filename', 'nsteps', 'delta_t', 'graphics'\n");
+		return -1;
+	}
+	int n_particles = atoi(argv[1]);
+	char* input_path = argv[2];
+	int n_steps = atoi(argv[3]);
+	double dt = atof(argv[4]);
+	char graphics = *argv[5];
+
+
+	double* data_arr = read_input(input_path);
+
+
+
+
+
+	return 0;
+}
+
+//SOLVER
+/*
+Solve F_i/m_i for acceleration a_i
+Use a in velocity calc u^n+1_i = u^n_i + dt*a
+Use u^n+1_i in postition calc x^n_i + dt*u^n+1_i
+
+
+
+*/
+
+double acceleration(double* data_array){
+	int n = sizeof(data_array)/8;
+	double* a_data = (double*) malloc(n*8*2);
+	double G = 1;
+	double eps = 0.001;
+	double sum_x = 0;
+	double sum_y = 0;
+	double x_i, y_i, x_j, y_j, m_j, r_ij;
+	for(int i = 0; i <n; i += 6){
+		x_i = data_array[i];
+		y_i = data_array[i+1];
+		for(int j = 0; j <n; j += 6){
+			if (i == j) continue;
+			x_j = data_array[j];
+			y_j = data_array[j+1];
+			m_j = data_array[j+2];
+
+
+			sum_x += m_j/((x_i*x_i - x_j*x_j
+		a_data[i/6] = -G*sum_x;
+		a_data[i/6 + 1] = -G*sum_y;
+		sum = 0;
+		}
+	}
+
+
+}
+
+
+double* read_input(char* path){
+	FILE* file = fopen(path, "rb");
+	if (file == NULL){
+		printf("ERROR: File path not valid\n");
+		return NULL;
+	}
+	fseek(file, 0, SEEK_END);
+	long int file_size = ftell(file);
+	int n = file_size/(6*8);
+	printf("Number of particles: %i in file %s\n", n, path);
+	fseek(file, 0, SEEK_SET);
+	double* input_data = (double*)malloc(file_size);
+	for(int i = 0; i < n; i++){
+		fread(&(input_data[i*6]), 8, 6, file);
+	}
+
+	// FOR DEBUGGING
+	for(int j =0; j < n; j++){
+		printf("%p\n", 	&input_data[j]);
+		printf("%lf\n", input_data[j]);
+		printf("%lf\n", input_data[j+1]);
+		printf("%lf\n", input_data[j+2]);
+		printf("%lf\n", input_data[j+3]);
+		printf("%lf\n", input_data[j+4]);
+		printf("%lf\n", input_data[j+5]);
+	}
+	//
+
+	fclose(file);
+	return input_data;
+
+}

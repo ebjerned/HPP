@@ -6,6 +6,7 @@
 // const increase perf ~80%
 // if NP is declared locally in function const does not matter, but still as
 // good performance as declared const globally. The scope may affect this
+
 void transform_std (float * dest, 
 		    const float * src, 
 		    const float * params, 

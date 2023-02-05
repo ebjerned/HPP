@@ -1,7 +1,7 @@
 CC = gcc
 LD = gcc
-CFLAGS = -Wall -lm
-LDFLAGS = -Wall -lm
+CFLAGS = -Wall -lm -O3
+LDFLAGS = -Wall -lm -O3
 RM = /bin/rm -f
 OBJS = galsim.o
 EXECUTABLE = galsim

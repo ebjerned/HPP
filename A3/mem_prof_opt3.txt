@@ -1,0 +1,84 @@
+--------------------------------------------------------------------------------
+Command:            ./galsim 10 input_data/ellipse_N_00010.gal 1 0.00001 1
+Massif arguments:   --time-unit=B
+ms_print arguments: massif.out.462990
+--------------------------------------------------------------------------------
+
+
+    KB
+10.13^                   ################                 :::::::::::::::     
+     |                   #                                :                   
+     |                   #                                :                   
+     |                   #                                :                   
+     |                   #                                :                   
+     |                   #                                :                   
+     |                   #                                :                   
+     |                   #                                :                   
+     |                   #                                :                   
+     |                   #                                :                   
+     |                   #                                :                   
+     |                   #                                :                   
+     |                   #                                :                   
+     |                   #                                :                   
+     |                   #                                :                   
+     |                   #                                :                   
+     |    :::::::::::::::#               ::::::::::::::::::              :    
+     |   ::              #               ::               :              ::   
+     |  :::              #               ::               :              :::  
+     |  :::              #               ::               :              :::: 
+   0 +----------------------------------------------------------------------->KB
+     0                                                                   37.23
+
+Number of snapshots: 16
+ Detailed snapshots: [6 (peak)]
+
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1            168              168              160             8            0
+  2          1,200            1,200            1,184            16            0
+  3          1,688            1,688            1,656            32            0
+  4          2,176            2,176            2,136            40            0
+  5         10,376           10,376           10,328            48            0
+  6         10,376           10,376           10,328            48            0
+99.54% (10,328B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->78.95% (8,192B) 0x49E2C74: _IO_file_doallocate (filedoalloc.c:101)
+| ->78.95% (8,192B) 0x49F1D5F: _IO_doallocbuf (genops.c:347)
+|   ->78.95% (8,192B) 0x49EF543: _IO_file_xsgetn (fileops.c:1287)
+|     ->78.95% (8,192B) 0x49E3C28: fread (iofread.c:38)
+|       ->78.95% (8,192B) 0x109C34: read_input (in /home/erbj0497/Documents/HPP/A3/galsim)
+|         ->78.95% (8,192B) 0x10935A: main (in /home/erbj0497/Documents/HPP/A3/galsim)
+|           
+->09.87% (1,024B) 0x49E2C23: _IO_file_doallocate (filedoalloc.c:101)
+| ->09.87% (1,024B) 0x49F1D5F: _IO_doallocbuf (genops.c:347)
+|   ->09.87% (1,024B) 0x49F0FDF: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+|     ->09.87% (1,024B) 0x49EF754: _IO_new_file_xsputn (fileops.c:1243)
+|       ->09.87% (1,024B) 0x49EF754: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+|         ->09.87% (1,024B) 0x49D91CC: outstring_func (vfprintf-internal.c:239)
+|           ->09.87% (1,024B) 0x49D91CC: __vfprintf_internal (vfprintf-internal.c:1263)
+|             ->09.87% (1,024B) 0x4A98DFA: __printf_chk (printf_chk.c:33)
+|               ->09.87% (1,024B) 0x10931D: main (in /home/erbj0497/Documents/HPP/A3/galsim)
+|                 
+->04.63% (480B) 0x109C03: read_input (in /home/erbj0497/Documents/HPP/A3/galsim)
+| ->04.63% (480B) 0x10935A: main (in /home/erbj0497/Documents/HPP/A3/galsim)
+|   
+->04.55% (472B) 0x49E36CD: __fopen_internal (iofopen.c:65)
+| ->04.55% (472B) 0x49E36CD: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+|   ->04.55% (472B) 0x109BEC: read_input (in /home/erbj0497/Documents/HPP/A3/galsim)
+|     ->04.55% (472B) 0x10935A: main (in /home/erbj0497/Documents/HPP/A3/galsim)
+|       
+->01.54% (160B) 0x1092D2: main (in /home/erbj0497/Documents/HPP/A3/galsim)
+  
+--------------------------------------------------------------------------------
+  n        time(B)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  7         18,576            2,176            2,136            40            0
+  8         19,064            1,688            1,664            24            0
+  9         19,552            2,176            2,136            40            0
+ 10         27,752           10,376           10,328            48            0
+ 11         35,952            2,176            2,136            40            0
+ 12         36,440            1,688            1,664            24            0
+ 13         36,928            1,200            1,184            16            0
+ 14         37,096            1,032            1,024             8            0
+ 15         38,128                0                0             0            0

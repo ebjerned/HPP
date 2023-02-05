@@ -1,0 +1,161 @@
+desc: (none)
+cmd: ./galsim_temp 1000 input_data/ellipse_N_01000.gal 1 0.00001 1
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=184356
+mem_heap_B=48000
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=184425
+mem_heap_B=48472
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=184885
+mem_heap_B=96472
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=185070
+mem_heap_B=104664
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=197995
+mem_heap_B=104664
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=peak
+n4: 104664 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 48000 0x109293: main (galsim_temp.c:40)
+ n1: 48000 0x10949F: getInput (galsim_temp.c:65)
+  n0: 48000 0x1092A4: main (galsim_temp.c:42)
+ n1: 8192 0x49E2C74: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 8192 0x49F1D5F: _IO_doallocbuf (genops.c:347)
+   n1: 8192 0x49EF543: _IO_file_xsgetn (fileops.c:1287)
+    n1: 8192 0x49E3C28: fread (iofread.c:38)
+     n1: 8192 0x1094BE: fread (stdio2.h:293)
+      n1: 8192 0x1094BE: getInput (galsim_temp.c:75)
+       n0: 8192 0x1092A4: main (galsim_temp.c:42)
+ n0: 472 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=6
+#-----------
+time=197995
+mem_heap_B=96472
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=198125
+mem_heap_B=96000
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=198160
+mem_heap_B=48000
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=198228
+mem_heap_B=96000
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=28219288
+mem_heap_B=48000
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=28219344
+mem_heap_B=48472
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=28219984
+mem_heap_B=56664
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=28221981
+mem_heap_B=48472
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=28222111
+mem_heap_B=48000
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=28222155
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=detailed
+n1: 0 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 0 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=16
+#-----------
+time=28222512
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=28228526
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty

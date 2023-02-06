@@ -3,6 +3,7 @@
 #include <math.h>
 #include <sys/time.h>
 #include <string.h>
+
 double* read_input(const char* restrict path, const int n);
 void acceleration(double* restrict data_array, const int n);
 void solver(double* restrict data_array, double* restrict acc_array, const double dt, const int n);
@@ -31,6 +32,7 @@ int main(int argc, char* argv[]){
 	time = get_wall_seconds();
 
 	double* data_arr = read_input(input_path, n_particles);
+	if (acc_array == NULL) return -1;
 	printf("Input read in %lf s\n", get_wall_seconds()-time);
 	time = get_wall_seconds();
 
@@ -54,35 +56,29 @@ int main(int argc, char* argv[]){
 void acceleration(double* restrict data_array, const int n){
 	double sum_x = 0;
 	double sum_y = 0;
-	double x_i, y_i, x_j, y_j,m_i, m_j, r_ij;
+	double x_i, y_i, x_j, y_j, m_j, r_ij;
 	const double G = 100/(double)n;
 	const double eps = 0.001;
 
 	int i, j;
 	for(i = 0; i < n*8; i +=8){
-//		printf("A # %i\n", i/8);
 		x_i = data_array[i];
 		y_i = data_array[i+1];
-		m_i = data_array[i+2];
+
 		for(j = 0; j < n*8; j+=8){
 			if(i==j) continue;
 			x_j = data_array[j];
 			y_j = data_array[j+1];
 			m_j = data_array[j+2];
 			r_ij = sqrt((x_i-x_j)*(x_i-x_j)+(y_i-y_j)*(y_i-y_j));
-//			double tmp_x = (x_i-x_j)/((r_ij+eps)*(r_ij+eps)*(r_ij+eps));
 
 			sum_x += m_j*(x_i-x_j)/((r_ij+eps)*(r_ij+eps)*(r_ij+eps));
 			sum_y += m_j*(y_i-y_j)/((r_ij+eps)*(r_ij+eps)*(r_ij+eps));
-//			printf("%lf\t", -m_i*tmp_x);
 		}
 		data_array[i+6] = -G*sum_x;
 		data_array[i+7] = -G*sum_y;
-//		printf("%lf\n%lf\n", sum_x, sum_y);
 		sum_x=0;
 		sum_y=0;
-//		printf("\n");
-//		printf("%lf\t%lf\n", data_array[i+6], data_array[i+7]);
 	}
 
 }
@@ -93,7 +89,7 @@ void acceleration2(double* restrict data_array, double* restrict acc_array, cons
 	const double G = 100/(double)n;
 	const double eps = 0.001;
 	int i, j;
-	double tmp_x, tmp_y;
+	double denom;
 	memset(acc_array, 0, 2*n*8);
 
 
@@ -102,32 +98,28 @@ void acceleration2(double* restrict data_array, double* restrict acc_array, cons
 		y_i = data_array[i+1];
 		m_i = data_array[i+2];
 
-
 		for(j = 0; j < i; j+=6){
 			x_j = data_array[j];
 			y_j = data_array[j+1];
 			m_j = data_array[j+2];
 			r_ij = sqrt((x_i-x_j)*(x_i-x_j)+(y_i-y_j)*(y_i-y_j));
-			tmp_x = (x_i-x_j)/((r_ij+eps)*(r_ij+eps)*(r_ij+eps));
-			tmp_y = (y_i-y_j)/((r_ij+eps)*(r_ij+eps)*(r_ij+eps));
-
-			acc_array[2*(i/6)] += -G*m_j*tmp_x;
-			acc_array[2*(i/6)+1] += -G*m_j*tmp_y;
-			acc_array[2*(j/6)] += G*m_i*tmp_x;
-			acc_array[2*(j/6)+1] += G*m_i*tmp_y;
+			denom = 1/((r_ij+eps)*(r_ij+eps)*(r_ij+eps));
+			acc_array[2*(i/6)] += -G*m_j*(x_i-x_j)*denom;
+			acc_array[2*(i/6)+1] += -G*m_j*(y_i-y_j)*denom;
+			acc_array[2*(j/6)] += G*m_i*(x_i-x_j)*denom;
+			acc_array[2*(j/6)+1] += G*m_i*(y_i-y_j)*denom;
 		}
 	}
 }
 
  
 void solver(double* restrict data_array, double* restrict acc_array, const double dt, const int n){
-	double time = get_wall_seconds();
+//	double time = get_wall_seconds();
 	acceleration2(data_array, acc_array, n);
 //	printf("Calculated acceleration2 in %lf s\n",get_wall_seconds()-time); 
 
 	int i;
-	for(i =0; i < n*6; i+=6){
-		
+	for(i = 0; i < n*6; i+=6){
 		data_array[i+3] = data_array[i+3] + dt*acc_array[2*(i/6)];
 		data_array[i+4] = data_array[i+4] + dt*acc_array[2*(i/6)+1];
 		data_array[i] = data_array[i] + dt*data_array[i+3];
@@ -145,7 +137,10 @@ double* read_input(const char* restrict path, const int n){
 	}
 
 	double* input_data = (double*)malloc(n*48);
-	fread(input_data, 8, 6*n, file);
+	if(fread(input_data, 8, 6*n, file) != n*6){
+		printf("ERROR: Mismatch between specified number of particles and read number of particles\n");
+		return NULL;
+	}
 	fclose(file);
 	return input_data;
 
@@ -168,7 +163,6 @@ void print_matrix(double* array, const int n, const int m){
 }
 
 void write_output(double* restrict data_array, double* restrict acc_array, const int n, const char* restrict path){
-	
 	FILE* file = fopen(path, "wb");
 	fwrite(data_array, 8 ,6*n, file);
 	fclose(file);

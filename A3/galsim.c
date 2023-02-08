@@ -5,11 +5,9 @@
 #include <string.h>
 
 double* read_input(const char* restrict path, const int n);
-void acceleration(double* restrict data_array, const int n);
+void acceleration(double* restrict data_array, double* restrict acc_array, const int n);
 void solver(double* restrict data_array, double* restrict acc_array, const double dt, const int n);
-void print_array(double* restrict array, const int n, const char* restrict title);
 void write_output(double* restrict data_array, double* restrict acc_array, const int n, const char* restrict path);
-double* p_x, p_y, mass, v_x, v_y, brightness;
 double get_wall_seconds();
 
 
@@ -53,38 +51,7 @@ int main(int argc, char* argv[]){
 	return 0;
 }
 
-void acceleration(double* restrict data_array, const int n){
-	double sum_x = 0;
-	double sum_y = 0;
-	double x_i, y_i, x_j, y_j, m_j, r_ij;
-	const double G = 100/(double)n;
-	const double eps = 0.001;
-
-	int i, j;
-	for(i = 0; i < n*8; i +=8){
-		x_i = data_array[i];
-		y_i = data_array[i+1];
-
-		for(j = 0; j < n*8; j+=8){
-			if(i==j) continue;
-			x_j = data_array[j];
-			y_j = data_array[j+1];
-			m_j = data_array[j+2];
-			r_ij = sqrt((x_i-x_j)*(x_i-x_j)+(y_i-y_j)*(y_i-y_j));
-
-			sum_x += m_j*(x_i-x_j)/((r_ij+eps)*(r_ij+eps)*(r_ij+eps));
-			sum_y += m_j*(y_i-y_j)/((r_ij+eps)*(r_ij+eps)*(r_ij+eps));
-		}
-		data_array[i+6] = -G*sum_x;
-		data_array[i+7] = -G*sum_y;
-		sum_x=0;
-		sum_y=0;
-	}
-
-}
-
-
-void acceleration2(double* restrict data_array, double* restrict acc_array, const int n){
+void acceleration(double* restrict data_array, double* restrict acc_array, const int n){
 	double x_i, y_i, x_j, y_j,m_i, m_j, r_ij;
 	const double G = 100/(double)n;
 	const double eps = 0.001;
@@ -115,7 +82,7 @@ void acceleration2(double* restrict data_array, double* restrict acc_array, cons
  
 void solver(double* restrict data_array, double* restrict acc_array, const double dt, const int n){
 //	double time = get_wall_seconds();
-	acceleration2(data_array, acc_array, n);
+	acceleration(data_array, acc_array, n);
 //	printf("Calculated acceleration2 in %lf s\n",get_wall_seconds()-time); 
 
 	int i;
@@ -144,22 +111,6 @@ double* read_input(const char* restrict path, const int n){
 	fclose(file);
 	return input_data;
 
-}
-
-
-void print_array(double* restrict array, const int n, const char* restrict title){
-	printf("Printing %s\n", title);
-	for(int i=0; i < n; i++)
-		printf("%lf\n", array[i]);
-}
-
-void print_matrix(double* array, const int n, const int m){
-	for(int i =0; i<n; i++){
-		for(int j = 0; j<m; j++){
-			if(!j) printf("\n");
-			printf("%lf\t", array[i*n+j]);
-			}
-		}
 }
 
 void write_output(double* restrict data_array, double* restrict acc_array, const int n, const char* restrict path){

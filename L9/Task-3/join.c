@@ -33,7 +33,7 @@ int main (int argc, char *argv[])
 
   /* Initialize and set thread detached attribute */
   pthread_attr_init(&attr);
-  pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_JOINABLE);
+  pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_DETACHED);
 
   for(t=0; t<NUM_THREADS; t++) {
     printf("Main: creating thread %ld\n", t);
@@ -47,11 +47,11 @@ int main (int argc, char *argv[])
   /* Free attribute and wait for the other threads */
   pthread_attr_destroy(&attr);
   for(t=0; t<NUM_THREADS; t++) {
-    rc = pthread_join(thread[t], &status);
+    /*rc = pthread_join(thread[t], &status);
     if (rc) {
       printf("ERROR; return code from pthread_join() is %d\n", rc);
       exit(-1);
-    }
+    }*/
     printf("Main: completed join with thread %ld having a status of %ld\n",t,(long)status);
   }
  

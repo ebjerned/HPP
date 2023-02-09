@@ -4,12 +4,15 @@
 
 long int sum = 0;
 int N = 100000;
+pthread_mutex_t lock;
+
 
 void* the_thread_func(void* arg) {
-
+  pthread_mutex_lock(&lock);
   for(int i = 1; i <= N; ++i)
   	sum += 1;
 
+  pthread_mutex_unlock(&lock);
   return NULL;
 }
 
@@ -20,7 +23,7 @@ int main(int argc, char **argv) {
   printf("This is the main() function starting.\n");
 
   int N = atoi(argv[1]);
-
+  pthread_mutex_init(&lock,NULL);
   /* Start thread. */
   printf("the main() function now calling pthread_create().\n");
   pthread_t threads[N];
@@ -34,7 +37,7 @@ int main(int argc, char **argv) {
   printf("the main() function now calling pthread_join().\n");
   for(int i = 0; i < N; i++)
     pthread_join(threads[i], NULL);
-
+  pthread_mutex_destroy(&lock);
   printf("sum = %ld\n", sum); 
 
   return 0;

@@ -1,13 +1,13 @@
 /**********************************************************************
  * Enumeration sort
- *
+ * O(n^2)
  **********************************************************************/
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
 #include <sys/time.h>
 
-#define NUM_THREADS	5
+#define NUM_THREADS	10
 #define len 100000
 
 static double get_wall_seconds() {
@@ -17,7 +17,7 @@ static double get_wall_seconds() {
   return seconds;
 }
 
-double indata[len], outdata[len];
+double indata[len], outdata[len], outdata2[len];
 
 void *findrank(void *arg)
 {
@@ -28,6 +28,22 @@ void *findrank(void *arg)
 	for (i=0;i<len;i++)
 		if (indata[i]<indata[j]) rank++;
 	outdata[rank]=indata[j];
+	pthread_exit(NULL);
+}
+
+void* findrank_alt(void* arg){
+	int rank;
+	long t = (long) arg;
+	long el;
+	int i,j;
+	for(j =0; j < len/NUM_THREADS; j++){
+		el = t + j;
+		rank = 0;
+		for(i=0; i<len; i++){
+			if(indata[i]<indata[el]) rank++;
+		}
+		outdata2[rank] = indata[el];
+	}
 	pthread_exit(NULL);
 }
 
@@ -51,18 +67,30 @@ int main(int argc, char *argv[]) {
 
   // Enumeration sort
   double startTime = get_wall_seconds();
-  for (j=0;j<len;j+=NUM_THREADS)
+/*  for (j=0;j<len;j+=NUM_THREADS)
     {
 		for(t=0; t<NUM_THREADS; t++) {
 			el=j+t;
 		    pthread_create(&threads[t], &attr, findrank, (void *)el); }
-		
+
 		for(t=0; t<NUM_THREADS; t++) 
 			pthread_join(threads[t], &status);
     }
+*/
+
+  for(j=0; j < NUM_THREADS; j++){
+	pthread_create(&threads[t], &attr, findrank_alt, (void *)j);
+  }
+  for(j=0; j < NUM_THREADS; j++){
+	pthread_join(threads[t], &status);
+  }
   double timeTaken = get_wall_seconds() - startTime;
   printf("Time: %f  NUM_THREADS: %d\n", timeTaken, NUM_THREADS);
-
+/*  int checksum = 0;
+  for(i=0; i<len-1; i++)
+	checksum += outdata[i]-outdata2[i];
+  printf("Checksum = %i\n", checksum);
+*/
   // Check results, -1 implies data same as the previous element
     for (i=0; i<len-1; i++)
       if (outdata[i]>outdata[i+1] && outdata[i+1]>-1)

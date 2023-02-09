@@ -3,6 +3,11 @@
 #include <math.h>
 #include <string.h>
 #include <sys/time.h>
+#include <pthread.h>
+#define NUM_THREADS 10 
+// Speed up is about as expected, being normal time/NUM_THREADS
+// Larger than 70x70 matrices are faster running parallell, otherwise serial is faster
+void* multiply(void* arg);
 
 static double get_wall_seconds() {
   struct timeval tv;
@@ -50,6 +55,25 @@ int main(int argc, char *argv[]) {
       for (k=0; k<n; k++)
 	C[i][j] += A[i][k] * B[k][j];
 
+  printf("Normal calc: %lf s\n", get_wall_seconds()-startTime);
+  for (i = 0; i<n; i++)
+    for(j=0;j<n;j++){
+      C[i][j] = 0.0;
+    }
+  double time = get_wall_seconds();
+  pthread_t threads[NUM_THREADS];
+
+  for(i = 0; i< NUM_THREADS; i++){
+	int* range = (int*)malloc(8);
+	range[0] = i*n/NUM_THREADS;
+	range[1] = (i+1)*n/NUM_THREADS;
+	pthread_create(&threads[i], NULL, multiply, range);
+  }
+  for(i =0; i<NUM_THREADS; i++){
+  	pthread_join(threads[i],NULL);
+	
+  }
+  printf("Parallell calc: %lf s\n", get_wall_seconds()-time);
   double timeTaken = get_wall_seconds() - startTime;
   printf("Elapsed time: %f wall seconds\n", timeTaken);
 
@@ -87,3 +111,18 @@ int main(int argc, char *argv[]) {
 
   return 0;
 }
+
+
+void* multiply(void* arg){
+  int* args = (int*) arg;
+  int s = args[0];
+  int e = args[1];
+  int i,j,k;
+  printf("Thread range %i - %i\n", s,e);
+  for(i=s; i<e; i++)
+    for (j=0; j<n; j++)
+      for (k=0; k<n; k++)
+	C[i][j] += A[i][k] * B[k][j];
+  return NULL;
+}
+

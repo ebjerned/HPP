@@ -36,8 +36,6 @@ int main(int argc, char* argv[]){
 
 	for(int i = 0; i < n_steps; i++){
 		solver(data_arr, acc_array, dt, n_particles);
-//		printf("\rSolving timestep %i, average time %lf",i,(get_wall_seconds()-time)/(i+1));
-//		fflush(stdout);
 	}
 	printf("\n");
 	printf("Problem solved in %lf s, %lf per timestep with %i particles\n", get_wall_seconds()-time, (get_wall_seconds()-time)/n_steps, n_particles);
@@ -70,20 +68,18 @@ void acceleration(double* restrict data_array, double* restrict acc_array, const
 			y_j = data_array[j+1];
 			m_j = data_array[j+2];
 			r_ij = sqrt((x_i-x_j)*(x_i-x_j)+(y_i-y_j)*(y_i-y_j));
-			denom = 1/((r_ij+eps)*(r_ij+eps)*(r_ij+eps));
-			acc_array[2*(i/6)] += -G*m_j*(x_i-x_j)*denom;
-			acc_array[2*(i/6)+1] += -G*m_j*(y_i-y_j)*denom;
-			acc_array[2*(j/6)] += G*m_i*(x_i-x_j)*denom;
-			acc_array[2*(j/6)+1] += G*m_i*(y_i-y_j)*denom;
+			denom = G/((r_ij+eps)*(r_ij+eps)*(r_ij+eps));
+			acc_array[2*(i/6)] += -m_j*(x_i-x_j)*denom;
+			acc_array[2*(i/6)+1] += -m_j*(y_i-y_j)*denom;
+			acc_array[2*(j/6)] += m_i*(x_i-x_j)*denom;
+			acc_array[2*(j/6)+1] += m_i*(y_i-y_j)*denom;
 		}
 	}
 }
 
- 
+
 void solver(double* restrict data_array, double* restrict acc_array, const double dt, const int n){
-//	double time = get_wall_seconds();
 	acceleration(data_array, acc_array, n);
-//	printf("Calculated acceleration2 in %lf s\n",get_wall_seconds()-time); 
 
 	int i;
 	for(i = 0; i < n*6; i+=6){

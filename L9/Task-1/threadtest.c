@@ -32,7 +32,7 @@ int main() {
   double* threaddata;
   /* Wait for thread to finish. */
   printf("the main() function now calling pthread_join().\n");
-  if(pthread_join(thread, &threaddata) != 0) {
+  if(pthread_join(thread, (void**) &threaddata) != 0) {
     printf("ERROR: pthread_join failed.\n");
     return -1;
   }

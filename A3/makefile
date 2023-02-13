@@ -1,9 +1,9 @@
 CC = gcc
 LD = gcc
-CFLAGS = -Wall -lm -O0
-LDFLAGS = -Wall -lm -O0
+CFLAGS = -Wall -lm -O2 -ffast-math -march=native
+LDFLAGS = -Wall -lm -O2 -ffast-math -march=native
 RM = /bin/rm -f
-OBJS = galsim_keywords.o
+OBJS = galsim.o
 EXECUTABLE = galsim
 
 all:$(EXECUTABLE)
@@ -11,8 +11,8 @@ all:$(EXECUTABLE)
 $(EXECUTABLE): $(OBJS)
 	$(LD) $(OBJS) -o $(EXECUTABLE) $(LDFLAGS)
 
-galsim.o: galsim_keywords.c
-	$(CC) -c galsim_keywords.c $(CFLAGS)
+galsim.o: galsim.c
+	$(CC) -c galsim.c $(CFLAGS)
 
 clean:
 	$(RM) $(EXECUTABLE) $(OBJS)

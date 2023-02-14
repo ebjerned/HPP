@@ -48,7 +48,7 @@ int main(int argc, char* argv[]){
 	printf("Problem solved in %lf s, %lf per timestep with %i particles\n", get_wall_seconds()-time, (get_wall_seconds()-time)/n_steps, n_particles);
 	time = get_wall_seconds();
 
-	write_output(data_arr, acc_arr, n_particles, "output.gal");
+	write_output(data_arr, acc_arr, n_particles, "result.gal");
 	printf("Output written in %lf s\n", get_wall_seconds()-time);
 
 	free(data_arr);

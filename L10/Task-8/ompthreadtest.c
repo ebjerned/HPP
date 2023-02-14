@@ -7,6 +7,7 @@ int N = 100000;
 void the_thread_func() {
 
   for(int i = 1; i <= N; ++i) {
+    #pragma omp critical
     sum += 1;
   }
 
@@ -21,7 +22,7 @@ int main(int argc, char **argv) {
 
 #pragma omp parallel num_threads(nThreads)
   the_thread_func();
-  
+
   printf("This is the main() function after the parallel block\n");
 
   printf("sum = %ld\n", sum);

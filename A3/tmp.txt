@@ -1,42 +1,54 @@
-Initialized in 0.000035 s
-Input read in 0.000228 s
+Initialized in 0.000031 s
+Input read in 0.000277 s
 
 Problem solved in 0.000151 s, 0.000001 per timestep with 10 particles
-Output written in 0.002436 s
-Program finished in 0.002901 s. Exiting...
-Initialized in 0.000034 s
-Input read in 0.000968 s
+Output written in 0.002432 s
+Program finished in 0.002939 s. Exiting...
+Initialized in 0.000030 s
+Input read in 0.000282 s
 
-Problem solved in 0.003268 s, 0.000016 per timestep with 50 particles
-Output written in 0.002136 s
-Program finished in 0.006463 s. Exiting...
+Problem solved in 0.003285 s, 0.000016 per timestep with 50 particles
+Output written in 0.002700 s
+Program finished in 0.006336 s. Exiting...
+Initialized in 0.000027 s
+Input read in 0.000282 s
+
+Problem solved in 0.012763 s, 0.000064 per timestep with 100 particles
+Output written in 0.002544 s
+Program finished in 0.015651 s. Exiting...
 Initialized in 0.000033 s
-Input read in 0.000802 s
+Input read in 0.000323 s
 
-Problem solved in 0.012742 s, 0.000064 per timestep with 100 particles
-Output written in 0.002338 s
-Program finished in 0.015964 s. Exiting...
+Problem solved in 0.321218 s, 0.001606 per timestep with 500 particles
+Output written in 0.008276 s
+Program finished in 0.329895 s. Exiting...
 Initialized in 0.000033 s
-Input read in 0.000903 s
+Input read in 0.000330 s
 
-Problem solved in 0.321656 s, 0.001608 per timestep with 500 particles
-Output written in 0.003010 s
-Program finished in 0.325657 s. Exiting...
-Initialized in 0.000034 s
-Input read in 0.000416 s
-
-Problem solved in 1.292407 s, 0.006462 per timestep with 1000 particles
-Output written in 0.002841 s
-Program finished in 1.295745 s. Exiting...
-Initialized in 0.000036 s
-Input read in 0.004128 s
-
-Problem solved in 32.421063 s, 0.162105 per timestep with 5000 particles
-Output written in 0.005836 s
-Program finished in 32.431196 s. Exiting...
+Problem solved in 1.292137 s, 0.006461 per timestep with 1000 particles
+Output written in 0.003355 s
+Program finished in 1.295903 s. Exiting...
 Initialized in 0.000035 s
-Input read in 0.000934 s
+Input read in 0.000428 s
 
-Problem solved in 130.419576 s, 0.652098 per timestep with 10000 particles
-Output written in 0.008775 s
-Program finished in 130.429485 s. Exiting...
+Problem solved in 11.673324 s, 0.058367 per timestep with 3000 particles
+Output written in 0.010343 s
+Program finished in 11.684230 s. Exiting...
+Initialized in 0.000029 s
+Input read in 0.000582 s
+
+Problem solved in 32.445358 s, 0.162227 per timestep with 5000 particles
+Output written in 0.011678 s
+Program finished in 32.457768 s. Exiting...
+Initialized in 0.000030 s
+Input read in 0.005452 s
+
+Problem solved in 63.559336 s, 0.317797 per timestep with 7000 particles
+Output written in 0.012420 s
+Program finished in 63.577339 s. Exiting...
+Initialized in 0.000035 s
+Input read in 0.000908 s
+
+Problem solved in 130.339240 s, 0.651696 per timestep with 10000 particles
+Output written in 0.008705 s
+Program finished in 130.349066 s. Exiting...

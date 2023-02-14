@@ -6,8 +6,8 @@ N_3 = [e**3 for e in range(1, 100)]
 time = [0.002901, 0.006463, 0.015964, 0.325657, 1.295745, 11.684230, 32.431196, 63.577339, 130.429485]
 
 
-plt.loglog(N_2, N_2)
-plt.loglog(N_3,N_3)
+#plt.loglog(N_2, N_2)
+plt.loglog(N_3, N_3)
 plt.loglog(N, time, "ro-")
 plt.legend(["N^2", "N^3", "Measured time"])
 plt.title("Time complexity")

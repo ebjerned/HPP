@@ -6,7 +6,7 @@ time = [0.002901, 0.006463, 0.015964, 0.325657, 1.295745, 11.684230, 32.431196, 
 
 
 plt.loglog(N_2, N_2)
-plt.loglog(N, time)
+plt.loglog(N, time, "o")
 plt.legend(["N^2", "Measured time"])
 plt.title("Time complexity")
 plt.xlabel("Particles [-]")

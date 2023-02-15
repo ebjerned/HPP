@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <math.h>
 #include <sys/time.h>
-#include <string.h>
 
 double* read_input(char* path, int n);
 void acceleration(double* data_array, double* acc_array, int n);

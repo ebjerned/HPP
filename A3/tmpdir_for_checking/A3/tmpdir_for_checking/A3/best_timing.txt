@@ -1,2 +1,0 @@
-8.400
-AMD Opteron(tm) Processor 6282 SE

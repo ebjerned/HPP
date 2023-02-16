@@ -24,20 +24,13 @@ int main(int argc, char *argv[]) {
   for(repeat = 0; repeat < 400; repeat++) {
 
     globsum=0.0;
-#pragma omp parallel num_threads(nThreads) private(sum)
-    {
-      sum=0.0;
 
-#pragma omp for
+#pragma omp parallel for num_threads(nThreads) reduction(+: globsum)
       for (i = 0; i < n ; i++) { 
-	sum += A[i];
+	globsum += A[i];
       }
 
-#pragma omp critical
-      {
-	globsum+=sum;
-      }
-    }
+
 
   }
 

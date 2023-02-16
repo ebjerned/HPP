@@ -14,24 +14,20 @@ double f(int q) {
 int main(int argc, char *argv[]) {
   const int M = 200;
   double arr[M];
+  int i;
 
-#pragma omp parallel num_threads(3)
-  {
+	#pragma omp parallel for num_threads(3)
+        for(i = 0; i < M; i++){
+		arr[i] = f(i);
+        }
 
-    int i;
-#pragma omp for
-      for(i = 0; i < M; i++)
-	arr[i] = f(i);
+	  /* Sum up results. */
+	  double sum = 0;
+	  int k;
+	  for(k = 0; k < M; k++)
+	    sum += arr[k];
 
-  }
+	  printf("sum = %f\n", sum);
 
-  /* Sum up results. */
-  double sum = 0;
-  int k;
-  for(k = 0; k < M; k++)
-    sum += arr[k];
-
-  printf("sum = %f\n", sum);
-
-  return 0;
+	  return 0;
 }

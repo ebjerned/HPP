@@ -18,6 +18,13 @@ void funcB() {
     x *= 1.000000002;
   printf("funcB() result: x = %f\n", x);
 }
+void funcC() {
+  long int i;
+  double x = 1.0;
+  for(i = 0; i < N; i++)
+    x *= 1.000000003;
+  printf("funcC() result: x = %f\n", x);
+}
 
 int main(int argc, char *argv[]) {
 
@@ -36,6 +43,10 @@ int main(int argc, char *argv[]) {
       {
 	funcB();
       }
+#pragma omp section
+	{
+		funcC();
+	}
 
     } /* end of omp sections block */
 

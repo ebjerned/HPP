@@ -49,9 +49,12 @@ int main(int argc, char* argv[]) {
 
   int count7_again = count_values(list_to_sort, N, 7);
   printf("After sort : the number 7 occurs %d times in the list.\n", count7_again);
-  for (i = 0; i < N; i++)
+
+/*  for (i = 0; i < N; i++)
 	printf("%i ",list_to_sort[i]);
-  printf("\n");
+  printf("\n");*/
+
+
   // Check that list is really sorted
   for(i = 0; i < N-1; i++) {
     if(list_to_sort[i] > list_to_sort[i+1]) {

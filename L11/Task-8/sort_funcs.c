@@ -1,7 +1,8 @@
 #include <stdlib.h>
 #include <omp.h>
 #include <stdio.h>
-void merge_sort(intType* list_to_sort, int N, int num_threads) {
+#include "sort_funcs.h"
+void merge_sort(intType* list_to_sort, int N, int n_tasks) {
   if(N == 1) {
     // Only one element, no sorting needed. Just return directly in this case.
     return;
@@ -15,32 +16,33 @@ void merge_sort(intType* list_to_sort, int N, int num_threads) {
   int i;
 
 
-  omp_set_nested(1);
-  // Sort list1 and list2
 
     for(i = 0; i < n1; i++)
         list1[i] = list_to_sort[i];
     for(i = 0; i < n2; i++)
       list2[i] = list_to_sort[n1+i];
 
-  if (num_threads < 2){
+#pragma omp parallel
+{
+    #pragma omp single
+	{
+	   if(n_tasks >= 2){
+	   #pragma omp task 
+		{
+		   merge_sort(list1, n1, n_tasks/2);
+		}
+	   #pragma omp task 
+		{
+		   merge_sort(list2, n2, n_tasks/2);
+		}
+	   #pragma omp taskwait
+	   } else {
+		merge_sort(list1, n1, 1);
+		merge_sort(list2, n2, 1);
+	   }
+ 	}
 
-    merge_sort(list1, n1, 0);
-    merge_sort(list2, n2, 0);
-
-  } else{
-    #pragma omp parallel num_threads(2)
-      {
-        if (omp_get_thread_num()%2 == 0){
-          merge_sort(list1, n1, (num_threads)/2);
-        }
-        else{
-          merge_sort(list2, n2, (num_threads)/2);
-        }
-      }
-  }
-
-
+}
   // Merge!
   int i1 = 0;
   int i2 = 0;

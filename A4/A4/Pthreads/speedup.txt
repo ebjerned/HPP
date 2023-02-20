@@ -1,95 +1,32 @@
-Problem solved in 16.608167 s, 0.166082 per timestep with 5000 particles
-Program finished in 16.614514 s. Exiting...
-
-Problem solved in 8.210616 s, 0.082106 per timestep with 5000 particles
-Program finished in 8.217228 s. Exiting...
-
-Problem solved in 5.568899 s, 0.055689 per timestep with 5000 particles
-Program finished in 5.580727 s. Exiting...
-
-Problem solved in 4.196094 s, 0.041961 per timestep with 5000 particles
-Program finished in 4.202661 s. Exiting...
-
-Problem solved in 3.378543 s, 0.033785 per timestep with 5000 particles
-Program finished in 3.390479 s. Exiting...
-
-Problem solved in 2.826394 s, 0.028264 per timestep with 5000 particles
-Program finished in 2.832603 s. Exiting...
-
-Problem solved in 2.442188 s, 0.024422 per timestep with 5000 particles
-Program finished in 2.448849 s. Exiting...
-
-Problem solved in 2.141769 s, 0.021418 per timestep with 5000 particles
-Program finished in 2.153422 s. Exiting...
-
-Problem solved in 1.969789 s, 0.019698 per timestep with 5000 particles
-Program finished in 1.981373 s. Exiting...
-
-Problem solved in 1.791649 s, 0.017916 per timestep with 5000 particles
-Program finished in 1.803435 s. Exiting...
-
-Problem solved in 1.654363 s, 0.016544 per timestep with 5000 particles
-Program finished in 1.660843 s. Exiting...
-
-Problem solved in 1.536576 s, 0.015366 per timestep with 5000 particles
-Program finished in 1.543239 s. Exiting...
-
-Problem solved in 1.867316 s, 0.018673 per timestep with 5000 particles
-Program finished in 1.873650 s. Exiting...
-
-Problem solved in 2.017742 s, 0.020177 per timestep with 5000 particles
-Program finished in 2.023810 s. Exiting...
-
-Problem solved in 1.933320 s, 0.019333 per timestep with 5000 particles
-Program finished in 1.939667 s. Exiting...
-
-Problem solved in 1.838129 s, 0.018381 per timestep with 5000 particles
-Program finished in 1.850046 s. Exiting...
-
-Problem solved in 1.754617 s, 0.017546 per timestep with 5000 particles
-Program finished in 1.760879 s. Exiting...
-
-Problem solved in 1.676942 s, 0.016769 per timestep with 5000 particles
-Program finished in 1.688788 s. Exiting...
-
-Problem solved in 1.601616 s, 0.016016 per timestep with 5000 particles
-Program finished in 1.612955 s. Exiting...
-
-Problem solved in 1.544675 s, 0.015447 per timestep with 5000 particles
-Program finished in 1.551242 s. Exiting...
-
-Problem solved in 1.490593 s, 0.014906 per timestep with 5000 particles
-Program finished in 1.506689 s. Exiting...
-
-Problem solved in 1.445860 s, 0.014459 per timestep with 5000 particles
-Program finished in 1.457968 s. Exiting...
-
-Problem solved in 1.396180 s, 0.013962 per timestep with 5000 particles
-Program finished in 1.407812 s. Exiting...
-
-Problem solved in 1.352685 s, 0.013527 per timestep with 5000 particles
-Program finished in 1.364675 s. Exiting...
-
-Problem solved in 1.316373 s, 0.013164 per timestep with 5000 particles
-Program finished in 1.323127 s. Exiting...
-
-Problem solved in 1.279016 s, 0.012790 per timestep with 5000 particles
-Program finished in 1.290926 s. Exiting...
-
-Problem solved in 1.248409 s, 0.012484 per timestep with 5000 particles
-Program finished in 1.260142 s. Exiting...
-
-Problem solved in 1.253834 s, 0.012538 per timestep with 5000 particles
-Program finished in 1.260569 s. Exiting...
-
-Problem solved in 1.451887 s, 0.014519 per timestep with 5000 particles
-Program finished in 1.468530 s. Exiting...
-
-Problem solved in 1.481349 s, 0.014813 per timestep with 5000 particles
-Program finished in 1.488133 s. Exiting...
-
-Problem solved in 1.522815 s, 0.015228 per timestep with 5000 particles
-Program finished in 1.534688 s. Exiting...
-
-Problem solved in 1.545739 s, 0.015457 per timestep with 5000 particles
-Program finished in 1.558086 s. Exiting...
+1	16.497569
+2	8.325388
+3	5.548271
+4	4.201342
+5	3.389383
+6	2.833277
+7	2.445307
+8	2.150717
+9	1.968636
+10	1.799885
+11	1.665574
+12	1.529268
+13	1.802900
+14	1.840217
+15	1.866074
+16	1.847605
+17	1.764167
+18	1.682338
+19	1.616851
+20	1.547400
+21	1.502285
+22	1.448188
+23	1.408054
+24	1.360812
+25	1.336746
+26	1.289124
+27	1.260238
+28	1.262812
+29	1.464633
+30	1.488886
+31	1.527508
+32	1.542522

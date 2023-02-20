@@ -39,14 +39,14 @@ int main(int argc, char* argv[]){
 	int n_threads = atoi(argv[6]);
 	double* acc_arr = (double*)malloc(n_particles*2*sizeof(double));
 
-	printf("Initialized in %lf s\n", get_wall_seconds()-time);
+//	printf("Initialized in %lf s\n", get_wall_seconds()-time);
 	time = get_wall_seconds();
 
 	double* data_arr = read_input(input_path, n_particles);
 
 	if (data_arr == NULL) return -1;
 
-	printf("Input read in %lf s\n", get_wall_seconds()-time);
+//	printf("Input read in %lf s\n", get_wall_seconds()-time);
 	time = get_wall_seconds();
 
 	for(int i = 0; i < n_steps; i++){
@@ -57,17 +57,17 @@ int main(int argc, char* argv[]){
 //		printf("Solved in %lf s\n", get_wall_seconds()-time);
 	}
 
-	printf("\n");
-	printf("Problem solved in %lf s, %lf per timestep with %i particles\n", get_wall_seconds()-time, (get_wall_seconds()-time)/n_steps, n_particles);
+//	printf("\n");
+//	printf("Problem solved in %lf s, %lf per timestep with %i particles\n", get_wall_seconds()-time, (get_wall_seconds()-time)/n_steps, n_particles);
 	time = get_wall_seconds();
 
 	write_output(data_arr, acc_arr, n_particles, "result.gal");
-	printf("Output written in %lf s\n", get_wall_seconds()-time);
+//	printf("Output written in %lf s\n", get_wall_seconds()-time);
 
 	free(data_arr);
 	free(acc_arr);
-	printf("Program finished in %lf s. Exiting...\n", get_wall_seconds()-start);
-
+//	printf("Program finished in %lf s. Exiting...\n", get_wall_seconds()-start);
+	printf("%i\t%lf\n", n_threads, get_wall_seconds()-start);
 	return 0;
 }
 

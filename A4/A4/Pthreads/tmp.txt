@@ -1,0 +1,66 @@
+
+Acceleration at particle 0 by thread 0 
+Acceleration at particle 1 by thread 0 
+	Acceleration at particle 1 by thread 0 from particle 0
+0.020154	-69.098380
+Acceleration at particle 2 by thread 0 
+	Acceleration at particle 2 by thread 0 from particle 0
+97.546539	-97.489653
+	Acceleration at particle 2 by thread 0 from particle 1
+195.036192	0.056886
+Acceleration at particle 3 by thread 0 
+	Acceleration at particle 3 by thread 0 from particle 0
+-97.489653	-97.546539
+	Acceleration at particle 3 by thread 0 from particle 1
+-195.036192	-0.056886
+	Acceleration at particle 3 by thread 0 from particle 2
+-264.134572	-0.077039
+Thread 0 acceleretion:
+-0.077039
+264.134572
+0.077039
+-264.134572
+264.134572
+0.077039
+-264.134572
+-0.077039
+
+Problem solved in 0.000366 s, 0.000183 per timestep with 4 particles
+-0.077039
+264.134572
+0.077039
+-264.134572
+264.134572
+0.077039
+-264.134572
+-0.077039
+
+Acceleration at particle 0 by thread 0 
+Acceleration at particle 2 by thread 0 
+	Acceleration at particle 2 by thread 0 from particle 0
+97.546539	-97.489653
+	Acceleration at particle 2 by thread 0 from particle 1
+195.036192	0.056886
+Acceleration at particle 1 by thread 1 
+	Acceleration at particle 1 by thread 1 from particle 0
+0.020154	-69.098380
+Acceleration at particle 3 by thread 1 
+	Acceleration at particle 3 by thread 1 from particle 0
+-97.489654	-97.546539
+	Acceleration at particle 3 by thread 1 from particle 1
+-195.036193	-0.056885
+	Acceleration at particle 3 by thread 1 from particle 2
+-264.134573	-0.077039
+
+
+Problem solved in 0.000461 s, 0.000231 per timestep with 4 particles
+-0.077039
+264.134573
+97.595131
+-430.751041
+459.170756
+0.077039
+-528.269132
+-0.077039
+Output written in 0.008254 s
+Program finished in 0.009057 s. Exiting...

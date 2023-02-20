@@ -50,7 +50,7 @@ int main(int argc, char* argv[]){
 	time = get_wall_seconds();
 	for(int i = 0; i < n_steps; i++){
 //		double atime = get_wall_seconds();
-//		acceleration(data_arr, acc_arr, n_particles, n_threads, sub_acc_arrays);
+		acceleration(data_arr, acc_arr, n_particles, n_threads, sub_acc_arrays);
 //		printf("Acceleration calculated in %lf s\n", get_wall_seconds()-atime);
 //		atime = get_wall_seconds();
 		solver(data_arr, acc_arr, dt, n_particles);

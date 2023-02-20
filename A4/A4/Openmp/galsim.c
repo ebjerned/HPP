@@ -31,14 +31,14 @@ int main(int argc, char* argv[]){
 	int n_threads = atoi(argv[6]);
 	double* acc_arr = (double*)malloc(n_particles*2*sizeof(double));
 
-//	printf("Initialized in %lf s\n", get_wall_seconds()-time);
+	printf("Initialized in %lf s\n", get_wall_seconds()-time);
 	time = get_wall_seconds();
 
 	double* data_arr = read_input(input_path, n_particles);
 
 	if (data_arr == NULL) return -1;
 
-//	printf("Input read in %lf s\n", get_wall_seconds()-time);
+	printf("Input read in %lf s\n", get_wall_seconds()-time);
 	time = get_wall_seconds();
 	double** sub_acc_arrays = (double**)malloc(sizeof(double*)*n_threads);
 	for(int i = 0; i < n_threads; i++){
@@ -46,19 +46,24 @@ int main(int argc, char* argv[]){
 	//	memset(sub_acc, 0, 2*sizeof(double)*n_particles);
 		sub_acc_arrays[i] = sub_acc;
 	}
-//	printf("Threads setup in %lf s\n", get_wall_seconds()-time);
+	printf("Threads setup in %lf s\n", get_wall_seconds()-time);
 	time = get_wall_seconds();
 	for(int i = 0; i < n_steps; i++){
+		double atime = get_wall_seconds();
 		acceleration(data_arr, acc_arr, n_particles, n_threads, sub_acc_arrays);
+		printf("Acceleration calculated in %lf s\n", get_wall_seconds()-atime);
+		atime = get_wall_seconds();
 		solver(data_arr, acc_arr, dt, n_particles);
+		printf("Solution calculated in %lf s\n", get_wall_seconds()-atime);
+
 	}
 
 //	printf("\n");
-//	printf("Problem solved in %lf s, %lf per timestep with %i particles\n", get_wall_seconds()-time, (get_wall_seconds()-time)/n_steps, n_particles);
+	printf("Problem solved in %lf s, %lf per timestep with %i particles\n", get_wall_seconds()-time, (get_wall_seconds()-time)/n_steps, n_particles);
 	time = get_wall_seconds();
 
 	write_output(data_arr, acc_arr, n_particles, "result.gal");
-//	printf("Output written in %lf s\n", get_wall_seconds()-time);
+	printf("Output written in %lf s\n", get_wall_seconds()-time);
 
 	free(data_arr);
 	free(acc_arr);
@@ -66,7 +71,7 @@ int main(int argc, char* argv[]){
 		free(sub_acc_arrays[i]);
 	}
 	free(sub_acc_arrays);
-//	printf("Program finished in %lf s. Exiting...\n", get_wall_seconds()-start);
+	printf("Program finished in %lf s. Exiting...\n", get_wall_seconds()-start);
 	printf("%i\t%lf\n",n_threads, get_wall_seconds()-start);
 	return 0;
 }

@@ -77,7 +77,7 @@ int main(int argc, char* argv[]){
 }
 
 void acceleration(double* data_array, double* acc_array, int n, int n_threads, double** sub_acc_arrays){
-	
+//	double time = get_wall_seconds();
 	#pragma omp parallel num_threads(n_threads) 
 	{
 	double x_i, y_i, x_j, y_j,m_i, m_j, r_ij;
@@ -119,6 +119,8 @@ void acceleration(double* data_array, double* acc_array, int n, int n_threads, d
 		}
 	}
 	}
+//	printf("Parallell section completed in %lf s\n", get_wall_seconds()-time);
+//	time = get_wall_seconds();
 	for(int i = 0; i < n_threads; i++){
 		for(int j = 0; j<2*n; j++){
 			if (i==0){
@@ -128,6 +130,7 @@ void acceleration(double* data_array, double* acc_array, int n, int n_threads, d
 			}
 		}
 	}
+//	printf("Summation completed in  %lf s\n", get_wall_seconds()-time);
 }
 
 

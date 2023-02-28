@@ -7,7 +7,7 @@ threads = [e[0] for e in t]
 s = [t[0][1]/e[1] for e in t]
 
 
-plt.plot(threads,s, "ro")
+plt.plot(threads,s, "ro-", markerfacecolor='none')
 plt.plot(threads, threads)
 plt.xlabel("Number of threads")
 plt.ylabel("Performance increase")

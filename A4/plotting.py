@@ -5,15 +5,15 @@ t= np.loadtxt("A4/Openmp/speedup.txt")
 t2= np.loadtxt("A4/Pthreads/speedup.txt")
 
 threads = [e[0] for e in t]
-threadsspeedup = [1/e[0] for e in t]
-s = [e[1] for e in t]
-s2 = [e[1] for e in t2]
+s = [t[0][1]/e[1] for e in t]
+s2 = [t2[0][1]/e[1] for e in t2]
 
 
-plt.plot(threads,s, "ro-")
-plt.plot(threads,s, "go-")
-plt.plot(threads, threadsspeedup)
+plt.plot(threads,s, "ro-", markerfacecolor='none')
+plt.plot(threads,s2, "go-",markerfacecolor='none')
+plt.plot(threads, threads)
 plt.legend(["OpenMP", "Pthread", "Ideal"])
 plt.xlabel("Number of threads")
-plt.ylabel("Run time [s]")
-plt.savefig("Comparison of methods")
+plt.ylabel("Performance increase")
+plt.title("Comparison of methods")
+plt.savefig("Comparison of methods.png")

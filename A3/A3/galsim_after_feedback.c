@@ -4,8 +4,8 @@
 #include <sys/time.h>
 
 double** read_input(char* path, int n);
-void acceleration(double* xpos, double* ypos, double* m, double* xvel, double* yvel, double* acc_arrayx, double* acc_arrayy, int n);
-void solver(double* xpos, double* ypos, double* m, double* xvel, double* yvel, double* acc_arrayx, double* acc_arrayy, double dt, int n);
+void acceleration(double* restrict xpos, double* restrict ypos, double* restrict m, double* restrict xvel, double* restrict yvel, double* restrict acc_arrayx, double* restrict acc_arrayy, int n);
+void solver(double* restrict xpos, double* restrict ypos, double* restrict m, double* restrict xvel, double* restrict yvel, double* restrict acc_arrayx, double* restrict acc_arrayy, double dt, int n);
 void write_output(double** input_data, int n, char* path);
 double get_wall_seconds();
 
@@ -40,6 +40,7 @@ int main(int argc, char* argv[]){
 	double* m = data_arr[2];
 	double* xvel = data_arr[3];
 	double* yvel = data_arr[4];
+	double* brig = data_arr[5];
 
 	printf("Input read in %lf s\n", get_wall_seconds()-time);
 	time = get_wall_seconds();
@@ -61,6 +62,7 @@ int main(int argc, char* argv[]){
 	free(m);
 	free(xvel);
 	free(yvel);
+	free(brig);
 	free(data_arr);
 	free(acc_arrx);
 	free(acc_arry);
@@ -69,8 +71,8 @@ int main(int argc, char* argv[]){
 	return 0;
 }
 
-void acceleration(double* xpos, double* ypos, double* m, double* xvel, double* yvel, double* acc_arrayx, double* acc_arrayy, int n){
-	double x_i, y_i, x_j, y_j,m_i, m_j, r_ij, distx, disty, denomx, denomy;
+inline void acceleration(double* restrict xpos, double* restrict ypos, double* restrict m, double* restrict xvel, double* restrict yvel, double* restrict acc_arrayx, double* restrict acc_arrayy, int n){
+	double x_i, y_i, x_j, y_j,m_i, m_j, r_ij, distx, disty, denomx, denomy, temp_accx, temp_accy;
 	double G = 100/(double)n;
 	double eps = 0.001;
 	int i, j;
@@ -80,7 +82,8 @@ void acceleration(double* xpos, double* ypos, double* m, double* xvel, double* y
 		// Assign current values to mitigate carry over from previous timestep. Faster than memset
 		acc_arrayx[i] = 0;
 		acc_arrayy[i] = 0;
-
+		temp_accx = 0;
+		temp_accy = 0;
 		// Fetch j-loop invariant values
 		x_i = xpos[i];
 		y_i = ypos[i];
@@ -98,16 +101,18 @@ void acceleration(double* xpos, double* ypos, double* m, double* xvel, double* y
 			denomy = disty*denom;
 
 			// Update x and y components of the acceleration
-			acc_arrayx[i] += -m_j*denomx;
+			temp_accx += -m_j*denomx;
 			acc_arrayx[j] += m_i*denomx;
-			acc_arrayy[i] += -m_j*denomy;
+			temp_accy += -m_j*denomy;
 			acc_arrayy[j] += m_i*denomy;
 		}
+		acc_arrayx[i] = temp_accx;
+		acc_arrayy[i] = temp_accy;
 	}
 }
 
 
-void solver(double* xpos, double* ypos, double* m, double* xvel, double* yvel, double* acc_arrayx, double* acc_arrayy, double dt, int n){
+inline void solver(double* restrict xpos, double* restrict ypos, double* restrict m, double* restrict xvel, double* restrict yvel, double* restrict acc_arrayx, double* restrict acc_arrayy, double dt, int n){
 	int i;
 	// Symplectic Euler for the n particles
 	for(i = 0; i < n; i++){
@@ -145,12 +150,12 @@ double** read_input(char* path, int n){
 	}
 	fclose(file);*/
 	for(int i = 0; i < n; i++){
-		fread(xpos, sizeof(double), 1, file);
-		fread(ypos, sizeof(double), 1, file);
-		fread(m, sizeof(double), 1, file);
-		fread(xvel, sizeof(double), 1, file);
-		fread(yvel, sizeof(double), 1, file);
-		fread(brig, sizeof(double), 1, file);
+		fread(&xpos[i], sizeof(double), 1, file);
+		fread(&ypos[i], sizeof(double), 1, file);
+		fread(&m[i], sizeof(double), 1, file);
+		fread(&xvel[i], sizeof(double), 1, file);
+		fread(&yvel[i], sizeof(double), 1, file);
+		fread(&brig[i], sizeof(double), 1, file);
 	}
 	fclose(file);
 	input_data[0] = xpos;

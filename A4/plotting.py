@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 t= np.loadtxt("A4/Openmp/speedup.txt")
-t2= np.loadtxt("A4/Pthreads/speedup.txt")
+t2= np.loadtxt("../A4_additional/Pthreads/speedup.txt")
 
 threads = [e[0] for e in t]
 s = [t[0][1]/e[1] for e in t]

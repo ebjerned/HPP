@@ -5,20 +5,25 @@
 #include <pthread.h>
 #include <string.h>
 
-double* read_input(char* path, int n);
-void* acceleration(void* arg);
-void acceleration_joiner(double* data_array, double* acc_array, int n, int n_threads);
-void solver(double* data_array, double* acc_array, double dt, int n);
-void write_output(double* data_array, double* acc_array, int n, char* path);
-double get_wall_seconds();
-
 typedef struct data_struct{
 	double* data_array;
 	double* acc_array;
 	int s;
 	int n;
 	int offset;
+	pthread_mutex_t m;
 } data_t;
+
+
+double* read_input(char* path, int n);
+void* acceleration(void* arg);
+void acceleration_joiner(double* data_array, double* acc_array, int n, int n_threads, data_t* argument_data);
+void solver(double* data_array, double* acc_array, double dt, int n);
+void write_output(double* data_array, double* acc_array, int n, char* path);
+double get_wall_seconds();
+
+pthread_cond_t c;
+pthread_mutex_t* mutex_variables;
 
 
 int main(int argc, char* argv[]){
@@ -38,75 +43,94 @@ int main(int argc, char* argv[]){
 //	char graphics = *argv[5];
 	int n_threads = atoi(argv[6]);
 	double* acc_arr = (double*)malloc(n_particles*2*sizeof(double));
+	
+	
+//	mutex_variables = (pthread_mutex_t*)malloc(n_threads*sizeof(pthread_mutex_t));
+//	for (int i = 0; i< n_threads; i++){
+//		pthread_mutex_init(&mutex_variables[i], NULL);
+//	}
+//	pthread_cond_init(&c, NULL);
 
-//	printf("Initialized in %lf s\n", get_wall_seconds()-time);
+	printf("Initialized in %lf s\n", get_wall_seconds()-time);
 	time = get_wall_seconds();
 
 	double* data_arr = read_input(input_path, n_particles);
 
 	if (data_arr == NULL) return -1;
 
-//	printf("Input read in %lf s\n", get_wall_seconds()-time);
+	printf("Input read in %lf s\n", get_wall_seconds()-time);
 	time = get_wall_seconds();
-
-	for(int i = 0; i < n_steps; i++){
-		acceleration_joiner(data_arr, acc_arr, n_particles, n_threads);
-//		printf("Acceleration computed in %lf s\n", get_wall_seconds()-time);
-//		time = get_wall_seconds();
-		solver(data_arr, acc_arr, dt, n_particles);
-//		printf("Solved in %lf s\n", get_wall_seconds()-time);
+	data_t* argument_data = (data_t*)malloc(sizeof(data_t)*n_threads);
+	double* sub_acc_array[n_threads];
+	pthread_t threads[n_threads];
+	for(int i = 0; i < n_threads; i++){
+		sub_acc_array[i]= (double*)malloc(sizeof(double)*n_particles*2);
+		argument_data[i].data_array = data_arr;
+                argument_data[i].acc_array = sub_acc_array[i];
+                argument_data[i].s = n_threads;
+                argument_data[i].n = n_particles;
+                argument_data[i].offset = i;
 	}
 
-//	printf("\n");
-//	printf("Problem solved in %lf s, %lf per timestep with %i particles\n", get_wall_seconds()-time, (get_wall_seconds()-time)/n_steps, n_particles);
+
+	printf("Threads setup in %lf s\n", get_wall_seconds()-time);
+	time = get_wall_seconds();
+	for(int i = 0; i < n_steps; i++){
+		acceleration_joiner(data_arr, acc_arr, n_particles, n_threads, argument_data);
+		solver(data_arr, acc_arr, dt, n_particles);
+	}
+
+	printf("\n");
+	printf("Problem solved in %lf s, %lf per timestep with %i particles\n", get_wall_seconds()-time, (get_wall_seconds()-time)/n_steps, n_particles);
 	time = get_wall_seconds();
 
 	write_output(data_arr, acc_arr, n_particles, "result.gal");
-//	printf("Output written in %lf s\n", get_wall_seconds()-time);
-
+	printf("Output written in %lf s\n", get_wall_seconds()-time);
+		for (int i = 0; i< n_threads; i++){
+//		pthread_mutex_destroy(&mutex_variables[i]);
+		free(argument_data[i].acc_array);
+	}
+	free(argument_data);
+//	pthread_cond_destroy(&c);
+//	free(mutex_variables);
 	free(data_arr);
 	free(acc_arr);
-//	printf("Program finished in %lf s. Exiting...\n", get_wall_seconds()-start);
-	printf("%i\t%lf\n", n_threads, get_wall_seconds()-start);
+	printf("Program finished in %lf s. Exiting...\n", get_wall_seconds()-start);
+
 	return 0;
 }
 
-void acceleration_joiner(double* data_array, double* acc_array, int n, int n_threads){
+void acceleration_joiner(double* data_array, double* acc_array, int n, int n_threads, data_t* argument_data){
 	int i,j;
 	pthread_t threads[n_threads];
-	double* sub_acc_array[n_threads];
-	data_t* argument_data = (data_t*)malloc(sizeof(data_t)*n_threads);
-
+//	double* sub_acc_array[n_threads];
+//	data_t* argument_data = (data_t*)malloc(sizeof(data_t)*n_threads);
 	for(i = 0; i < n_threads; i++){
-		sub_acc_array[i] = (double*) malloc(sizeof(double)*n*2);
-		memset(sub_acc_array[i], 0, 2*n*8);
-
-		argument_data[i].data_array = data_array;
-		argument_data[i].acc_array = sub_acc_array[i];
-
-		argument_data[i].s = n_threads;
-		argument_data[i].n = n;
-		argument_data[i].offset = i;
+//		sub_acc_array[i] = (double*) malloc(sizeof(double)*n*2);
+//		argument_data[i].data_array = data_array;
+//		argument_data[i].acc_array = sub_acc_array[i];
+//		argument_data[i].s = n_threads;
+//		argument_data[i].n = n;
+//		argument_data[i].offset = i;
 		pthread_create(&threads[i], NULL, acceleration, (void*) &argument_data[i]);
 	}
+//	pthread_cond_broadcast(&c);
 
 	for(i=0; i < n_threads; i++){
 		pthread_join(threads[i], NULL);
 //		printf("Thread %i acceleretion:\n", i);
 
 		for(j = 0; j < n*2; j++){
-//			printf("%lf\n", argument_data[i].acc_array[j]);
-			if (i == 0){
+			if (i==0){
 				acc_array[j] = argument_data[i].acc_array[j];
 			}else{
 				acc_array[j] += argument_data[i].acc_array[j];
 
 			}
-
 		}
-		free(argument_data[i].acc_array);
+//		free(argument_data[i].acc_array);
 	}
-	free(argument_data);
+//	free(argument_data);
 
 
 }
@@ -117,18 +141,24 @@ void* acceleration(void* arg){
 	double* acc_array = (double*)data_struct.acc_array;
 	int s = (int)data_struct.s;
 	int n = (int)data_struct.n;
-	int offset = (int)data_struct.offset;
+//	pthread_cond_t c = (pthread_cond_t) data_struct.c;
+	pthread_mutex_t m = (pthread_mutex_t) data_struct.m;
+	memset(acc_array, 0, 2*8*n);
+
+	int offset = (int) data_struct.offset;
 	double x_i, y_i, x_j, y_j,m_i, m_j, r_ij;
 	double G = 100/(double)n;
 	double eps = 0.001;
 	int i, j;
 	double denom;
 
+//	pthread_cond_wait(&c, &m);
+
 	for(i = 6*offset; i < 6*n; i +=6*s){
 		// Assign current values to mitigate carry over from previous timestep. Faster than memset
 //		printf("Acceleration at particle %i by thread %i \n", i/6, offset);
-//		acc_array[2*(i/6)] = 0;
-//		acc_array[2*(i/6)+1] = 0;
+		acc_array[2*(i/6)] = 0;
+		acc_array[2*(i/6)+1] = 0;
 
 		// Fetch j-loop invariant values
 		x_i = data_array[i];
@@ -152,6 +182,7 @@ void* acceleration(void* arg){
 //			printf("%lf\t%lf\n", acc_array[2*(i/6)],acc_array[2*(i/6)+1]);
 		}
 	}
+	return NULL;
 }
 
 

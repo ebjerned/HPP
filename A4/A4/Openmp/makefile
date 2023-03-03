@@ -1,7 +1,7 @@
 CC = gcc
 LD = gcc
-CFLAGS = -Wall -lm -O2 -ffast-math -march=native -fopenmp -g
-LDFLAGS = -Wall -lm -O2 -ffast-math -march=native -fopenmp -g
+CFLAGS = -Wall -lm -O2 -ffast-math -march=native -fopenmp
+LDFLAGS = -Wall -lm -O2 -ffast-math -march=native -fopenmp
 RM = /bin/rm -f
 OBJS = galsim.o
 EXECUTABLE = galsim

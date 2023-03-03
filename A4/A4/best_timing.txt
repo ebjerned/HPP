@@ -1,6 +1,4 @@
-1.115460 
-32
+1.115460 32
 1.092492 
-32
 AMD Opteron (Bulldozer) 6282SE, 2.6 GHz, 16-core, dual socket
-
+32

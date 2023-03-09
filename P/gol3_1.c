@@ -3,14 +3,16 @@
 #include <string.h>
 #include <sys/time.h>
 #include <math.h>
+#include <assert.h>
 
 char*** generateVolume(int x, int y, int z);
 char*** generateZeroVolume(int x, int y, int z);
+char* generateContigousVolume(int x, int y, int z);
 void freeVolume(char*** volume, int x, int y, int z);
 void printVolume(char*** volume, int x, int y, int z);
 int* findAlive(char*** volume, int x, int y, int z);
-void addAlive(int* alive, int i, int j, int z);
-void removeAlive(int* alive, int i, int j, int k);
+int* findAlive2(char* volume, int x, int y, int z);
+
 int* processNeighbours(int* dest, char*** neigh_count, int* all, int x, int y, int z);
 double get_wall_seconds();
 
@@ -22,13 +24,13 @@ int main(int argc, char* argv[]){
 	char*** states = generateVolume(size, size, size);
 	char*** neigh_count = generateZeroVolume(size,size,size);
 	char*** new_states = generateZeroVolume(size, size, size);
-
+	char* contVol = generateContigousVolume(size, size, size);
 	int* alive;
 	int* updated = (int*)malloc(sizeof(int)*size*size*size*3+4);;
 	char R[4] = {5,7,6,6};
 //	printf("Initial state: \n");
 //	printVolume(states, size, size, size);
-//	alive = findAlive(states,size,size,size);
+	int* alive2 = findAlive2(contVol,size,size,size);
 	alive = findAlive(states,size,size,size);
 	int* all = (int*)malloc(sizeof(int)*alive[0]*27+4);
 	processNeighbours(all, neigh_count, alive, size,size,size);
@@ -133,6 +135,16 @@ char*** generateVolume(int x, int y, int z){
 	return z_slices;
 
 }
+char* generateContigousVolume(int x, int y, int z){
+	double time = get_wall_seconds();
+        char* vol = (char*)malloc(z*y*x*sizeof(char));
+        for(int i = 0; i < x*y*x; i++){
+		vol[i] = (char)round(0.55*(double)rand()/RAND_MAX);
+        }
+        printf("Generated contigous volume in %lf s\n", get_wall_seconds()-time);
+        return vol;
+
+}
 char*** generateZeroVolume(int x, int y, int z){
 	double time = get_wall_seconds();
         char*** z_slices = (char***)malloc(z*sizeof(char**));
@@ -184,6 +196,7 @@ int* findAlive(char*** volume, int x, int y, int z){
                 for(int j = 0; j < y; j++){
                         for(int k = 0; k < x; k++){
 				//printf("Checking life at %i %i %i\n", i,j,k);
+//				assert(volume[i][j][k] == (volume + z*i + y*j + x*k));
 				if(volume[i][j][k]){
 					alive[counter] = i;
 					alive[counter + 1] = j;
@@ -201,6 +214,21 @@ int* findAlive(char*** volume, int x, int y, int z){
 	return alive;
 }
 
+int* findAlive2(char* volume, int x, int y, int z){
+	double time = get_wall_seconds();
+	int* alive =(int*) malloc(sizeof(int)*x*y*z*+4);
+	int counter  = 1;
+	for(int i = 0; i < x*y*z; i++){
+                if(volume[i]){
+			alive[counter] = i;
+			counter++;
+		}
+        }
+	alive[0] = counter;
+//	printf("Number of alive cells of total %i/%i\n", (counter/3), x*y*z);
+	printf("Found contigous alive in %lf s\n", get_wall_seconds()-time);
+	return alive;
+}
 
 // TODO: When loopin through neighbours, count how many times a neighbour is mentioned. This can replace the neighbour checking in the main loop
 int* processNeighbours(int* dest, char*** neigh_count, int* alive,  int x, int y, int z){
@@ -209,7 +237,6 @@ int* processNeighbours(int* dest, char*** neigh_count, int* alive,  int x, int y
 
 //	printf("Allocated %li bytes for neighbors\n", sizeof(int)*alive[0]*27+4);
 	int counter = 1;
-	int c2 = 6;
 	double timecon = 0;
 
 //	char a = 0;
@@ -224,77 +251,6 @@ int* processNeighbours(int* dest, char*** neigh_count, int* alive,  int x, int y
 	
 
 		double temp = get_wall_seconds();
-/*		int z1 = z_coord - 1;
-		int z3 = z_coord + 1;
-		int y1 = y_coord - 1;
-		int y3 = y_coord + 1;
-		int x1 = x_coord - 1;
-		int x3 = x_coord + 1;
-
-
-		if(z1<0) z1 = 34 - z1;
-		if(z1 > 34) z1 = z1 - 34;
-
-		if(z3<0) z1 = 34 - z3;
-		if(z3 > 34) z3 = z3 - 34;
-
-		if(y1 < 0) y1 = 34 - y1;
-		if(y1 > 34) y1 = y1 - 34;
-
-		if(y3 < 0) y3 = 34 - y3;
-		if(y3 > 34) y3 = y3 - 34;
-
-		if(x1 < 0) x1 = 34 - x1;
-		if(x1 > 34) x1 = x1 - 34;
-
-		if(x3 < 0) x3 = 34 - x3;
-		if(x3 > 34) x3 = x3 - 34;
-		
-		neigh_count[z1][y1][x1] += 1;
-		neigh_count[z1][y1][x_coord] += 1;
-		neigh_count[z1][y1][x3] += 1;
-
-		neigh_count[z1][y_coord][x1] += 1;
-		neigh_count[z1][y_coord][x_coord] += 1;
-		neigh_count[z1][y_coord][x3] += 1;
-
-		neigh_count[z1][y3][x1] += 1;
-		neigh_count[z1][y3][x_coord] += 1;
-		neigh_count[z1][y3][x3] += 1;
-
-		neigh_count[z_coord][y1][x1] += 1;
-		neigh_count[z_coord][y1][x_coord] += 1;
-		neigh_count[z_coord][y1][x3] += 1;
-
-		neigh_count[z_coord][y_coord][x1] += 1;
-		neigh_count[z_coord][y_coord][x_coord] += 1;
-		neigh_count[z_coord][y_coord][x3] += 1;
-
-		neigh_count[z_coord][y3][x1] += 1;
-		neigh_count[z_coord][y3][x_coord] += 1;
-		neigh_count[z_coord][y3][x3] += 1;
-
-		neigh_count[z3][y1][x1] += 1;
-		neigh_count[z3][y1][x_coord] += 1;
-		neigh_count[z3][y1][x3] += 1;
-
-		neigh_count[z3][y_coord][x1] += 1;
-		neigh_count[z3][y_coord][x_coord] += 1;
-		neigh_count[z3][y_coord][x3] += 1;
-
-		neigh_count[z3][y3][x1] += 1;
-		neigh_count[z3][y3][x_coord] += 1;
-		neigh_count[z3][y3][x3] += 1;
-
-
-
-
-		*/
-
-
-
-//		printf("z: %i y: %i x: %i\n", z_coord, y_coord, x_coord);
-
 
 		char l_u = 2;
 		char l_l = -1;
@@ -323,10 +279,7 @@ int* processNeighbours(int* dest, char*** neigh_count, int* alive,  int x, int y
 		for(char l = l_l; l < l_u; l++){
                         for(char m = m_l; m < m_u; m++){
                                 for(char n = n_l; n < n_u; n++){
-/*					 if((unsigned int)(z_coord+l) >= z || (unsigned int)(y_coord+m) >= y || (unsigned int) (x_coord+n) >= x){
-//						printf("Blocked z: %i/%i y: %i/%i x: %i/%i\n", z_coord+l, z-1, y_coord+m,y-1, x_coord+n, x-1);
-                                                continue;
-					}*/
+
 					all[counter] = z_coord+l;
 					all[counter+1] = y_coord+m;
 					all[counter+2] = x_coord+n;
@@ -352,6 +305,11 @@ int* processNeighbours(int* dest, char*** neigh_count, int* alive,  int x, int y
 }
 
 
+
+void processNeighbour2(char* vol, int i, int j, int k){
+
+
+}
 
 double get_wall_seconds() {
   struct timeval tv;

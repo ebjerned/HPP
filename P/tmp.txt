@@ -1,0 +1,6704 @@
+Generated volume in 0.000067 s
+Generated volume in 0.000054 s
+Number of alive cells of total 85/1000
+Found alive in 0.000011 s
+Allocated 27652 bytes for neighbors
+Counter: 5410
+003
+Found new entry
+004
+Found new entry
+005
+Found new entry
+013
+Found new entry
+014
+Found new entry
+015
+Found new entry
+103
+Found new entry
+104
+Found new entry
+105
+Found new entry
+113
+Found new entry
+114
+Found new entry
+115
+Found new entry
+003
+Found new entry
+004
+Found new entry
+005
+Found new entry
+013
+Found new entry
+014
+Found new entry
+015
+Found new entry
+023
+Found new entry
+024
+Found new entry
+025
+Found new entry
+103
+Found new entry
+104
+Found new entry
+105
+Found new entry
+113
+Found new entry
+114
+Found new entry
+115
+Found new entry
+123
+Found new entry
+124
+Found new entry
+125
+Found new entry
+004
+Found new entry
+005
+Found new entry
+006
+Found new entry
+014
+Found new entry
+015
+Found new entry
+016
+Found new entry
+024
+Found new entry
+025
+Found new entry
+026
+Found new entry
+104
+Found new entry
+105
+Found new entry
+106
+Found new entry
+114
+Found new entry
+115
+Found new entry
+116
+Found new entry
+124
+Found new entry
+125
+Found new entry
+126
+Found new entry
+017
+Found new entry
+018
+Found new entry
+019
+Found new entry
+027
+Found new entry
+028
+Found new entry
+029
+Found new entry
+037
+Found new entry
+038
+Found new entry
+039
+Found new entry
+117
+Found new entry
+118
+Found new entry
+119
+Found new entry
+127
+Found new entry
+128
+Found new entry
+129
+Found new entry
+137
+Found new entry
+138
+Found new entry
+139
+Found new entry
+026
+Found new entry
+027
+Found new entry
+028
+Found new entry
+036
+Found new entry
+037
+Found new entry
+038
+Found new entry
+046
+Found new entry
+047
+Found new entry
+048
+Found new entry
+126
+Found new entry
+127
+Found new entry
+128
+Found new entry
+136
+Found new entry
+137
+Found new entry
+138
+Found new entry
+146
+Found new entry
+147
+Found new entry
+148
+Found new entry
+036
+Found new entry
+037
+Found new entry
+038
+Found new entry
+046
+Found new entry
+047
+Found new entry
+048
+Found new entry
+056
+Found new entry
+057
+Found new entry
+058
+Found new entry
+136
+Found new entry
+137
+Found new entry
+138
+Found new entry
+146
+Found new entry
+147
+Found new entry
+148
+Found new entry
+156
+Found new entry
+157
+Found new entry
+158
+Found new entry
+038
+Found new entry
+039
+Found new entry
+048
+Found new entry
+049
+Found new entry
+058
+Found new entry
+059
+Found new entry
+138
+Found new entry
+139
+Found new entry
+148
+Found new entry
+149
+Found new entry
+158
+Found new entry
+159
+Found new entry
+050
+Found new entry
+051
+Found duplicate to 051 with 051 with count 0
+Found duplicate to 051 with 051 with count 1
+Found duplicate to 051 with 051 with count 0
+Found duplicate to 051 with 051 with count 1
+Found duplicate to 051 with 051 with count 0
+Found duplicate to 051 with 051 with count 1
+052
+Found new entry
+060
+Found new entry
+061
+Found duplicate to 061 with 061 with count 0
+Found duplicate to 061 with 061 with count 1
+062
+Found new entry
+070
+Found new entry
+071
+Found new entry
+072
+Found new entry
+150
+Found new entry
+151
+Found duplicate to 151 with 151 with count 1
+Found duplicate to 151 with 151 with count 0
+Found duplicate to 151 with 151 with count 0
+Found duplicate to 151 with 151 with count 1
+Found duplicate to 151 with 151 with count 0
+Found duplicate to 151 with 151 with count 1
+152
+Found new entry
+160
+Found new entry
+161
+Found duplicate to 161 with 161 with count 0
+Found duplicate to 161 with 161 with count 1
+162
+Found new entry
+170
+Found new entry
+171
+Found duplicate to 171 with 171 with count 0
+Found duplicate to 171 with 171 with count 1
+172
+Found new entry
+062
+Found new entry
+063
+Found new entry
+064
+Found new entry
+072
+Found new entry
+073
+Found new entry
+074
+Found new entry
+082
+Found new entry
+083
+Found new entry
+084
+Found new entry
+162
+Found new entry
+163
+Found new entry
+164
+Found new entry
+172
+Found new entry
+173
+Found new entry
+174
+Found new entry
+182
+Found new entry
+183
+Found new entry
+184
+Found new entry
+063
+Found new entry
+064
+Found new entry
+065
+Found new entry
+073
+Found new entry
+074
+Found new entry
+075
+Found new entry
+083
+Found new entry
+084
+Found new entry
+085
+Found new entry
+163
+Found new entry
+164
+Found new entry
+165
+Found new entry
+173
+Found new entry
+174
+Found new entry
+175
+Found new entry
+183
+Found new entry
+184
+Found new entry
+185
+Found new entry
+080
+Found new entry
+081
+Found new entry
+090
+Found new entry
+091
+Found new entry
+180
+Found new entry
+181
+Found duplicate to 181 with 181 with count 0
+Found duplicate to 181 with 181 with count 1
+190
+Found new entry
+191
+Found duplicate to 191 with 191 with count 0
+Found duplicate to 191 with 191 with count 1
+084
+Found new entry
+085
+Found new entry
+086
+Found new entry
+094
+Found new entry
+095
+Found new entry
+096
+Found new entry
+184
+Found new entry
+185
+Found new entry
+186
+Found new entry
+194
+Found new entry
+195
+Found new entry
+196
+Found new entry
+088
+Found new entry
+089
+Found new entry
+098
+Found new entry
+099
+Found new entry
+188
+Found new entry
+189
+Found new entry
+198
+Found new entry
+199
+Found new entry
+001
+Found new entry
+002
+Found new entry
+003
+Found new entry
+011
+Found duplicate to 011 with 011 with count 0
+012
+Found new entry
+013
+Found new entry
+101
+Found new entry
+102
+Found new entry
+103
+Found new entry
+111
+Found new entry
+112
+Found new entry
+113
+Found new entry
+201
+Found new entry
+202
+Found new entry
+203
+Found new entry
+211
+Found new entry
+212
+Found new entry
+213
+Found new entry
+002
+Found new entry
+003
+Found new entry
+004
+Found new entry
+012
+Found new entry
+013
+Found new entry
+014
+Found new entry
+102
+Found new entry
+103
+Found new entry
+104
+Found new entry
+112
+Found new entry
+113
+Found new entry
+114
+Found new entry
+202
+Found new entry
+203
+Found new entry
+204
+Found new entry
+212
+Found new entry
+213
+Found new entry
+214
+Found new entry
+013
+Found new entry
+014
+Found new entry
+015
+Found new entry
+023
+Found new entry
+024
+Found new entry
+025
+Found new entry
+033
+Found new entry
+034
+Found new entry
+035
+Found new entry
+113
+Found new entry
+114
+Found new entry
+115
+Found new entry
+123
+Found new entry
+124
+Found new entry
+125
+Found new entry
+133
+Found new entry
+134
+Found new entry
+135
+Found new entry
+213
+Found new entry
+214
+Found new entry
+215
+Found new entry
+223
+Found new entry
+224
+Found new entry
+225
+Found new entry
+233
+Found new entry
+234
+Found new entry
+235
+Found new entry
+014
+Found new entry
+015
+Found new entry
+016
+Found new entry
+024
+Found new entry
+025
+Found new entry
+026
+Found new entry
+034
+Found new entry
+035
+Found new entry
+036
+Found new entry
+114
+Found new entry
+115
+Found new entry
+116
+Found new entry
+124
+Found new entry
+125
+Found new entry
+126
+Found new entry
+134
+Found new entry
+135
+Found new entry
+136
+Found new entry
+214
+Found new entry
+215
+Found new entry
+216
+Found new entry
+224
+Found new entry
+225
+Found new entry
+226
+Found new entry
+234
+Found new entry
+235
+Found new entry
+236
+Found new entry
+030
+Found new entry
+031
+Found duplicate to 031 with 031 with count 0
+Found duplicate to 031 with 031 with count 1
+Found duplicate to 031 with 031 with count 0
+Found duplicate to 031 with 031 with count 1
+Found duplicate to 031 with 031 with count 0
+Found duplicate to 031 with 031 with count 1
+Found duplicate to 031 with 031 with count 2
+Found duplicate to 031 with 031 with count 0
+Found duplicate to 031 with 031 with count 1
+Found duplicate to 031 with 031 with count 2
+032
+Found new entry
+040
+Found new entry
+041
+Found duplicate to 041 with 041 with count 0
+Found duplicate to 041 with 041 with count 1
+Found duplicate to 041 with 041 with count 0
+Found duplicate to 041 with 041 with count 1
+Found duplicate to 041 with 041 with count 0
+Found duplicate to 041 with 041 with count 1
+Found duplicate to 041 with 041 with count 0
+Found duplicate to 041 with 041 with count 1
+Found duplicate to 041 with 041 with count 2
+042
+Found new entry
+050
+Found new entry
+051
+Found duplicate to 051 with 051 with count 1
+Found duplicate to 051 with 051 with count 2
+Found duplicate to 051 with 051 with count 1
+Found duplicate to 051 with 051 with count 2
+Found duplicate to 051 with 051 with count 1
+Found duplicate to 051 with 051 with count 2
+052
+Found new entry
+130
+Found new entry
+131
+Found duplicate to 131 with 131 with count 0
+Found duplicate to 131 with 131 with count 1
+Found duplicate to 131 with 131 with count 0
+Found duplicate to 131 with 131 with count 1
+Found duplicate to 131 with 131 with count 1
+Found duplicate to 131 with 131 with count 2
+Found duplicate to 131 with 131 with count 0
+Found duplicate to 131 with 131 with count 0
+Found duplicate to 131 with 131 with count 1
+Found duplicate to 131 with 131 with count 2
+Found duplicate to 131 with 131 with count 0
+Found duplicate to 131 with 131 with count 1
+Found duplicate to 131 with 131 with count 2
+132
+Found new entry
+140
+Found new entry
+141
+Found duplicate to 141 with 141 with count 0
+Found duplicate to 141 with 141 with count 1
+Found duplicate to 141 with 141 with count 0
+Found duplicate to 141 with 141 with count 1
+Found duplicate to 141 with 141 with count 0
+Found duplicate to 141 with 141 with count 1
+Found duplicate to 141 with 141 with count 1
+Found duplicate to 141 with 141 with count 2
+Found duplicate to 141 with 141 with count 0
+Found duplicate to 141 with 141 with count 0
+Found duplicate to 141 with 141 with count 1
+Found duplicate to 141 with 141 with count 2
+Found duplicate to 141 with 141 with count 0
+Found duplicate to 141 with 141 with count 1
+Found duplicate to 141 with 141 with count 2
+142
+Found new entry
+150
+Found new entry
+151
+Found duplicate to 151 with 151 with count 2
+Found duplicate to 151 with 151 with count 1
+Found duplicate to 151 with 151 with count 1
+Found duplicate to 151 with 151 with count 2
+Found duplicate to 151 with 151 with count 1
+Found duplicate to 151 with 151 with count 2
+Found duplicate to 151 with 151 with count 0
+Found duplicate to 151 with 151 with count 1
+Found duplicate to 151 with 151 with count 2
+Found duplicate to 151 with 151 with count 0
+Found duplicate to 151 with 151 with count 1
+Found duplicate to 151 with 151 with count 2
+152
+Found new entry
+230
+Found new entry
+231
+Found duplicate to 231 with 231 with count 0
+Found duplicate to 231 with 231 with count 1
+Found duplicate to 231 with 231 with count 0
+Found duplicate to 231 with 231 with count 1
+Found duplicate to 231 with 231 with count 2
+232
+Found new entry
+240
+Found new entry
+241
+Found duplicate to 241 with 241 with count 0
+Found duplicate to 241 with 241 with count 1
+Found duplicate to 241 with 241 with count 0
+Found duplicate to 241 with 241 with count 1
+Found duplicate to 241 with 241 with count 0
+Found duplicate to 241 with 241 with count 1
+Found duplicate to 241 with 241 with count 2
+Found duplicate to 241 with 241 with count 0
+Found duplicate to 241 with 241 with count 1
+Found duplicate to 241 with 241 with count 2
+242
+Found new entry
+250
+Found new entry
+251
+Found duplicate to 251 with 251 with count 1
+Found duplicate to 251 with 251 with count 0
+Found duplicate to 251 with 251 with count 0
+Found duplicate to 251 with 251 with count 1
+Found duplicate to 251 with 251 with count 0
+Found duplicate to 251 with 251 with count 1
+Found duplicate to 251 with 251 with count 2
+Found duplicate to 251 with 251 with count 0
+Found duplicate to 251 with 251 with count 1
+Found duplicate to 251 with 251 with count 2
+252
+Found new entry
+038
+Found new entry
+039
+Found new entry
+048
+Found new entry
+049
+Found new entry
+058
+Found new entry
+059
+Found new entry
+138
+Found new entry
+139
+Found new entry
+148
+Found new entry
+149
+Found new entry
+158
+Found new entry
+159
+Found new entry
+238
+Found new entry
+239
+Found new entry
+248
+Found new entry
+249
+Found new entry
+258
+Found new entry
+259
+Found new entry
+053
+Found new entry
+054
+Found new entry
+055
+Found new entry
+063
+Found new entry
+064
+Found new entry
+065
+Found new entry
+073
+Found new entry
+074
+Found new entry
+075
+Found new entry
+153
+Found new entry
+154
+Found new entry
+155
+Found new entry
+163
+Found new entry
+164
+Found new entry
+165
+Found new entry
+173
+Found new entry
+174
+Found new entry
+175
+Found new entry
+253
+Found new entry
+254
+Found new entry
+255
+Found new entry
+263
+Found new entry
+264
+Found new entry
+265
+Found new entry
+273
+Found new entry
+274
+Found new entry
+275
+Found new entry
+057
+Found new entry
+058
+Found new entry
+059
+Found new entry
+067
+Found new entry
+068
+Found new entry
+069
+Found new entry
+077
+Found new entry
+078
+Found new entry
+079
+Found new entry
+157
+Found new entry
+158
+Found new entry
+159
+Found new entry
+167
+Found new entry
+168
+Found new entry
+169
+Found new entry
+177
+Found new entry
+178
+Found new entry
+179
+Found new entry
+257
+Found new entry
+258
+Found new entry
+259
+Found new entry
+267
+Found new entry
+268
+Found new entry
+269
+Found new entry
+277
+Found new entry
+278
+Found new entry
+279
+Found new entry
+062
+Found new entry
+063
+Found new entry
+064
+Found new entry
+072
+Found new entry
+073
+Found new entry
+074
+Found new entry
+082
+Found new entry
+083
+Found new entry
+084
+Found new entry
+162
+Found new entry
+163
+Found new entry
+164
+Found new entry
+172
+Found new entry
+173
+Found new entry
+174
+Found new entry
+182
+Found new entry
+183
+Found new entry
+184
+Found new entry
+262
+Found new entry
+263
+Found new entry
+264
+Found new entry
+272
+Found new entry
+273
+Found new entry
+274
+Found new entry
+282
+Found new entry
+283
+Found new entry
+284
+Found new entry
+067
+Found new entry
+068
+Found new entry
+069
+Found new entry
+077
+Found new entry
+078
+Found new entry
+079
+Found new entry
+087
+Found new entry
+088
+Found new entry
+089
+Found new entry
+167
+Found new entry
+168
+Found new entry
+169
+Found new entry
+177
+Found new entry
+178
+Found new entry
+179
+Found new entry
+187
+Found new entry
+188
+Found new entry
+189
+Found new entry
+267
+Found new entry
+268
+Found new entry
+269
+Found new entry
+277
+Found new entry
+278
+Found new entry
+279
+Found new entry
+287
+Found new entry
+288
+Found new entry
+289
+Found new entry
+078
+Found new entry
+079
+Found new entry
+088
+Found new entry
+089
+Found new entry
+098
+Found new entry
+099
+Found new entry
+178
+Found new entry
+179
+Found new entry
+188
+Found new entry
+189
+Found new entry
+198
+Found new entry
+199
+Found new entry
+278
+Found new entry
+279
+Found new entry
+288
+Found new entry
+289
+Found new entry
+298
+Found new entry
+299
+Found new entry
+086
+Found new entry
+087
+Found new entry
+088
+Found new entry
+096
+Found new entry
+097
+Found new entry
+098
+Found new entry
+186
+Found new entry
+187
+Found new entry
+188
+Found new entry
+196
+Found new entry
+197
+Found new entry
+198
+Found new entry
+286
+Found new entry
+287
+Found new entry
+288
+Found new entry
+296
+Found new entry
+297
+Found new entry
+298
+Found new entry
+100
+Found new entry
+101
+Found new entry
+110
+Found new entry
+111
+Found duplicate to 111 with 111 with count 1
+Found duplicate to 111 with 111 with count 2
+200
+Found new entry
+201
+Found new entry
+210
+Found new entry
+211
+Found new entry
+300
+Found new entry
+301
+Found duplicate to 301 with 301 with count 0
+Found duplicate to 301 with 301 with count 1
+Found duplicate to 301 with 301 with count 2
+310
+Found new entry
+311
+Found new entry
+102
+Found new entry
+103
+Found new entry
+104
+Found new entry
+112
+Found new entry
+113
+Found new entry
+114
+Found new entry
+202
+Found new entry
+203
+Found new entry
+204
+Found new entry
+212
+Found new entry
+213
+Found new entry
+214
+Found new entry
+302
+Found new entry
+303
+Found new entry
+304
+Found new entry
+312
+Found new entry
+313
+Found new entry
+314
+Found new entry
+112
+Found new entry
+113
+Found new entry
+114
+Found new entry
+122
+Found new entry
+123
+Found new entry
+124
+Found new entry
+132
+Found new entry
+133
+Found new entry
+134
+Found new entry
+212
+Found new entry
+213
+Found new entry
+214
+Found new entry
+222
+Found new entry
+223
+Found new entry
+224
+Found new entry
+232
+Found new entry
+233
+Found new entry
+234
+Found new entry
+312
+Found new entry
+313
+Found new entry
+314
+Found new entry
+322
+Found new entry
+323
+Found new entry
+324
+Found new entry
+332
+Found new entry
+333
+Found new entry
+334
+Found new entry
+120
+Found new entry
+121
+Found duplicate to 121 with 121 with count 0
+Found duplicate to 121 with 121 with count 1
+Found duplicate to 121 with 121 with count 2
+Found duplicate to 121 with 121 with count 0
+Found duplicate to 121 with 121 with count 1
+Found duplicate to 121 with 121 with count 2
+Found duplicate to 121 with 121 with count 1
+Found duplicate to 121 with 121 with count 2
+Found duplicate to 121 with 121 with count 3
+Found duplicate to 121 with 121 with count 1
+Found duplicate to 121 with 121 with count 2
+Found duplicate to 121 with 121 with count 3
+130
+Found new entry
+131
+Found duplicate to 131 with 131 with count 1
+Found duplicate to 131 with 131 with count 2
+Found duplicate to 131 with 131 with count 1
+Found duplicate to 131 with 131 with count 2
+Found duplicate to 131 with 131 with count 2
+Found duplicate to 131 with 131 with count 3
+Found duplicate to 131 with 131 with count 1
+Found duplicate to 131 with 131 with count 1
+Found duplicate to 131 with 131 with count 2
+Found duplicate to 131 with 131 with count 3
+Found duplicate to 131 with 131 with count 1
+Found duplicate to 131 with 131 with count 2
+Found duplicate to 131 with 131 with count 3
+Found duplicate to 131 with 131 with count 1
+Found duplicate to 131 with 131 with count 2
+Found duplicate to 131 with 131 with count 3
+Found duplicate to 131 with 131 with count 1
+Found duplicate to 131 with 131 with count 2
+Found duplicate to 131 with 131 with count 3
+140
+Found new entry
+141
+Found duplicate to 141 with 141 with count 1
+Found duplicate to 141 with 141 with count 2
+Found duplicate to 141 with 141 with count 1
+Found duplicate to 141 with 141 with count 2
+Found duplicate to 141 with 141 with count 1
+Found duplicate to 141 with 141 with count 2
+Found duplicate to 141 with 141 with count 2
+Found duplicate to 141 with 141 with count 3
+Found duplicate to 141 with 141 with count 1
+Found duplicate to 141 with 141 with count 1
+Found duplicate to 141 with 141 with count 2
+Found duplicate to 141 with 141 with count 3
+Found duplicate to 141 with 141 with count 1
+Found duplicate to 141 with 141 with count 2
+Found duplicate to 141 with 141 with count 3
+Found duplicate to 141 with 141 with count 2
+Found duplicate to 141 with 141 with count 3
+Found duplicate to 141 with 141 with count 1
+Found duplicate to 141 with 141 with count 1
+Found duplicate to 141 with 141 with count 2
+Found duplicate to 141 with 141 with count 3
+220
+Found new entry
+221
+Found duplicate to 221 with 221 with count 1
+Found duplicate to 221 with 221 with count 2
+Found duplicate to 221 with 221 with count 3
+230
+Found new entry
+231
+Found duplicate to 231 with 231 with count 1
+Found duplicate to 231 with 231 with count 2
+Found duplicate to 231 with 231 with count 1
+Found duplicate to 231 with 231 with count 2
+Found duplicate to 231 with 231 with count 3
+Found duplicate to 231 with 231 with count 1
+Found duplicate to 231 with 231 with count 2
+Found duplicate to 231 with 231 with count 3
+240
+Found new entry
+241
+Found duplicate to 241 with 241 with count 1
+Found duplicate to 241 with 241 with count 2
+Found duplicate to 241 with 241 with count 1
+Found duplicate to 241 with 241 with count 2
+Found duplicate to 241 with 241 with count 1
+Found duplicate to 241 with 241 with count 2
+Found duplicate to 241 with 241 with count 3
+Found duplicate to 241 with 241 with count 1
+Found duplicate to 241 with 241 with count 2
+Found duplicate to 241 with 241 with count 3
+Found duplicate to 241 with 241 with count 1
+Found duplicate to 241 with 241 with count 2
+Found duplicate to 241 with 241 with count 3
+320
+Found new entry
+321
+Found duplicate to 321 with 321 with count 0
+Found duplicate to 321 with 321 with count 1
+Found duplicate to 321 with 321 with count 2
+Found duplicate to 321 with 321 with count 1
+Found duplicate to 321 with 321 with count 2
+Found duplicate to 321 with 321 with count 3
+330
+Found new entry
+331
+Found duplicate to 331 with 331 with count 0
+Found duplicate to 331 with 331 with count 1
+Found duplicate to 331 with 331 with count 2
+Found duplicate to 331 with 331 with count 1
+Found duplicate to 331 with 331 with count 2
+Found duplicate to 331 with 331 with count 3
+340
+Found new entry
+341
+Found duplicate to 341 with 341 with count 0
+Found duplicate to 341 with 341 with count 1
+Found duplicate to 341 with 341 with count 2
+Found duplicate to 341 with 341 with count 0
+Found duplicate to 341 with 341 with count 1
+Found duplicate to 341 with 341 with count 2
+Found duplicate to 341 with 341 with count 2
+Found duplicate to 341 with 341 with count 3
+Found duplicate to 341 with 341 with count 1
+150
+Found new entry
+151
+Found duplicate to 151 with 151 with count 3
+Found duplicate to 151 with 151 with count 2
+Found duplicate to 151 with 151 with count 2
+Found duplicate to 151 with 151 with count 3
+Found duplicate to 151 with 151 with count 2
+Found duplicate to 151 with 151 with count 3
+Found duplicate to 151 with 151 with count 1
+Found duplicate to 151 with 151 with count 2
+Found duplicate to 151 with 151 with count 3
+Found duplicate to 151 with 151 with count 1
+Found duplicate to 151 with 151 with count 2
+Found duplicate to 151 with 151 with count 3
+160
+Found new entry
+161
+Found duplicate to 161 with 161 with count 1
+Found duplicate to 161 with 161 with count 2
+Found duplicate to 161 with 161 with count 0
+Found duplicate to 161 with 161 with count 1
+Found duplicate to 161 with 161 with count 2
+170
+Found new entry
+171
+Found duplicate to 171 with 171 with count 1
+Found duplicate to 171 with 171 with count 2
+250
+Found new entry
+251
+Found duplicate to 251 with 251 with count 2
+Found duplicate to 251 with 251 with count 1
+Found duplicate to 251 with 251 with count 1
+Found duplicate to 251 with 251 with count 2
+Found duplicate to 251 with 251 with count 1
+Found duplicate to 251 with 251 with count 2
+Found duplicate to 251 with 251 with count 3
+Found duplicate to 251 with 251 with count 1
+Found duplicate to 251 with 251 with count 2
+Found duplicate to 251 with 251 with count 3
+260
+Found new entry
+261
+Found duplicate to 261 with 261 with count 1
+Found duplicate to 261 with 261 with count 0
+Found duplicate to 261 with 261 with count 0
+Found duplicate to 261 with 261 with count 1
+Found duplicate to 261 with 261 with count 0
+Found duplicate to 261 with 261 with count 1
+Found duplicate to 261 with 261 with count 2
+270
+Found new entry
+271
+Found duplicate to 271 with 271 with count 0
+Found duplicate to 271 with 271 with count 1
+Found duplicate to 271 with 271 with count 0
+Found duplicate to 271 with 271 with count 1
+350
+Found new entry
+351
+Found duplicate to 351 with 351 with count 1
+Found duplicate to 351 with 351 with count 2
+Found duplicate to 351 with 351 with count 0
+Found duplicate to 351 with 351 with count 0
+Found duplicate to 351 with 351 with count 1
+Found duplicate to 351 with 351 with count 2
+360
+Found new entry
+361
+Found duplicate to 361 with 361 with count 0
+Found duplicate to 361 with 361 with count 1
+Found duplicate to 361 with 361 with count 0
+Found duplicate to 361 with 361 with count 1
+Found duplicate to 361 with 361 with count 1
+Found duplicate to 361 with 361 with count 2
+Found duplicate to 361 with 361 with count 0
+370
+Found new entry
+371
+Found duplicate to 371 with 371 with count 0
+Found duplicate to 371 with 371 with count 1
+Found duplicate to 371 with 371 with count 0
+Found duplicate to 371 with 371 with count 1
+Found duplicate to 371 with 371 with count 0
+Found duplicate to 371 with 371 with count 1
+170
+Found new entry
+171
+Found duplicate to 171 with 171 with count 2
+Found duplicate to 171 with 171 with count 3
+180
+Found new entry
+181
+Found duplicate to 181 with 181 with count 1
+Found duplicate to 181 with 181 with count 2
+190
+Found new entry
+191
+Found duplicate to 191 with 191 with count 1
+Found duplicate to 191 with 191 with count 2
+270
+Found new entry
+271
+Found duplicate to 271 with 271 with count 1
+Found duplicate to 271 with 271 with count 2
+Found duplicate to 271 with 271 with count 1
+Found duplicate to 271 with 271 with count 2
+280
+Found new entry
+281
+Found duplicate to 281 with 281 with count 0
+Found duplicate to 281 with 281 with count 1
+Found duplicate to 281 with 281 with count 0
+Found duplicate to 281 with 281 with count 1
+290
+Found new entry
+291
+Found duplicate to 291 with 291 with count 0
+Found duplicate to 291 with 291 with count 1
+370
+Found new entry
+371
+Found duplicate to 371 with 371 with count 1
+Found duplicate to 371 with 371 with count 2
+Found duplicate to 371 with 371 with count 1
+Found duplicate to 371 with 371 with count 2
+Found duplicate to 371 with 371 with count 1
+Found duplicate to 371 with 371 with count 2
+380
+Found new entry
+381
+Found duplicate to 381 with 381 with count 0
+Found duplicate to 381 with 381 with count 1
+Found duplicate to 381 with 381 with count 0
+Found duplicate to 381 with 381 with count 1
+Found duplicate to 381 with 381 with count 0
+Found duplicate to 381 with 381 with count 1
+Found duplicate to 381 with 381 with count 0
+Found duplicate to 381 with 381 with count 1
+Found duplicate to 381 with 381 with count 0
+Found duplicate to 381 with 381 with count 1
+Found duplicate to 381 with 381 with count 2
+390
+Found new entry
+391
+Found duplicate to 391 with 391 with count 1
+Found duplicate to 391 with 391 with count 0
+Found duplicate to 391 with 391 with count 0
+Found duplicate to 391 with 391 with count 1
+Found duplicate to 391 with 391 with count 0
+Found duplicate to 391 with 391 with count 1
+Found duplicate to 391 with 391 with count 2
+175
+Found new entry
+176
+Found new entry
+177
+Found new entry
+185
+Found new entry
+186
+Found new entry
+187
+Found new entry
+195
+Found new entry
+196
+Found new entry
+197
+Found new entry
+275
+Found new entry
+276
+Found new entry
+277
+Found new entry
+285
+Found new entry
+286
+Found new entry
+287
+Found new entry
+295
+Found new entry
+296
+Found new entry
+297
+Found new entry
+375
+Found new entry
+376
+Found new entry
+377
+Found new entry
+385
+Found new entry
+386
+Found new entry
+387
+Found new entry
+395
+Found new entry
+396
+Found new entry
+397
+Found new entry
+176
+Found new entry
+177
+Found new entry
+178
+Found new entry
+186
+Found new entry
+187
+Found new entry
+188
+Found new entry
+196
+Found new entry
+197
+Found new entry
+198
+Found new entry
+276
+Found new entry
+277
+Found new entry
+278
+Found new entry
+286
+Found new entry
+287
+Found new entry
+288
+Found new entry
+296
+Found new entry
+297
+Found new entry
+298
+Found new entry
+376
+Found new entry
+377
+Found new entry
+378
+Found new entry
+386
+Found new entry
+387
+Found new entry
+388
+Found new entry
+396
+Found new entry
+397
+Found new entry
+398
+Found new entry
+183
+Found new entry
+184
+Found new entry
+185
+Found new entry
+193
+Found new entry
+194
+Found new entry
+195
+Found new entry
+283
+Found new entry
+284
+Found new entry
+285
+Found new entry
+293
+Found new entry
+294
+Found new entry
+295
+Found new entry
+383
+Found new entry
+384
+Found new entry
+385
+Found new entry
+393
+Found new entry
+394
+Found new entry
+395
+Found new entry
+184
+Found new entry
+185
+Found new entry
+186
+Found new entry
+194
+Found new entry
+195
+Found new entry
+196
+Found new entry
+284
+Found new entry
+285
+Found new entry
+286
+Found new entry
+294
+Found new entry
+295
+Found new entry
+296
+Found new entry
+384
+Found new entry
+385
+Found new entry
+386
+Found new entry
+394
+Found new entry
+395
+Found new entry
+396
+Found new entry
+201
+Found duplicate to 201 with 201 with count 1
+Found duplicate to 201 with 201 with count 2
+Found duplicate to 201 with 201 with count 3
+202
+Found new entry
+203
+Found new entry
+211
+Found new entry
+212
+Found new entry
+213
+Found new entry
+301
+Found duplicate to 301 with 301 with count 1
+Found duplicate to 301 with 301 with count 2
+Found duplicate to 301 with 301 with count 3
+Found duplicate to 301 with 301 with count 1
+Found duplicate to 301 with 301 with count 2
+Found duplicate to 301 with 301 with count 3
+302
+Found new entry
+303
+Found new entry
+311
+Found new entry
+312
+Found new entry
+313
+Found new entry
+401
+Found duplicate to 401 with 401 with count 0
+Found duplicate to 401 with 401 with count 1
+Found duplicate to 401 with 401 with count 2
+Found duplicate to 401 with 401 with count 2
+Found duplicate to 401 with 401 with count 3
+Found duplicate to 401 with 401 with count 1
+402
+Found new entry
+403
+Found new entry
+411
+Found new entry
+412
+Found new entry
+413
+Found new entry
+218
+Found new entry
+219
+Found new entry
+228
+Found new entry
+229
+Found new entry
+238
+Found new entry
+239
+Found new entry
+318
+Found new entry
+319
+Found new entry
+328
+Found new entry
+329
+Found new entry
+338
+Found new entry
+339
+Found new entry
+418
+Found new entry
+419
+Found new entry
+428
+Found new entry
+429
+Found new entry
+438
+Found new entry
+439
+Found new entry
+238
+Found new entry
+239
+Found new entry
+248
+Found new entry
+249
+Found new entry
+258
+Found new entry
+259
+Found new entry
+338
+Found new entry
+339
+Found new entry
+348
+Found new entry
+349
+Found new entry
+358
+Found new entry
+359
+Found new entry
+438
+Found new entry
+439
+Found new entry
+448
+Found new entry
+449
+Found new entry
+458
+Found new entry
+459
+Found new entry
+257
+Found new entry
+258
+Found new entry
+259
+Found new entry
+267
+Found new entry
+268
+Found new entry
+269
+Found new entry
+277
+Found new entry
+278
+Found new entry
+279
+Found new entry
+357
+Found new entry
+358
+Found new entry
+359
+Found new entry
+367
+Found new entry
+368
+Found new entry
+369
+Found new entry
+377
+Found new entry
+378
+Found new entry
+379
+Found new entry
+457
+Found new entry
+458
+Found new entry
+459
+Found new entry
+467
+Found new entry
+468
+Found new entry
+469
+Found new entry
+477
+Found new entry
+478
+Found new entry
+479
+Found new entry
+271
+Found duplicate to 271 with 271 with count 2
+Found duplicate to 271 with 271 with count 3
+Found duplicate to 271 with 271 with count 2
+Found duplicate to 271 with 271 with count 3
+272
+Found new entry
+273
+Found new entry
+281
+Found duplicate to 281 with 281 with count 1
+Found duplicate to 281 with 281 with count 2
+Found duplicate to 281 with 281 with count 1
+Found duplicate to 281 with 281 with count 2
+Found duplicate to 281 with 281 with count 2
+Found duplicate to 281 with 281 with count 3
+Found duplicate to 281 with 281 with count 4
+282
+Found new entry
+283
+Found new entry
+291
+Found duplicate to 291 with 291 with count 1
+Found duplicate to 291 with 291 with count 2
+Found duplicate to 291 with 291 with count 2
+Found duplicate to 291 with 291 with count 3
+Found duplicate to 291 with 291 with count 4
+292
+Found new entry
+293
+Found new entry
+371
+Found duplicate to 371 with 371 with count 2
+Found duplicate to 371 with 371 with count 3
+Found duplicate to 371 with 371 with count 2
+Found duplicate to 371 with 371 with count 3
+Found duplicate to 371 with 371 with count 2
+Found duplicate to 371 with 371 with count 3
+372
+Found new entry
+373
+Found new entry
+381
+Found duplicate to 381 with 381 with count 1
+Found duplicate to 381 with 381 with count 2
+Found duplicate to 381 with 381 with count 1
+Found duplicate to 381 with 381 with count 2
+Found duplicate to 381 with 381 with count 1
+Found duplicate to 381 with 381 with count 2
+Found duplicate to 381 with 381 with count 1
+Found duplicate to 381 with 381 with count 2
+Found duplicate to 381 with 381 with count 1
+Found duplicate to 381 with 381 with count 2
+Found duplicate to 381 with 381 with count 3
+Found duplicate to 381 with 381 with count 2
+Found duplicate to 381 with 381 with count 3
+Found duplicate to 381 with 381 with count 4
+Found duplicate to 381 with 381 with count 2
+Found duplicate to 381 with 381 with count 3
+Found duplicate to 381 with 381 with count 4
+382
+Found new entry
+383
+Found new entry
+391
+Found duplicate to 391 with 391 with count 2
+Found duplicate to 391 with 391 with count 1
+Found duplicate to 391 with 391 with count 1
+Found duplicate to 391 with 391 with count 2
+Found duplicate to 391 with 391 with count 1
+Found duplicate to 391 with 391 with count 2
+Found duplicate to 391 with 391 with count 3
+Found duplicate to 391 with 391 with count 3
+Found duplicate to 391 with 391 with count 4
+Found duplicate to 391 with 391 with count 2
+Found duplicate to 391 with 391 with count 2
+Found duplicate to 391 with 391 with count 3
+Found duplicate to 391 with 391 with count 4
+392
+Found new entry
+393
+Found new entry
+471
+Found duplicate to 471 with 471 with count 0
+Found duplicate to 471 with 471 with count 1
+Found duplicate to 471 with 471 with count 0
+Found duplicate to 471 with 471 with count 1
+472
+Found new entry
+473
+Found new entry
+481
+Found duplicate to 481 with 481 with count 1
+Found duplicate to 481 with 481 with count 0
+Found duplicate to 481 with 481 with count 0
+Found duplicate to 481 with 481 with count 1
+Found duplicate to 481 with 481 with count 0
+Found duplicate to 481 with 481 with count 1
+Found duplicate to 481 with 481 with count 0
+Found duplicate to 481 with 481 with count 1
+Found duplicate to 481 with 481 with count 2
+Found duplicate to 481 with 481 with count 2
+Found duplicate to 481 with 481 with count 3
+Found duplicate to 481 with 481 with count 4
+482
+Found new entry
+483
+Found new entry
+491
+Found duplicate to 491 with 491 with count 0
+Found duplicate to 491 with 491 with count 1
+Found duplicate to 491 with 491 with count 0
+Found duplicate to 491 with 491 with count 1
+Found duplicate to 491 with 491 with count 2
+Found duplicate to 491 with 491 with count 2
+Found duplicate to 491 with 491 with count 3
+Found duplicate to 491 with 491 with count 4
+492
+Found new entry
+493
+Found new entry
+307
+Found new entry
+308
+Found new entry
+309
+Found new entry
+317
+Found new entry
+318
+Found new entry
+319
+Found new entry
+327
+Found new entry
+328
+Found new entry
+329
+Found new entry
+407
+Found new entry
+408
+Found new entry
+409
+Found new entry
+417
+Found new entry
+418
+Found new entry
+419
+Found new entry
+427
+Found new entry
+428
+Found new entry
+429
+Found new entry
+507
+Found new entry
+508
+Found new entry
+509
+Found new entry
+517
+Found new entry
+518
+Found new entry
+519
+Found new entry
+527
+Found new entry
+528
+Found new entry
+529
+Found new entry
+348
+Found new entry
+349
+Found new entry
+358
+Found new entry
+359
+Found new entry
+368
+Found new entry
+369
+Found new entry
+448
+Found new entry
+449
+Found new entry
+458
+Found new entry
+459
+Found new entry
+468
+Found new entry
+469
+Found new entry
+548
+Found new entry
+549
+Found new entry
+558
+Found new entry
+559
+Found new entry
+568
+Found new entry
+569
+Found new entry
+408
+Found new entry
+409
+Found new entry
+418
+Found new entry
+419
+Found new entry
+508
+Found new entry
+509
+Found new entry
+518
+Found new entry
+519
+Found new entry
+608
+Found new entry
+609
+Found new entry
+618
+Found new entry
+619
+Found new entry
+400
+Found new entry
+401
+Found duplicate to 401 with 401 with count 1
+Found duplicate to 401 with 401 with count 2
+Found duplicate to 401 with 401 with count 3
+Found duplicate to 401 with 401 with count 3
+Found duplicate to 401 with 401 with count 4
+Found duplicate to 401 with 401 with count 2
+402
+Found new entry
+410
+Found new entry
+411
+Found new entry
+412
+Found new entry
+420
+Found new entry
+421
+Found duplicate to 421 with 421 with count 0
+Found duplicate to 421 with 421 with count 1
+Found duplicate to 421 with 421 with count 2
+422
+Found new entry
+500
+Found new entry
+501
+Found duplicate to 501 with 501 with count 0
+Found duplicate to 501 with 501 with count 1
+Found duplicate to 501 with 501 with count 0
+Found duplicate to 501 with 501 with count 1
+Found duplicate to 501 with 501 with count 2
+Found duplicate to 501 with 501 with count 1
+Found duplicate to 501 with 501 with count 2
+Found duplicate to 501 with 501 with count 3
+502
+Found new entry
+510
+Found new entry
+511
+Found new entry
+512
+Found new entry
+520
+Found new entry
+521
+Found duplicate to 521 with 521 with count 0
+Found duplicate to 521 with 521 with count 1
+Found duplicate to 521 with 521 with count 1
+Found duplicate to 521 with 521 with count 2
+Found duplicate to 521 with 521 with count 0
+522
+Found new entry
+600
+Found new entry
+601
+Found duplicate to 601 with 601 with count 0
+Found duplicate to 601 with 601 with count 1
+Found duplicate to 601 with 601 with count 1
+Found duplicate to 601 with 601 with count 2
+Found duplicate to 601 with 601 with count 3
+602
+Found new entry
+610
+Found new entry
+611
+Found new entry
+612
+Found new entry
+620
+Found new entry
+621
+Found duplicate to 621 with 621 with count 0
+Found duplicate to 621 with 621 with count 1
+Found duplicate to 621 with 621 with count 0
+Found duplicate to 621 with 621 with count 1
+Found duplicate to 621 with 621 with count 0
+Found duplicate to 621 with 621 with count 1
+Found duplicate to 621 with 621 with count 2
+622
+Found new entry
+402
+Found new entry
+403
+Found new entry
+404
+Found new entry
+412
+Found new entry
+413
+Found new entry
+414
+Found new entry
+422
+Found new entry
+423
+Found new entry
+424
+Found new entry
+502
+Found new entry
+503
+Found new entry
+504
+Found new entry
+512
+Found new entry
+513
+Found new entry
+514
+Found new entry
+522
+Found new entry
+523
+Found new entry
+524
+Found new entry
+602
+Found new entry
+603
+Found new entry
+604
+Found new entry
+612
+Found new entry
+613
+Found new entry
+614
+Found new entry
+622
+Found new entry
+623
+Found new entry
+624
+Found new entry
+405
+Found new entry
+406
+Found new entry
+407
+Found new entry
+415
+Found new entry
+416
+Found new entry
+417
+Found new entry
+425
+Found new entry
+426
+Found new entry
+427
+Found new entry
+505
+Found new entry
+506
+Found new entry
+507
+Found new entry
+515
+Found new entry
+516
+Found new entry
+517
+Found new entry
+525
+Found new entry
+526
+Found new entry
+527
+Found new entry
+605
+Found new entry
+606
+Found new entry
+607
+Found new entry
+615
+Found new entry
+616
+Found new entry
+617
+Found new entry
+625
+Found new entry
+626
+Found new entry
+627
+Found new entry
+410
+Found new entry
+411
+Found new entry
+412
+Found new entry
+420
+Found new entry
+421
+Found duplicate to 421 with 421 with count 1
+Found duplicate to 421 with 421 with count 2
+Found duplicate to 421 with 421 with count 3
+422
+Found new entry
+430
+Found new entry
+431
+Found new entry
+432
+Found new entry
+510
+Found new entry
+511
+Found new entry
+512
+Found new entry
+520
+Found new entry
+521
+Found duplicate to 521 with 521 with count 1
+Found duplicate to 521 with 521 with count 2
+Found duplicate to 521 with 521 with count 2
+Found duplicate to 521 with 521 with count 3
+Found duplicate to 521 with 521 with count 1
+522
+Found new entry
+530
+Found new entry
+531
+Found duplicate to 531 with 531 with count 0
+Found duplicate to 531 with 531 with count 1
+Found duplicate to 531 with 531 with count 2
+532
+Found new entry
+610
+Found new entry
+611
+Found new entry
+612
+Found new entry
+620
+Found new entry
+621
+Found duplicate to 621 with 621 with count 1
+Found duplicate to 621 with 621 with count 2
+Found duplicate to 621 with 621 with count 1
+Found duplicate to 621 with 621 with count 2
+Found duplicate to 621 with 621 with count 1
+Found duplicate to 621 with 621 with count 2
+Found duplicate to 621 with 621 with count 3
+622
+Found new entry
+630
+Found new entry
+631
+Found duplicate to 631 with 631 with count 0
+Found duplicate to 631 with 631 with count 1
+Found duplicate to 631 with 631 with count 0
+Found duplicate to 631 with 631 with count 1
+Found duplicate to 631 with 631 with count 0
+Found duplicate to 631 with 631 with count 1
+Found duplicate to 631 with 631 with count 2
+Found duplicate to 631 with 631 with count 0
+Found duplicate to 631 with 631 with count 1
+Found duplicate to 631 with 631 with count 2
+632
+Found new entry
+411
+Found new entry
+412
+Found new entry
+413
+Found new entry
+421
+Found duplicate to 421 with 421 with count 2
+Found duplicate to 421 with 421 with count 3
+Found duplicate to 421 with 421 with count 4
+422
+Found new entry
+423
+Found new entry
+431
+Found new entry
+432
+Found new entry
+433
+Found new entry
+511
+Found new entry
+512
+Found new entry
+513
+Found new entry
+521
+Found duplicate to 521 with 521 with count 2
+Found duplicate to 521 with 521 with count 3
+Found duplicate to 521 with 521 with count 3
+Found duplicate to 521 with 521 with count 4
+Found duplicate to 521 with 521 with count 2
+522
+Found new entry
+523
+Found new entry
+531
+Found duplicate to 531 with 531 with count 1
+Found duplicate to 531 with 531 with count 2
+Found duplicate to 531 with 531 with count 3
+532
+Found new entry
+533
+Found new entry
+611
+Found new entry
+612
+Found new entry
+613
+Found new entry
+621
+Found duplicate to 621 with 621 with count 2
+Found duplicate to 621 with 621 with count 3
+Found duplicate to 621 with 621 with count 2
+Found duplicate to 621 with 621 with count 3
+Found duplicate to 621 with 621 with count 2
+Found duplicate to 621 with 621 with count 3
+Found duplicate to 621 with 621 with count 4
+622
+Found new entry
+623
+Found new entry
+631
+Found duplicate to 631 with 631 with count 1
+Found duplicate to 631 with 631 with count 2
+Found duplicate to 631 with 631 with count 1
+Found duplicate to 631 with 631 with count 2
+Found duplicate to 631 with 631 with count 1
+Found duplicate to 631 with 631 with count 2
+Found duplicate to 631 with 631 with count 3
+Found duplicate to 631 with 631 with count 1
+Found duplicate to 631 with 631 with count 2
+Found duplicate to 631 with 631 with count 3
+632
+Found new entry
+633
+Found new entry
+458
+Found new entry
+459
+Found new entry
+468
+Found new entry
+469
+Found new entry
+478
+Found new entry
+479
+Found new entry
+558
+Found new entry
+559
+Found new entry
+568
+Found new entry
+569
+Found new entry
+578
+Found new entry
+579
+Found new entry
+658
+Found new entry
+659
+Found new entry
+668
+Found new entry
+669
+Found new entry
+678
+Found new entry
+679
+Found new entry
+466
+Found new entry
+467
+Found new entry
+468
+Found new entry
+476
+Found new entry
+477
+Found new entry
+478
+Found new entry
+486
+Found new entry
+487
+Found new entry
+488
+Found new entry
+566
+Found new entry
+567
+Found new entry
+568
+Found new entry
+576
+Found new entry
+577
+Found new entry
+578
+Found new entry
+586
+Found new entry
+587
+Found new entry
+588
+Found new entry
+666
+Found new entry
+667
+Found new entry
+668
+Found new entry
+676
+Found new entry
+677
+Found new entry
+678
+Found new entry
+686
+Found new entry
+687
+Found new entry
+688
+Found new entry
+471
+Found duplicate to 471 with 471 with count 1
+Found duplicate to 471 with 471 with count 2
+Found duplicate to 471 with 471 with count 1
+Found duplicate to 471 with 471 with count 2
+472
+Found new entry
+473
+Found new entry
+481
+Found duplicate to 481 with 481 with count 2
+Found duplicate to 481 with 481 with count 1
+Found duplicate to 481 with 481 with count 1
+Found duplicate to 481 with 481 with count 2
+Found duplicate to 481 with 481 with count 1
+Found duplicate to 481 with 481 with count 2
+Found duplicate to 481 with 481 with count 1
+Found duplicate to 481 with 481 with count 2
+Found duplicate to 481 with 481 with count 3
+Found duplicate to 481 with 481 with count 3
+Found duplicate to 481 with 481 with count 4
+Found duplicate to 481 with 481 with count 5
+Found duplicate to 481 with 481 with count 3
+Found duplicate to 481 with 481 with count 4
+Found duplicate to 481 with 481 with count 5
+482
+Found new entry
+483
+Found new entry
+491
+Found duplicate to 491 with 491 with count 1
+Found duplicate to 491 with 491 with count 2
+Found duplicate to 491 with 491 with count 1
+Found duplicate to 491 with 491 with count 2
+Found duplicate to 491 with 491 with count 3
+Found duplicate to 491 with 491 with count 3
+Found duplicate to 491 with 491 with count 4
+Found duplicate to 491 with 491 with count 5
+Found duplicate to 491 with 491 with count 3
+Found duplicate to 491 with 491 with count 4
+Found duplicate to 491 with 491 with count 5
+492
+Found new entry
+493
+Found new entry
+571
+Found duplicate to 571 with 571 with count 0
+Found duplicate to 571 with 571 with count 1
+Found duplicate to 571 with 571 with count 0
+Found duplicate to 571 with 571 with count 1
+Found duplicate to 571 with 571 with count 2
+Found duplicate to 571 with 571 with count 2
+Found duplicate to 571 with 571 with count 3
+Found duplicate to 571 with 571 with count 4
+572
+Found new entry
+573
+Found new entry
+581
+Found duplicate to 581 with 581 with count 1
+Found duplicate to 581 with 581 with count 0
+Found duplicate to 581 with 581 with count 0
+Found duplicate to 581 with 581 with count 1
+Found duplicate to 581 with 581 with count 0
+Found duplicate to 581 with 581 with count 1
+Found duplicate to 581 with 581 with count 2
+Found duplicate to 581 with 581 with count 0
+Found duplicate to 581 with 581 with count 1
+Found duplicate to 581 with 581 with count 2
+Found duplicate to 581 with 581 with count 2
+Found duplicate to 581 with 581 with count 3
+Found duplicate to 581 with 581 with count 4
+Found duplicate to 581 with 581 with count 2
+Found duplicate to 581 with 581 with count 3
+Found duplicate to 581 with 581 with count 4
+Found duplicate to 581 with 581 with count 3
+Found duplicate to 581 with 581 with count 4
+Found duplicate to 581 with 581 with count 5
+Found duplicate to 581 with 581 with count 4
+Found duplicate to 581 with 581 with count 5
+Found duplicate to 581 with 581 with count 6
+582
+Found new entry
+583
+Found new entry
+591
+Found duplicate to 591 with 591 with count 1
+Found duplicate to 591 with 591 with count 0
+Found duplicate to 591 with 591 with count 1
+Found duplicate to 591 with 591 with count 2
+Found duplicate to 591 with 591 with count 0
+Found duplicate to 591 with 591 with count 0
+Found duplicate to 591 with 591 with count 1
+Found duplicate to 591 with 591 with count 2
+Found duplicate to 591 with 591 with count 3
+Found duplicate to 591 with 591 with count 4
+Found duplicate to 591 with 591 with count 2
+Found duplicate to 591 with 591 with count 2
+Found duplicate to 591 with 591 with count 3
+Found duplicate to 591 with 591 with count 4
+Found duplicate to 591 with 591 with count 3
+Found duplicate to 591 with 591 with count 4
+Found duplicate to 591 with 591 with count 5
+Found duplicate to 591 with 591 with count 4
+Found duplicate to 591 with 591 with count 5
+Found duplicate to 591 with 591 with count 6
+592
+Found new entry
+593
+Found new entry
+671
+Found duplicate to 671 with 671 with count 0
+Found duplicate to 671 with 671 with count 1
+Found duplicate to 671 with 671 with count 2
+Found duplicate to 671 with 671 with count 0
+Found duplicate to 671 with 671 with count 1
+Found duplicate to 671 with 671 with count 2
+Found duplicate to 671 with 671 with count 2
+Found duplicate to 671 with 671 with count 3
+Found duplicate to 671 with 671 with count 4
+Found duplicate to 671 with 671 with count 4
+Found duplicate to 671 with 671 with count 5
+Found duplicate to 671 with 671 with count 6
+672
+Found new entry
+673
+Found new entry
+681
+Found duplicate to 681 with 681 with count 0
+Found duplicate to 681 with 681 with count 1
+Found duplicate to 681 with 681 with count 2
+Found duplicate to 681 with 681 with count 0
+Found duplicate to 681 with 681 with count 1
+Found duplicate to 681 with 681 with count 2
+Found duplicate to 681 with 681 with count 2
+Found duplicate to 681 with 681 with count 3
+Found duplicate to 681 with 681 with count 4
+Found duplicate to 681 with 681 with count 3
+Found duplicate to 681 with 681 with count 4
+Found duplicate to 681 with 681 with count 5
+Found duplicate to 681 with 681 with count 4
+Found duplicate to 681 with 681 with count 5
+Found duplicate to 681 with 681 with count 6
+Found duplicate to 681 with 681 with count 4
+Found duplicate to 681 with 681 with count 5
+Found duplicate to 681 with 681 with count 6
+682
+Found new entry
+683
+Found new entry
+691
+Found duplicate to 691 with 691 with count 0
+Found duplicate to 691 with 691 with count 1
+Found duplicate to 691 with 691 with count 2
+Found duplicate to 691 with 691 with count 0
+Found duplicate to 691 with 691 with count 1
+Found duplicate to 691 with 691 with count 2
+Found duplicate to 691 with 691 with count 2
+Found duplicate to 691 with 691 with count 3
+Found duplicate to 691 with 691 with count 4
+Found duplicate to 691 with 691 with count 4
+Found duplicate to 691 with 691 with count 5
+Found duplicate to 691 with 691 with count 4
+Found duplicate to 691 with 691 with count 4
+Found duplicate to 691 with 691 with count 5
+Found duplicate to 691 with 691 with count 6
+692
+Found new entry
+693
+Found new entry
+472
+Found new entry
+473
+Found new entry
+474
+Found new entry
+482
+Found new entry
+483
+Found new entry
+484
+Found new entry
+492
+Found new entry
+493
+Found new entry
+494
+Found new entry
+572
+Found new entry
+573
+Found new entry
+574
+Found new entry
+582
+Found new entry
+583
+Found new entry
+584
+Found new entry
+592
+Found new entry
+593
+Found new entry
+594
+Found new entry
+672
+Found new entry
+673
+Found new entry
+674
+Found new entry
+682
+Found new entry
+683
+Found new entry
+684
+Found new entry
+692
+Found new entry
+693
+Found new entry
+694
+Found new entry
+480
+Found new entry
+481
+Found duplicate to 481 with 481 with count 3
+Found duplicate to 481 with 481 with count 2
+Found duplicate to 481 with 481 with count 2
+Found duplicate to 481 with 481 with count 3
+Found duplicate to 481 with 481 with count 2
+Found duplicate to 481 with 481 with count 3
+Found duplicate to 481 with 481 with count 2
+Found duplicate to 481 with 481 with count 3
+Found duplicate to 481 with 481 with count 4
+Found duplicate to 481 with 481 with count 4
+Found duplicate to 481 with 481 with count 5
+Found duplicate to 481 with 481 with count 6
+Found duplicate to 481 with 481 with count 4
+Found duplicate to 481 with 481 with count 5
+Found duplicate to 481 with 481 with count 6
+490
+Found new entry
+491
+Found duplicate to 491 with 491 with count 2
+Found duplicate to 491 with 491 with count 3
+Found duplicate to 491 with 491 with count 2
+Found duplicate to 491 with 491 with count 3
+Found duplicate to 491 with 491 with count 4
+Found duplicate to 491 with 491 with count 4
+Found duplicate to 491 with 491 with count 5
+Found duplicate to 491 with 491 with count 6
+Found duplicate to 491 with 491 with count 4
+Found duplicate to 491 with 491 with count 5
+Found duplicate to 491 with 491 with count 6
+580
+Found new entry
+581
+Found duplicate to 581 with 581 with count 2
+Found duplicate to 581 with 581 with count 1
+Found duplicate to 581 with 581 with count 1
+Found duplicate to 581 with 581 with count 2
+Found duplicate to 581 with 581 with count 1
+Found duplicate to 581 with 581 with count 2
+Found duplicate to 581 with 581 with count 3
+Found duplicate to 581 with 581 with count 1
+Found duplicate to 581 with 581 with count 2
+Found duplicate to 581 with 581 with count 3
+Found duplicate to 581 with 581 with count 3
+Found duplicate to 581 with 581 with count 4
+Found duplicate to 581 with 581 with count 5
+Found duplicate to 581 with 581 with count 3
+Found duplicate to 581 with 581 with count 4
+Found duplicate to 581 with 581 with count 5
+Found duplicate to 581 with 581 with count 4
+Found duplicate to 581 with 581 with count 5
+Found duplicate to 581 with 581 with count 6
+Found duplicate to 581 with 581 with count 5
+Found duplicate to 581 with 581 with count 6
+Found duplicate to 581 with 581 with count 7
+590
+Found new entry
+591
+Found duplicate to 591 with 591 with count 2
+Found duplicate to 591 with 591 with count 1
+Found duplicate to 591 with 591 with count 2
+Found duplicate to 591 with 591 with count 3
+Found duplicate to 591 with 591 with count 1
+Found duplicate to 591 with 591 with count 1
+Found duplicate to 591 with 591 with count 2
+Found duplicate to 591 with 591 with count 3
+Found duplicate to 591 with 591 with count 4
+Found duplicate to 591 with 591 with count 5
+Found duplicate to 591 with 591 with count 3
+Found duplicate to 591 with 591 with count 3
+Found duplicate to 591 with 591 with count 4
+Found duplicate to 591 with 591 with count 5
+Found duplicate to 591 with 591 with count 4
+Found duplicate to 591 with 591 with count 5
+Found duplicate to 591 with 591 with count 6
+Found duplicate to 591 with 591 with count 5
+Found duplicate to 591 with 591 with count 6
+Found duplicate to 591 with 591 with count 7
+680
+Found new entry
+681
+Found duplicate to 681 with 681 with count 1
+Found duplicate to 681 with 681 with count 2
+Found duplicate to 681 with 681 with count 3
+Found duplicate to 681 with 681 with count 1
+Found duplicate to 681 with 681 with count 2
+Found duplicate to 681 with 681 with count 3
+Found duplicate to 681 with 681 with count 3
+Found duplicate to 681 with 681 with count 4
+Found duplicate to 681 with 681 with count 5
+Found duplicate to 681 with 681 with count 4
+Found duplicate to 681 with 681 with count 5
+Found duplicate to 681 with 681 with count 6
+Found duplicate to 681 with 681 with count 5
+Found duplicate to 681 with 681 with count 6
+Found duplicate to 681 with 681 with count 7
+Found duplicate to 681 with 681 with count 5
+Found duplicate to 681 with 681 with count 6
+Found duplicate to 681 with 681 with count 7
+690
+Found new entry
+691
+Found duplicate to 691 with 691 with count 1
+Found duplicate to 691 with 691 with count 2
+Found duplicate to 691 with 691 with count 3
+Found duplicate to 691 with 691 with count 1
+Found duplicate to 691 with 691 with count 2
+Found duplicate to 691 with 691 with count 3
+Found duplicate to 691 with 691 with count 3
+Found duplicate to 691 with 691 with count 4
+Found duplicate to 691 with 691 with count 5
+Found duplicate to 691 with 691 with count 5
+Found duplicate to 691 with 691 with count 6
+Found duplicate to 691 with 691 with count 5
+Found duplicate to 691 with 691 with count 5
+Found duplicate to 691 with 691 with count 6
+Found duplicate to 691 with 691 with count 7
+482
+Found new entry
+483
+Found new entry
+484
+Found new entry
+492
+Found new entry
+493
+Found new entry
+494
+Found new entry
+582
+Found new entry
+583
+Found new entry
+584
+Found new entry
+592
+Found new entry
+593
+Found new entry
+594
+Found new entry
+682
+Found new entry
+683
+Found new entry
+684
+Found new entry
+692
+Found new entry
+693
+Found new entry
+694
+Found new entry
+500
+Found new entry
+501
+Found duplicate to 501 with 501 with count 1
+Found duplicate to 501 with 501 with count 2
+Found duplicate to 501 with 501 with count 1
+Found duplicate to 501 with 501 with count 2
+Found duplicate to 501 with 501 with count 3
+Found duplicate to 501 with 501 with count 2
+Found duplicate to 501 with 501 with count 3
+Found duplicate to 501 with 501 with count 4
+502
+Found new entry
+510
+Found new entry
+511
+Found new entry
+512
+Found new entry
+600
+Found new entry
+601
+Found duplicate to 601 with 601 with count 1
+Found duplicate to 601 with 601 with count 2
+Found duplicate to 601 with 601 with count 2
+Found duplicate to 601 with 601 with count 3
+Found duplicate to 601 with 601 with count 4
+602
+Found new entry
+610
+Found new entry
+611
+Found new entry
+612
+Found new entry
+700
+Found new entry
+701
+Found duplicate to 701 with 701 with count 0
+Found duplicate to 701 with 701 with count 1
+Found duplicate to 701 with 701 with count 2
+Found duplicate to 701 with 701 with count 3
+Found duplicate to 701 with 701 with count 1
+Found duplicate to 701 with 701 with count 1
+Found duplicate to 701 with 701 with count 2
+Found duplicate to 701 with 701 with count 3
+702
+Found new entry
+710
+Found new entry
+711
+Found duplicate to 711 with 711 with count 0
+712
+Found new entry
+500
+Found new entry
+501
+Found duplicate to 501 with 501 with count 2
+Found duplicate to 501 with 501 with count 3
+Found duplicate to 501 with 501 with count 2
+Found duplicate to 501 with 501 with count 3
+Found duplicate to 501 with 501 with count 4
+Found duplicate to 501 with 501 with count 3
+Found duplicate to 501 with 501 with count 4
+Found duplicate to 501 with 501 with count 5
+502
+Found new entry
+510
+Found new entry
+511
+Found new entry
+512
+Found new entry
+520
+Found new entry
+521
+Found duplicate to 521 with 521 with count 3
+Found duplicate to 521 with 521 with count 4
+Found duplicate to 521 with 521 with count 4
+Found duplicate to 521 with 521 with count 5
+Found duplicate to 521 with 521 with count 3
+522
+Found new entry
+600
+Found new entry
+601
+Found duplicate to 601 with 601 with count 2
+Found duplicate to 601 with 601 with count 3
+Found duplicate to 601 with 601 with count 3
+Found duplicate to 601 with 601 with count 4
+Found duplicate to 601 with 601 with count 5
+602
+Found new entry
+610
+Found new entry
+611
+Found new entry
+612
+Found new entry
+620
+Found new entry
+621
+Found duplicate to 621 with 621 with count 3
+Found duplicate to 621 with 621 with count 4
+Found duplicate to 621 with 621 with count 3
+Found duplicate to 621 with 621 with count 4
+Found duplicate to 621 with 621 with count 3
+Found duplicate to 621 with 621 with count 4
+Found duplicate to 621 with 621 with count 5
+622
+Found new entry
+700
+Found new entry
+701
+Found duplicate to 701 with 701 with count 1
+Found duplicate to 701 with 701 with count 2
+Found duplicate to 701 with 701 with count 3
+Found duplicate to 701 with 701 with count 4
+Found duplicate to 701 with 701 with count 2
+Found duplicate to 701 with 701 with count 2
+Found duplicate to 701 with 701 with count 3
+Found duplicate to 701 with 701 with count 4
+702
+Found new entry
+710
+Found new entry
+711
+Found duplicate to 711 with 711 with count 1
+712
+Found new entry
+720
+Found new entry
+721
+Found duplicate to 721 with 721 with count 1
+Found duplicate to 721 with 721 with count 0
+Found duplicate to 721 with 721 with count 0
+Found duplicate to 721 with 721 with count 1
+Found duplicate to 721 with 721 with count 0
+Found duplicate to 721 with 721 with count 1
+Found duplicate to 721 with 721 with count 2
+Found duplicate to 721 with 721 with count 2
+Found duplicate to 721 with 721 with count 3
+Found duplicate to 721 with 721 with count 4
+Found duplicate to 721 with 721 with count 4
+Found duplicate to 721 with 721 with count 5
+Found duplicate to 721 with 721 with count 6
+Found duplicate to 721 with 721 with count 4
+Found duplicate to 721 with 721 with count 5
+Found duplicate to 721 with 721 with count 6
+722
+Found new entry
+518
+Found new entry
+519
+Found new entry
+528
+Found new entry
+529
+Found new entry
+538
+Found new entry
+539
+Found new entry
+618
+Found new entry
+619
+Found new entry
+628
+Found new entry
+629
+Found new entry
+638
+Found new entry
+639
+Found new entry
+718
+Found new entry
+719
+Found new entry
+728
+Found new entry
+729
+Found new entry
+738
+Found new entry
+739
+Found new entry
+522
+Found new entry
+523
+Found new entry
+524
+Found new entry
+532
+Found new entry
+533
+Found new entry
+534
+Found new entry
+542
+Found new entry
+543
+Found new entry
+544
+Found new entry
+622
+Found new entry
+623
+Found new entry
+624
+Found new entry
+632
+Found new entry
+633
+Found new entry
+634
+Found new entry
+642
+Found new entry
+643
+Found new entry
+644
+Found new entry
+722
+Found new entry
+723
+Found new entry
+724
+Found new entry
+732
+Found new entry
+733
+Found new entry
+734
+Found new entry
+742
+Found new entry
+743
+Found new entry
+744
+Found new entry
+528
+Found new entry
+529
+Found new entry
+538
+Found new entry
+539
+Found new entry
+548
+Found new entry
+549
+Found new entry
+628
+Found new entry
+629
+Found new entry
+638
+Found new entry
+639
+Found new entry
+648
+Found new entry
+649
+Found new entry
+728
+Found new entry
+729
+Found new entry
+738
+Found new entry
+739
+Found new entry
+748
+Found new entry
+749
+Found new entry
+537
+Found new entry
+538
+Found new entry
+539
+Found new entry
+547
+Found new entry
+548
+Found new entry
+549
+Found new entry
+557
+Found new entry
+558
+Found new entry
+559
+Found new entry
+637
+Found new entry
+638
+Found new entry
+639
+Found new entry
+647
+Found new entry
+648
+Found new entry
+649
+Found new entry
+657
+Found new entry
+658
+Found new entry
+659
+Found new entry
+737
+Found new entry
+738
+Found new entry
+739
+Found new entry
+747
+Found new entry
+748
+Found new entry
+749
+Found new entry
+757
+Found new entry
+758
+Found new entry
+759
+Found new entry
+542
+Found new entry
+543
+Found new entry
+544
+Found new entry
+552
+Found new entry
+553
+Found new entry
+554
+Found new entry
+562
+Found new entry
+563
+Found new entry
+564
+Found new entry
+642
+Found new entry
+643
+Found new entry
+644
+Found new entry
+652
+Found new entry
+653
+Found new entry
+654
+Found new entry
+662
+Found new entry
+663
+Found new entry
+664
+Found new entry
+742
+Found new entry
+743
+Found new entry
+744
+Found new entry
+752
+Found new entry
+753
+Found new entry
+754
+Found new entry
+762
+Found new entry
+763
+Found new entry
+764
+Found new entry
+551
+Found duplicate to 551 with 551 with count 0
+Found duplicate to 551 with 551 with count 1
+Found duplicate to 551 with 551 with count 2
+552
+Found new entry
+553
+Found new entry
+561
+Found duplicate to 561 with 561 with count 0
+Found duplicate to 561 with 561 with count 1
+562
+Found new entry
+563
+Found new entry
+571
+Found duplicate to 571 with 571 with count 1
+Found duplicate to 571 with 571 with count 2
+Found duplicate to 571 with 571 with count 1
+Found duplicate to 571 with 571 with count 2
+Found duplicate to 571 with 571 with count 3
+Found duplicate to 571 with 571 with count 3
+Found duplicate to 571 with 571 with count 4
+Found duplicate to 571 with 571 with count 5
+Found duplicate to 571 with 571 with count 5
+Found duplicate to 571 with 571 with count 6
+Found duplicate to 571 with 571 with count 7
+572
+Found new entry
+573
+Found new entry
+651
+Found duplicate to 651 with 651 with count 0
+Found duplicate to 651 with 651 with count 1
+Found duplicate to 651 with 651 with count 0
+Found duplicate to 651 with 651 with count 1
+Found duplicate to 651 with 651 with count 2
+652
+Found new entry
+653
+Found new entry
+661
+Found duplicate to 661 with 661 with count 4
+Found duplicate to 661 with 661 with count 5
+Found duplicate to 661 with 661 with count 6
+662
+Found new entry
+663
+Found new entry
+671
+Found duplicate to 671 with 671 with count 1
+Found duplicate to 671 with 671 with count 2
+Found duplicate to 671 with 671 with count 3
+Found duplicate to 671 with 671 with count 1
+Found duplicate to 671 with 671 with count 2
+Found duplicate to 671 with 671 with count 3
+Found duplicate to 671 with 671 with count 3
+Found duplicate to 671 with 671 with count 4
+Found duplicate to 671 with 671 with count 5
+Found duplicate to 671 with 671 with count 5
+Found duplicate to 671 with 671 with count 6
+Found duplicate to 671 with 671 with count 7
+672
+Found new entry
+673
+Found new entry
+751
+Found duplicate to 751 with 751 with count 0
+Found duplicate to 751 with 751 with count 1
+Found duplicate to 751 with 751 with count 1
+Found duplicate to 751 with 751 with count 2
+Found duplicate to 751 with 751 with count 0
+Found duplicate to 751 with 751 with count 1
+Found duplicate to 751 with 751 with count 2
+Found duplicate to 751 with 751 with count 3
+752
+Found new entry
+753
+Found new entry
+761
+Found duplicate to 761 with 761 with count 1
+Found duplicate to 761 with 761 with count 2
+Found duplicate to 761 with 761 with count 3
+Found duplicate to 761 with 761 with count 1
+Found duplicate to 761 with 761 with count 2
+Found duplicate to 761 with 761 with count 3
+Found duplicate to 761 with 761 with count 4
+Found duplicate to 761 with 761 with count 5
+Found duplicate to 761 with 761 with count 6
+762
+Found new entry
+763
+Found new entry
+771
+Found duplicate to 771 with 771 with count 0
+Found duplicate to 771 with 771 with count 1
+Found duplicate to 771 with 771 with count 2
+Found duplicate to 771 with 771 with count 0
+Found duplicate to 771 with 771 with count 1
+Found duplicate to 771 with 771 with count 2
+Found duplicate to 771 with 771 with count 1
+Found duplicate to 771 with 771 with count 2
+Found duplicate to 771 with 771 with count 3
+Found duplicate to 771 with 771 with count 1
+Found duplicate to 771 with 771 with count 2
+Found duplicate to 771 with 771 with count 3
+Found duplicate to 771 with 771 with count 2
+Found duplicate to 771 with 771 with count 3
+Found duplicate to 771 with 771 with count 4
+Found duplicate to 771 with 771 with count 4
+Found duplicate to 771 with 771 with count 5
+Found duplicate to 771 with 771 with count 6
+772
+Found new entry
+773
+Found new entry
+557
+Found new entry
+558
+Found new entry
+559
+Found new entry
+567
+Found new entry
+568
+Found new entry
+569
+Found new entry
+577
+Found new entry
+578
+Found new entry
+579
+Found new entry
+657
+Found new entry
+658
+Found new entry
+659
+Found new entry
+667
+Found new entry
+668
+Found new entry
+669
+Found new entry
+677
+Found new entry
+678
+Found new entry
+679
+Found new entry
+757
+Found new entry
+758
+Found new entry
+759
+Found new entry
+767
+Found new entry
+768
+Found new entry
+769
+Found new entry
+777
+Found new entry
+778
+Found new entry
+779
+Found new entry
+566
+Found new entry
+567
+Found new entry
+568
+Found new entry
+576
+Found new entry
+577
+Found new entry
+578
+Found new entry
+586
+Found new entry
+587
+Found new entry
+588
+Found new entry
+666
+Found new entry
+667
+Found new entry
+668
+Found new entry
+676
+Found new entry
+677
+Found new entry
+678
+Found new entry
+686
+Found new entry
+687
+Found new entry
+688
+Found new entry
+766
+Found new entry
+767
+Found new entry
+768
+Found new entry
+776
+Found new entry
+777
+Found new entry
+778
+Found new entry
+786
+Found new entry
+787
+Found new entry
+788
+Found new entry
+574
+Found new entry
+575
+Found new entry
+576
+Found new entry
+584
+Found new entry
+585
+Found new entry
+586
+Found new entry
+594
+Found new entry
+595
+Found new entry
+596
+Found new entry
+674
+Found new entry
+675
+Found new entry
+676
+Found new entry
+684
+Found new entry
+685
+Found new entry
+686
+Found new entry
+694
+Found new entry
+695
+Found new entry
+696
+Found new entry
+774
+Found new entry
+775
+Found new entry
+776
+Found new entry
+784
+Found new entry
+785
+Found new entry
+786
+Found new entry
+794
+Found new entry
+795
+Found new entry
+796
+Found new entry
+604
+Found new entry
+605
+Found new entry
+606
+Found new entry
+614
+Found new entry
+615
+Found new entry
+616
+Found new entry
+624
+Found new entry
+625
+Found new entry
+626
+Found new entry
+704
+Found new entry
+705
+Found new entry
+706
+Found new entry
+714
+Found new entry
+715
+Found new entry
+716
+Found new entry
+724
+Found new entry
+725
+Found new entry
+726
+Found new entry
+804
+Found new entry
+805
+Found new entry
+806
+Found new entry
+814
+Found new entry
+815
+Found new entry
+816
+Found new entry
+824
+Found new entry
+825
+Found new entry
+826
+Found new entry
+606
+Found new entry
+607
+Found new entry
+608
+Found new entry
+616
+Found new entry
+617
+Found new entry
+618
+Found new entry
+626
+Found new entry
+627
+Found new entry
+628
+Found new entry
+706
+Found new entry
+707
+Found new entry
+708
+Found new entry
+716
+Found new entry
+717
+Found new entry
+718
+Found new entry
+726
+Found new entry
+727
+Found new entry
+728
+Found new entry
+806
+Found new entry
+807
+Found new entry
+808
+Found new entry
+816
+Found new entry
+817
+Found new entry
+818
+Found new entry
+826
+Found new entry
+827
+Found new entry
+828
+Found new entry
+614
+Found new entry
+615
+Found new entry
+616
+Found new entry
+624
+Found new entry
+625
+Found new entry
+626
+Found new entry
+634
+Found new entry
+635
+Found new entry
+636
+Found new entry
+714
+Found new entry
+715
+Found new entry
+716
+Found new entry
+724
+Found new entry
+725
+Found new entry
+726
+Found new entry
+734
+Found new entry
+735
+Found new entry
+736
+Found new entry
+814
+Found new entry
+815
+Found new entry
+816
+Found new entry
+824
+Found new entry
+825
+Found new entry
+826
+Found new entry
+834
+Found new entry
+835
+Found new entry
+836
+Found new entry
+623
+Found new entry
+624
+Found new entry
+625
+Found new entry
+633
+Found new entry
+634
+Found new entry
+635
+Found new entry
+643
+Found new entry
+644
+Found new entry
+645
+Found new entry
+723
+Found new entry
+724
+Found new entry
+725
+Found new entry
+733
+Found new entry
+734
+Found new entry
+735
+Found new entry
+743
+Found new entry
+744
+Found new entry
+745
+Found new entry
+823
+Found new entry
+824
+Found new entry
+825
+Found new entry
+833
+Found new entry
+834
+Found new entry
+835
+Found new entry
+843
+Found new entry
+844
+Found new entry
+845
+Found new entry
+655
+Found new entry
+656
+Found new entry
+657
+Found new entry
+665
+Found new entry
+666
+Found new entry
+667
+Found new entry
+675
+Found new entry
+676
+Found new entry
+677
+Found new entry
+755
+Found new entry
+756
+Found new entry
+757
+Found new entry
+765
+Found new entry
+766
+Found new entry
+767
+Found new entry
+775
+Found new entry
+776
+Found new entry
+777
+Found new entry
+855
+Found new entry
+856
+Found new entry
+857
+Found new entry
+865
+Found new entry
+866
+Found new entry
+867
+Found new entry
+875
+Found new entry
+876
+Found new entry
+877
+Found new entry
+671
+Found duplicate to 671 with 671 with count 2
+Found duplicate to 671 with 671 with count 3
+Found duplicate to 671 with 671 with count 4
+Found duplicate to 671 with 671 with count 2
+Found duplicate to 671 with 671 with count 3
+Found duplicate to 671 with 671 with count 4
+Found duplicate to 671 with 671 with count 4
+Found duplicate to 671 with 671 with count 5
+Found duplicate to 671 with 671 with count 6
+Found duplicate to 671 with 671 with count 6
+Found duplicate to 671 with 671 with count 7
+Found duplicate to 671 with 671 with count 8
+Found duplicate to 671 with 671 with count 5
+Found duplicate to 671 with 671 with count 6
+Found duplicate to 671 with 671 with count 7
+Found duplicate to 671 with 671 with count 5
+Found duplicate to 671 with 671 with count 6
+Found duplicate to 671 with 671 with count 7
+Found duplicate to 671 with 671 with count 6
+Found duplicate to 671 with 671 with count 7
+Found duplicate to 671 with 671 with count 8
+672
+Found new entry
+673
+Found new entry
+681
+Found duplicate to 681 with 681 with count 2
+Found duplicate to 681 with 681 with count 3
+Found duplicate to 681 with 681 with count 4
+Found duplicate to 681 with 681 with count 2
+Found duplicate to 681 with 681 with count 3
+Found duplicate to 681 with 681 with count 4
+Found duplicate to 681 with 681 with count 4
+Found duplicate to 681 with 681 with count 5
+Found duplicate to 681 with 681 with count 6
+Found duplicate to 681 with 681 with count 5
+Found duplicate to 681 with 681 with count 6
+Found duplicate to 681 with 681 with count 7
+Found duplicate to 681 with 681 with count 6
+Found duplicate to 681 with 681 with count 7
+Found duplicate to 681 with 681 with count 8
+Found duplicate to 681 with 681 with count 6
+Found duplicate to 681 with 681 with count 7
+Found duplicate to 681 with 681 with count 8
+Found duplicate to 681 with 681 with count 5
+Found duplicate to 681 with 681 with count 6
+Found duplicate to 681 with 681 with count 7
+Found duplicate to 681 with 681 with count 5
+Found duplicate to 681 with 681 with count 6
+Found duplicate to 681 with 681 with count 7
+682
+Found new entry
+683
+Found new entry
+691
+Found duplicate to 691 with 691 with count 2
+Found duplicate to 691 with 691 with count 3
+Found duplicate to 691 with 691 with count 4
+Found duplicate to 691 with 691 with count 2
+Found duplicate to 691 with 691 with count 3
+Found duplicate to 691 with 691 with count 4
+Found duplicate to 691 with 691 with count 4
+Found duplicate to 691 with 691 with count 5
+Found duplicate to 691 with 691 with count 6
+Found duplicate to 691 with 691 with count 6
+Found duplicate to 691 with 691 with count 7
+Found duplicate to 691 with 691 with count 6
+Found duplicate to 691 with 691 with count 6
+Found duplicate to 691 with 691 with count 7
+Found duplicate to 691 with 691 with count 8
+Found duplicate to 691 with 691 with count 5
+Found duplicate to 691 with 691 with count 6
+Found duplicate to 691 with 691 with count 7
+692
+Found new entry
+693
+Found new entry
+771
+Found duplicate to 771 with 771 with count 1
+Found duplicate to 771 with 771 with count 2
+Found duplicate to 771 with 771 with count 3
+Found duplicate to 771 with 771 with count 1
+Found duplicate to 771 with 771 with count 2
+Found duplicate to 771 with 771 with count 3
+Found duplicate to 771 with 771 with count 2
+Found duplicate to 771 with 771 with count 3
+Found duplicate to 771 with 771 with count 4
+Found duplicate to 771 with 771 with count 2
+Found duplicate to 771 with 771 with count 3
+Found duplicate to 771 with 771 with count 4
+Found duplicate to 771 with 771 with count 3
+Found duplicate to 771 with 771 with count 4
+Found duplicate to 771 with 771 with count 5
+Found duplicate to 771 with 771 with count 5
+Found duplicate to 771 with 771 with count 6
+Found duplicate to 771 with 771 with count 7
+Found duplicate to 771 with 771 with count 5
+Found duplicate to 771 with 771 with count 6
+Found duplicate to 771 with 771 with count 7
+Found duplicate to 771 with 771 with count 5
+Found duplicate to 771 with 771 with count 6
+Found duplicate to 771 with 771 with count 7
+Found duplicate to 771 with 771 with count 7
+Found duplicate to 771 with 771 with count 8
+Found duplicate to 771 with 771 with count 6
+772
+Found new entry
+773
+Found new entry
+781
+Found duplicate to 781 with 781 with count 0
+Found duplicate to 781 with 781 with count 1
+Found duplicate to 781 with 781 with count 2
+Found duplicate to 781 with 781 with count 0
+Found duplicate to 781 with 781 with count 1
+Found duplicate to 781 with 781 with count 2
+Found duplicate to 781 with 781 with count 0
+Found duplicate to 781 with 781 with count 1
+Found duplicate to 781 with 781 with count 2
+Found duplicate to 781 with 781 with count 1
+Found duplicate to 781 with 781 with count 2
+Found duplicate to 781 with 781 with count 3
+Found duplicate to 781 with 781 with count 2
+Found duplicate to 781 with 781 with count 3
+Found duplicate to 781 with 781 with count 4
+Found duplicate to 781 with 781 with count 4
+Found duplicate to 781 with 781 with count 5
+Found duplicate to 781 with 781 with count 6
+Found duplicate to 781 with 781 with count 4
+Found duplicate to 781 with 781 with count 5
+Found duplicate to 781 with 781 with count 6
+Found duplicate to 781 with 781 with count 5
+Found duplicate to 781 with 781 with count 6
+Found duplicate to 781 with 781 with count 7
+Found duplicate to 781 with 781 with count 5
+Found duplicate to 781 with 781 with count 6
+Found duplicate to 781 with 781 with count 7
+782
+Found new entry
+783
+Found new entry
+791
+Found duplicate to 791 with 791 with count 1
+Found duplicate to 791 with 791 with count 2
+Found duplicate to 791 with 791 with count 0
+Found duplicate to 791 with 791 with count 0
+Found duplicate to 791 with 791 with count 1
+Found duplicate to 791 with 791 with count 2
+Found duplicate to 791 with 791 with count 0
+Found duplicate to 791 with 791 with count 1
+Found duplicate to 791 with 791 with count 2
+Found duplicate to 791 with 791 with count 3
+Found duplicate to 791 with 791 with count 4
+Found duplicate to 791 with 791 with count 2
+Found duplicate to 791 with 791 with count 5
+Found duplicate to 791 with 791 with count 6
+Found duplicate to 791 with 791 with count 4
+Found duplicate to 791 with 791 with count 6
+Found duplicate to 791 with 791 with count 7
+Found duplicate to 791 with 791 with count 5
+792
+Found new entry
+793
+Found new entry
+871
+Found duplicate to 871 with 871 with count 0
+Found duplicate to 871 with 871 with count 1
+Found duplicate to 871 with 871 with count 2
+Found duplicate to 871 with 871 with count 0
+Found duplicate to 871 with 871 with count 1
+Found duplicate to 871 with 871 with count 2
+Found duplicate to 871 with 871 with count 1
+Found duplicate to 871 with 871 with count 2
+Found duplicate to 871 with 871 with count 3
+Found duplicate to 871 with 871 with count 1
+Found duplicate to 871 with 871 with count 2
+Found duplicate to 871 with 871 with count 3
+Found duplicate to 871 with 871 with count 4
+Found duplicate to 871 with 871 with count 5
+Found duplicate to 871 with 871 with count 6
+Found duplicate to 871 with 871 with count 5
+Found duplicate to 871 with 871 with count 6
+Found duplicate to 871 with 871 with count 7
+872
+Found new entry
+873
+Found new entry
+881
+Found duplicate to 881 with 881 with count 0
+Found duplicate to 881 with 881 with count 1
+Found duplicate to 881 with 881 with count 0
+Found duplicate to 881 with 881 with count 1
+Found duplicate to 881 with 881 with count 2
+Found duplicate to 881 with 881 with count 0
+Found duplicate to 881 with 881 with count 1
+Found duplicate to 881 with 881 with count 2
+Found duplicate to 881 with 881 with count 0
+Found duplicate to 881 with 881 with count 1
+Found duplicate to 881 with 881 with count 2
+Found duplicate to 881 with 881 with count 1
+Found duplicate to 881 with 881 with count 2
+Found duplicate to 881 with 881 with count 3
+Found duplicate to 881 with 881 with count 5
+Found duplicate to 881 with 881 with count 6
+Found duplicate to 881 with 881 with count 4
+Found duplicate to 881 with 881 with count 6
+Found duplicate to 881 with 881 with count 7
+Found duplicate to 881 with 881 with count 5
+882
+Found new entry
+883
+Found new entry
+891
+Found duplicate to 891 with 891 with count 0
+Found duplicate to 891 with 891 with count 1
+Found duplicate to 891 with 891 with count 1
+Found duplicate to 891 with 891 with count 2
+Found duplicate to 891 with 891 with count 0
+Found duplicate to 891 with 891 with count 0
+Found duplicate to 891 with 891 with count 1
+Found duplicate to 891 with 891 with count 2
+892
+Found new entry
+893
+Found new entry
+678
+Found new entry
+679
+Found new entry
+688
+Found new entry
+689
+Found new entry
+698
+Found new entry
+699
+Found new entry
+778
+Found new entry
+779
+Found new entry
+788
+Found new entry
+789
+Found new entry
+798
+Found new entry
+799
+Found new entry
+878
+Found new entry
+879
+Found new entry
+888
+Found new entry
+889
+Found new entry
+898
+Found new entry
+899
+Found new entry
+688
+Found new entry
+689
+Found new entry
+698
+Found new entry
+699
+Found new entry
+788
+Found new entry
+789
+Found new entry
+798
+Found new entry
+799
+Found new entry
+888
+Found new entry
+889
+Found new entry
+898
+Found new entry
+899
+Found new entry
+701
+Found duplicate to 701 with 701 with count 2
+Found duplicate to 701 with 701 with count 3
+Found duplicate to 701 with 701 with count 4
+Found duplicate to 701 with 701 with count 5
+Found duplicate to 701 with 701 with count 3
+Found duplicate to 701 with 701 with count 3
+Found duplicate to 701 with 701 with count 4
+Found duplicate to 701 with 701 with count 5
+702
+Found new entry
+703
+Found new entry
+711
+Found duplicate to 711 with 711 with count 2
+712
+Found new entry
+713
+Found new entry
+801
+Found duplicate to 801 with 801 with count 0
+Found duplicate to 801 with 801 with count 1
+Found duplicate to 801 with 801 with count 1
+Found duplicate to 801 with 801 with count 2
+Found duplicate to 801 with 801 with count 3
+Found duplicate to 801 with 801 with count 4
+Found duplicate to 801 with 801 with count 5
+Found duplicate to 801 with 801 with count 6
+802
+Found new entry
+803
+Found new entry
+811
+Found duplicate to 811 with 811 with count 0
+812
+Found new entry
+813
+Found new entry
+901
+Found duplicate to 901 with 901 with count 0
+Found duplicate to 901 with 901 with count 0
+Found duplicate to 901 with 901 with count 2
+Found duplicate to 901 with 901 with count 3
+Found duplicate to 901 with 901 with count 1
+Found duplicate to 901 with 901 with count 5
+Found duplicate to 901 with 901 with count 6
+Found duplicate to 901 with 901 with count 4
+902
+Found new entry
+903
+Found new entry
+911
+Found duplicate to 911 with 911 with count 1
+912
+Found new entry
+913
+Found new entry
+700
+Found new entry
+701
+Found duplicate to 701 with 701 with count 3
+Found duplicate to 701 with 701 with count 4
+Found duplicate to 701 with 701 with count 5
+Found duplicate to 701 with 701 with count 6
+Found duplicate to 701 with 701 with count 4
+Found duplicate to 701 with 701 with count 4
+Found duplicate to 701 with 701 with count 5
+Found duplicate to 701 with 701 with count 6
+702
+Found new entry
+710
+Found new entry
+711
+Found duplicate to 711 with 711 with count 3
+712
+Found new entry
+720
+Found new entry
+721
+Found duplicate to 721 with 721 with count 2
+Found duplicate to 721 with 721 with count 1
+Found duplicate to 721 with 721 with count 1
+Found duplicate to 721 with 721 with count 2
+Found duplicate to 721 with 721 with count 1
+Found duplicate to 721 with 721 with count 2
+Found duplicate to 721 with 721 with count 3
+Found duplicate to 721 with 721 with count 3
+Found duplicate to 721 with 721 with count 4
+Found duplicate to 721 with 721 with count 5
+Found duplicate to 721 with 721 with count 5
+Found duplicate to 721 with 721 with count 6
+Found duplicate to 721 with 721 with count 7
+Found duplicate to 721 with 721 with count 5
+Found duplicate to 721 with 721 with count 6
+Found duplicate to 721 with 721 with count 7
+Found duplicate to 721 with 721 with count 5
+Found duplicate to 721 with 721 with count 6
+Found duplicate to 721 with 721 with count 7
+Found duplicate to 721 with 721 with count 6
+Found duplicate to 721 with 721 with count 7
+Found duplicate to 721 with 721 with count 8
+722
+Found new entry
+800
+Found new entry
+801
+Found duplicate to 801 with 801 with count 1
+Found duplicate to 801 with 801 with count 2
+Found duplicate to 801 with 801 with count 2
+Found duplicate to 801 with 801 with count 3
+Found duplicate to 801 with 801 with count 4
+Found duplicate to 801 with 801 with count 5
+Found duplicate to 801 with 801 with count 6
+Found duplicate to 801 with 801 with count 7
+802
+Found new entry
+810
+Found new entry
+811
+Found duplicate to 811 with 811 with count 1
+812
+Found new entry
+820
+Found new entry
+821
+Found duplicate to 821 with 821 with count 0
+Found duplicate to 821 with 821 with count 1
+Found duplicate to 821 with 821 with count 0
+Found duplicate to 821 with 821 with count 1
+Found duplicate to 821 with 821 with count 2
+Found duplicate to 821 with 821 with count 2
+Found duplicate to 821 with 821 with count 3
+Found duplicate to 821 with 821 with count 4
+Found duplicate to 821 with 821 with count 4
+Found duplicate to 821 with 821 with count 5
+Found duplicate to 821 with 821 with count 6
+Found duplicate to 821 with 821 with count 4
+Found duplicate to 821 with 821 with count 5
+Found duplicate to 821 with 821 with count 6
+Found duplicate to 821 with 821 with count 4
+Found duplicate to 821 with 821 with count 5
+Found duplicate to 821 with 821 with count 6
+Found duplicate to 821 with 821 with count 6
+Found duplicate to 821 with 821 with count 7
+Found duplicate to 821 with 821 with count 8
+822
+Found new entry
+900
+Found new entry
+901
+Found duplicate to 901 with 901 with count 1
+Found duplicate to 901 with 901 with count 1
+Found duplicate to 901 with 901 with count 3
+Found duplicate to 901 with 901 with count 4
+Found duplicate to 901 with 901 with count 2
+Found duplicate to 901 with 901 with count 6
+Found duplicate to 901 with 901 with count 7
+Found duplicate to 901 with 901 with count 5
+902
+Found new entry
+910
+Found new entry
+911
+Found duplicate to 911 with 911 with count 2
+912
+Found new entry
+920
+Found new entry
+921
+Found duplicate to 921 with 921 with count 2
+Found duplicate to 921 with 921 with count 3
+Found duplicate to 921 with 921 with count 4
+Found duplicate to 921 with 921 with count 4
+Found duplicate to 921 with 921 with count 5
+Found duplicate to 921 with 921 with count 6
+Found duplicate to 921 with 921 with count 4
+Found duplicate to 921 with 921 with count 5
+Found duplicate to 921 with 921 with count 6
+Found duplicate to 921 with 921 with count 4
+Found duplicate to 921 with 921 with count 5
+Found duplicate to 921 with 921 with count 6
+Found duplicate to 921 with 921 with count 6
+Found duplicate to 921 with 921 with count 7
+Found duplicate to 921 with 921 with count 8
+922
+Found new entry
+703
+Found new entry
+704
+Found new entry
+705
+Found new entry
+713
+Found new entry
+714
+Found new entry
+715
+Found new entry
+723
+Found new entry
+724
+Found new entry
+725
+Found new entry
+803
+Found new entry
+804
+Found new entry
+805
+Found new entry
+813
+Found new entry
+814
+Found new entry
+815
+Found new entry
+823
+Found new entry
+824
+Found new entry
+825
+Found new entry
+903
+Found new entry
+904
+Found new entry
+905
+Found new entry
+913
+Found new entry
+914
+Found new entry
+915
+Found new entry
+923
+Found new entry
+924
+Found new entry
+925
+Found new entry
+724
+Found new entry
+725
+Found new entry
+726
+Found new entry
+734
+Found new entry
+735
+Found new entry
+736
+Found new entry
+744
+Found new entry
+745
+Found new entry
+746
+Found new entry
+824
+Found new entry
+825
+Found new entry
+826
+Found new entry
+834
+Found new entry
+835
+Found new entry
+836
+Found new entry
+844
+Found new entry
+845
+Found new entry
+846
+Found new entry
+924
+Found new entry
+925
+Found new entry
+926
+Found new entry
+934
+Found new entry
+935
+Found new entry
+936
+Found new entry
+944
+Found new entry
+945
+Found new entry
+946
+Found new entry
+743
+Found new entry
+744
+Found new entry
+745
+Found new entry
+753
+Found new entry
+754
+Found new entry
+755
+Found new entry
+763
+Found new entry
+764
+Found new entry
+765
+Found new entry
+843
+Found new entry
+844
+Found new entry
+845
+Found new entry
+853
+Found new entry
+854
+Found new entry
+855
+Found new entry
+863
+Found new entry
+864
+Found new entry
+865
+Found new entry
+943
+Found new entry
+944
+Found new entry
+945
+Found new entry
+953
+Found new entry
+954
+Found new entry
+955
+Found new entry
+963
+Found new entry
+964
+Found new entry
+965
+Found new entry
+750
+Found new entry
+751
+Found duplicate to 751 with 751 with count 1
+Found duplicate to 751 with 751 with count 2
+Found duplicate to 751 with 751 with count 2
+Found duplicate to 751 with 751 with count 3
+Found duplicate to 751 with 751 with count 1
+Found duplicate to 751 with 751 with count 2
+Found duplicate to 751 with 751 with count 3
+Found duplicate to 751 with 751 with count 4
+Found duplicate to 751 with 751 with count 5
+Found duplicate to 751 with 751 with count 6
+Found duplicate to 751 with 751 with count 7
+Found duplicate to 751 with 751 with count 6
+Found duplicate to 751 with 751 with count 7
+Found duplicate to 751 with 751 with count 8
+760
+Found new entry
+761
+Found duplicate to 761 with 761 with count 2
+Found duplicate to 761 with 761 with count 3
+Found duplicate to 761 with 761 with count 4
+Found duplicate to 761 with 761 with count 2
+Found duplicate to 761 with 761 with count 3
+Found duplicate to 761 with 761 with count 4
+Found duplicate to 761 with 761 with count 5
+Found duplicate to 761 with 761 with count 6
+Found duplicate to 761 with 761 with count 7
+Found duplicate to 761 with 761 with count 5
+Found duplicate to 761 with 761 with count 6
+Found duplicate to 761 with 761 with count 7
+Found duplicate to 761 with 761 with count 5
+Found duplicate to 761 with 761 with count 6
+Found duplicate to 761 with 761 with count 7
+Found duplicate to 761 with 761 with count 6
+Found duplicate to 761 with 761 with count 7
+Found duplicate to 761 with 761 with count 8
+770
+Found new entry
+771
+Found duplicate to 771 with 771 with count 2
+Found duplicate to 771 with 771 with count 3
+Found duplicate to 771 with 771 with count 4
+Found duplicate to 771 with 771 with count 2
+Found duplicate to 771 with 771 with count 3
+Found duplicate to 771 with 771 with count 4
+Found duplicate to 771 with 771 with count 3
+Found duplicate to 771 with 771 with count 4
+Found duplicate to 771 with 771 with count 5
+Found duplicate to 771 with 771 with count 3
+Found duplicate to 771 with 771 with count 4
+Found duplicate to 771 with 771 with count 5
+Found duplicate to 771 with 771 with count 4
+Found duplicate to 771 with 771 with count 5
+Found duplicate to 771 with 771 with count 6
+Found duplicate to 771 with 771 with count 6
+Found duplicate to 771 with 771 with count 7
+Found duplicate to 771 with 771 with count 8
+Found duplicate to 771 with 771 with count 6
+Found duplicate to 771 with 771 with count 7
+Found duplicate to 771 with 771 with count 8
+Found duplicate to 771 with 771 with count 6
+Found duplicate to 771 with 771 with count 7
+Found duplicate to 771 with 771 with count 8
+Found duplicate to 771 with 771 with count 8
+Found duplicate to 771 with 771 with count 9
+Found duplicate to 771 with 771 with count 7
+850
+Found new entry
+851
+Found duplicate to 851 with 851 with count 1
+Found duplicate to 851 with 851 with count 0
+Found duplicate to 851 with 851 with count 0
+Found duplicate to 851 with 851 with count 1
+Found duplicate to 851 with 851 with count 1
+Found duplicate to 851 with 851 with count 2
+Found duplicate to 851 with 851 with count 3
+Found duplicate to 851 with 851 with count 1
+Found duplicate to 851 with 851 with count 2
+Found duplicate to 851 with 851 with count 3
+Found duplicate to 851 with 851 with count 1
+Found duplicate to 851 with 851 with count 2
+Found duplicate to 851 with 851 with count 3
+Found duplicate to 851 with 851 with count 5
+Found duplicate to 851 with 851 with count 6
+Found duplicate to 851 with 851 with count 7
+860
+Found new entry
+861
+Found duplicate to 861 with 861 with count 0
+Found duplicate to 861 with 861 with count 1
+Found duplicate to 861 with 861 with count 0
+Found duplicate to 861 with 861 with count 1
+Found duplicate to 861 with 861 with count 2
+Found duplicate to 861 with 861 with count 1
+Found duplicate to 861 with 861 with count 2
+Found duplicate to 861 with 861 with count 3
+Found duplicate to 861 with 861 with count 1
+Found duplicate to 861 with 861 with count 2
+Found duplicate to 861 with 861 with count 3
+Found duplicate to 861 with 861 with count 1
+Found duplicate to 861 with 861 with count 2
+Found duplicate to 861 with 861 with count 3
+Found duplicate to 861 with 861 with count 4
+Found duplicate to 861 with 861 with count 5
+Found duplicate to 861 with 861 with count 6
+Found duplicate to 861 with 861 with count 5
+Found duplicate to 861 with 861 with count 6
+Found duplicate to 861 with 861 with count 7
+Found duplicate to 861 with 861 with count 5
+Found duplicate to 861 with 861 with count 6
+Found duplicate to 861 with 861 with count 7
+870
+Found new entry
+871
+Found duplicate to 871 with 871 with count 1
+Found duplicate to 871 with 871 with count 2
+Found duplicate to 871 with 871 with count 3
+Found duplicate to 871 with 871 with count 1
+Found duplicate to 871 with 871 with count 2
+Found duplicate to 871 with 871 with count 3
+Found duplicate to 871 with 871 with count 2
+Found duplicate to 871 with 871 with count 3
+Found duplicate to 871 with 871 with count 4
+Found duplicate to 871 with 871 with count 2
+Found duplicate to 871 with 871 with count 3
+Found duplicate to 871 with 871 with count 4
+Found duplicate to 871 with 871 with count 5
+Found duplicate to 871 with 871 with count 6
+Found duplicate to 871 with 871 with count 7
+Found duplicate to 871 with 871 with count 6
+Found duplicate to 871 with 871 with count 7
+Found duplicate to 871 with 871 with count 8
+950
+Found new entry
+951
+Found duplicate to 951 with 951 with count 0
+Found duplicate to 951 with 951 with count 1
+Found duplicate to 951 with 951 with count 1
+Found duplicate to 951 with 951 with count 2
+Found duplicate to 951 with 951 with count 3
+Found duplicate to 951 with 951 with count 2
+Found duplicate to 951 with 951 with count 3
+Found duplicate to 951 with 951 with count 1
+Found duplicate to 951 with 951 with count 1
+Found duplicate to 951 with 951 with count 2
+Found duplicate to 951 with 951 with count 3
+Found duplicate to 951 with 951 with count 5
+Found duplicate to 951 with 951 with count 6
+Found duplicate to 951 with 951 with count 7
+960
+Found new entry
+961
+Found duplicate to 961 with 961 with count 1
+Found duplicate to 961 with 961 with count 0
+Found duplicate to 961 with 961 with count 0
+Found duplicate to 961 with 961 with count 1
+Found duplicate to 961 with 961 with count 2
+Found duplicate to 961 with 961 with count 1
+Found duplicate to 961 with 961 with count 2
+Found duplicate to 961 with 961 with count 3
+Found duplicate to 961 with 961 with count 1
+Found duplicate to 961 with 961 with count 2
+Found duplicate to 961 with 961 with count 3
+Found duplicate to 961 with 961 with count 2
+Found duplicate to 961 with 961 with count 3
+Found duplicate to 961 with 961 with count 2
+Found duplicate to 961 with 961 with count 6
+Found duplicate to 961 with 961 with count 7
+Found duplicate to 961 with 961 with count 6
+970
+Found new entry
+971
+Found duplicate to 971 with 971 with count 0
+Found duplicate to 971 with 971 with count 1
+Found duplicate to 971 with 971 with count 2
+Found duplicate to 971 with 971 with count 2
+Found duplicate to 971 with 971 with count 3
+Found duplicate to 971 with 971 with count 1
+Found duplicate to 971 with 971 with count 1
+Found duplicate to 971 with 971 with count 2
+Found duplicate to 971 with 971 with count 3
+760
+Found new entry
+761
+Found duplicate to 761 with 761 with count 3
+Found duplicate to 761 with 761 with count 4
+Found duplicate to 761 with 761 with count 5
+Found duplicate to 761 with 761 with count 3
+Found duplicate to 761 with 761 with count 4
+Found duplicate to 761 with 761 with count 5
+Found duplicate to 761 with 761 with count 6
+Found duplicate to 761 with 761 with count 7
+Found duplicate to 761 with 761 with count 8
+Found duplicate to 761 with 761 with count 6
+Found duplicate to 761 with 761 with count 7
+Found duplicate to 761 with 761 with count 8
+Found duplicate to 761 with 761 with count 6
+Found duplicate to 761 with 761 with count 7
+Found duplicate to 761 with 761 with count 8
+Found duplicate to 761 with 761 with count 7
+Found duplicate to 761 with 761 with count 8
+Found duplicate to 761 with 761 with count 9
+770
+Found new entry
+771
+Found duplicate to 771 with 771 with count 3
+Found duplicate to 771 with 771 with count 4
+Found duplicate to 771 with 771 with count 5
+Found duplicate to 771 with 771 with count 3
+Found duplicate to 771 with 771 with count 4
+Found duplicate to 771 with 771 with count 5
+Found duplicate to 771 with 771 with count 4
+Found duplicate to 771 with 771 with count 5
+Found duplicate to 771 with 771 with count 6
+Found duplicate to 771 with 771 with count 4
+Found duplicate to 771 with 771 with count 5
+Found duplicate to 771 with 771 with count 6
+Found duplicate to 771 with 771 with count 5
+Found duplicate to 771 with 771 with count 6
+Found duplicate to 771 with 771 with count 7
+Found duplicate to 771 with 771 with count 7
+Found duplicate to 771 with 771 with count 8
+Found duplicate to 771 with 771 with count 9
+Found duplicate to 771 with 771 with count 7
+Found duplicate to 771 with 771 with count 8
+Found duplicate to 771 with 771 with count 9
+Found duplicate to 771 with 771 with count 7
+Found duplicate to 771 with 771 with count 8
+Found duplicate to 771 with 771 with count 9
+Found duplicate to 771 with 771 with count 9
+Found duplicate to 771 with 771 with count 10
+Found duplicate to 771 with 771 with count 8
+780
+Found new entry
+781
+Found duplicate to 781 with 781 with count 1
+Found duplicate to 781 with 781 with count 2
+Found duplicate to 781 with 781 with count 3
+Found duplicate to 781 with 781 with count 1
+Found duplicate to 781 with 781 with count 2
+Found duplicate to 781 with 781 with count 3
+Found duplicate to 781 with 781 with count 1
+Found duplicate to 781 with 781 with count 2
+Found duplicate to 781 with 781 with count 3
+Found duplicate to 781 with 781 with count 2
+Found duplicate to 781 with 781 with count 3
+Found duplicate to 781 with 781 with count 4
+Found duplicate to 781 with 781 with count 3
+Found duplicate to 781 with 781 with count 4
+Found duplicate to 781 with 781 with count 5
+Found duplicate to 781 with 781 with count 5
+Found duplicate to 781 with 781 with count 6
+Found duplicate to 781 with 781 with count 7
+Found duplicate to 781 with 781 with count 5
+Found duplicate to 781 with 781 with count 6
+Found duplicate to 781 with 781 with count 7
+Found duplicate to 781 with 781 with count 6
+Found duplicate to 781 with 781 with count 7
+Found duplicate to 781 with 781 with count 8
+Found duplicate to 781 with 781 with count 6
+Found duplicate to 781 with 781 with count 7
+Found duplicate to 781 with 781 with count 8
+Found duplicate to 781 with 781 with count 6
+Found duplicate to 781 with 781 with count 7
+Found duplicate to 781 with 781 with count 8
+860
+Found new entry
+861
+Found duplicate to 861 with 861 with count 1
+Found duplicate to 861 with 861 with count 2
+Found duplicate to 861 with 861 with count 1
+Found duplicate to 861 with 861 with count 2
+Found duplicate to 861 with 861 with count 3
+Found duplicate to 861 with 861 with count 2
+Found duplicate to 861 with 861 with count 3
+Found duplicate to 861 with 861 with count 4
+Found duplicate to 861 with 861 with count 2
+Found duplicate to 861 with 861 with count 3
+Found duplicate to 861 with 861 with count 4
+Found duplicate to 861 with 861 with count 2
+Found duplicate to 861 with 861 with count 3
+Found duplicate to 861 with 861 with count 4
+Found duplicate to 861 with 861 with count 5
+Found duplicate to 861 with 861 with count 6
+Found duplicate to 861 with 861 with count 7
+Found duplicate to 861 with 861 with count 6
+Found duplicate to 861 with 861 with count 7
+Found duplicate to 861 with 861 with count 8
+Found duplicate to 861 with 861 with count 6
+Found duplicate to 861 with 861 with count 7
+Found duplicate to 861 with 861 with count 8
+870
+Found new entry
+871
+Found duplicate to 871 with 871 with count 2
+Found duplicate to 871 with 871 with count 3
+Found duplicate to 871 with 871 with count 4
+Found duplicate to 871 with 871 with count 2
+Found duplicate to 871 with 871 with count 3
+Found duplicate to 871 with 871 with count 4
+Found duplicate to 871 with 871 with count 3
+Found duplicate to 871 with 871 with count 4
+Found duplicate to 871 with 871 with count 5
+Found duplicate to 871 with 871 with count 3
+Found duplicate to 871 with 871 with count 4
+Found duplicate to 871 with 871 with count 5
+Found duplicate to 871 with 871 with count 6
+Found duplicate to 871 with 871 with count 7
+Found duplicate to 871 with 871 with count 8
+Found duplicate to 871 with 871 with count 7
+Found duplicate to 871 with 871 with count 8
+Found duplicate to 871 with 871 with count 9
+880
+Found new entry
+881
+Found duplicate to 881 with 881 with count 1
+Found duplicate to 881 with 881 with count 2
+Found duplicate to 881 with 881 with count 1
+Found duplicate to 881 with 881 with count 2
+Found duplicate to 881 with 881 with count 3
+Found duplicate to 881 with 881 with count 1
+Found duplicate to 881 with 881 with count 2
+Found duplicate to 881 with 881 with count 3
+Found duplicate to 881 with 881 with count 1
+Found duplicate to 881 with 881 with count 2
+Found duplicate to 881 with 881 with count 3
+Found duplicate to 881 with 881 with count 2
+Found duplicate to 881 with 881 with count 3
+Found duplicate to 881 with 881 with count 4
+Found duplicate to 881 with 881 with count 6
+Found duplicate to 881 with 881 with count 7
+Found duplicate to 881 with 881 with count 5
+Found duplicate to 881 with 881 with count 7
+Found duplicate to 881 with 881 with count 8
+Found duplicate to 881 with 881 with count 6
+Found duplicate to 881 with 881 with count 6
+Found duplicate to 881 with 881 with count 7
+Found duplicate to 881 with 881 with count 8
+Found duplicate to 881 with 881 with count 6
+Found duplicate to 881 with 881 with count 7
+Found duplicate to 881 with 881 with count 8
+960
+Found new entry
+961
+Found duplicate to 961 with 961 with count 2
+Found duplicate to 961 with 961 with count 1
+Found duplicate to 961 with 961 with count 1
+Found duplicate to 961 with 961 with count 2
+Found duplicate to 961 with 961 with count 3
+Found duplicate to 961 with 961 with count 2
+Found duplicate to 961 with 961 with count 3
+Found duplicate to 961 with 961 with count 4
+Found duplicate to 961 with 961 with count 2
+Found duplicate to 961 with 961 with count 3
+Found duplicate to 961 with 961 with count 4
+Found duplicate to 961 with 961 with count 3
+Found duplicate to 961 with 961 with count 4
+Found duplicate to 961 with 961 with count 3
+Found duplicate to 961 with 961 with count 7
+Found duplicate to 961 with 961 with count 8
+Found duplicate to 961 with 961 with count 7
+970
+Found new entry
+971
+Found duplicate to 971 with 971 with count 1
+Found duplicate to 971 with 971 with count 2
+Found duplicate to 971 with 971 with count 3
+Found duplicate to 971 with 971 with count 3
+Found duplicate to 971 with 971 with count 4
+Found duplicate to 971 with 971 with count 2
+Found duplicate to 971 with 971 with count 2
+Found duplicate to 971 with 971 with count 3
+Found duplicate to 971 with 971 with count 4
+980
+Found new entry
+981
+Found duplicate to 981 with 981 with count 0
+Found duplicate to 981 with 981 with count 1
+Found duplicate to 981 with 981 with count 0
+Found duplicate to 981 with 981 with count 1
+Found duplicate to 981 with 981 with count 2
+Found duplicate to 981 with 981 with count 1
+Found duplicate to 981 with 981 with count 2
+Found duplicate to 981 with 981 with count 1
+Found duplicate to 981 with 981 with count 2
+Found duplicate to 981 with 981 with count 3
+Found duplicate to 981 with 981 with count 1
+Found duplicate to 981 with 981 with count 6
+Found duplicate to 981 with 981 with count 7
+Found duplicate to 981 with 981 with count 8
+Found duplicate to 981 with 981 with count 6
+Found duplicate to 981 with 981 with count 7
+Found duplicate to 981 with 981 with count 8
+768
+Found new entry
+769
+Found new entry
+778
+Found new entry
+779
+Found new entry
+788
+Found new entry
+789
+Found new entry
+868
+Found new entry
+869
+Found new entry
+878
+Found new entry
+879
+Found new entry
+888
+Found new entry
+889
+Found new entry
+968
+Found new entry
+969
+Found new entry
+978
+Found new entry
+979
+Found new entry
+988
+Found new entry
+989
+Found new entry
+808
+Found new entry
+809
+Found new entry
+818
+Found new entry
+819
+Found new entry
+908
+Found new entry
+909
+Found new entry
+918
+Found new entry
+919
+Found new entry
+802
+Found new entry
+803
+Found new entry
+804
+Found new entry
+812
+Found new entry
+813
+Found new entry
+814
+Found new entry
+822
+Found new entry
+823
+Found new entry
+824
+Found new entry
+902
+Found new entry
+903
+Found new entry
+904
+Found new entry
+912
+Found new entry
+913
+Found new entry
+914
+Found new entry
+922
+Found new entry
+923
+Found new entry
+924
+Found new entry
+870
+Found new entry
+871
+Found duplicate to 871 with 871 with count 3
+Found duplicate to 871 with 871 with count 4
+Found duplicate to 871 with 871 with count 5
+Found duplicate to 871 with 871 with count 3
+Found duplicate to 871 with 871 with count 4
+Found duplicate to 871 with 871 with count 5
+Found duplicate to 871 with 871 with count 4
+Found duplicate to 871 with 871 with count 5
+Found duplicate to 871 with 871 with count 6
+Found duplicate to 871 with 871 with count 4
+Found duplicate to 871 with 871 with count 5
+Found duplicate to 871 with 871 with count 6
+Found duplicate to 871 with 871 with count 7
+Found duplicate to 871 with 871 with count 8
+Found duplicate to 871 with 871 with count 9
+Found duplicate to 871 with 871 with count 8
+Found duplicate to 871 with 871 with count 9
+Found duplicate to 871 with 871 with count 10
+880
+Found new entry
+881
+Found duplicate to 881 with 881 with count 2
+Found duplicate to 881 with 881 with count 3
+Found duplicate to 881 with 881 with count 2
+Found duplicate to 881 with 881 with count 3
+Found duplicate to 881 with 881 with count 4
+Found duplicate to 881 with 881 with count 2
+Found duplicate to 881 with 881 with count 3
+Found duplicate to 881 with 881 with count 4
+Found duplicate to 881 with 881 with count 2
+Found duplicate to 881 with 881 with count 3
+Found duplicate to 881 with 881 with count 4
+Found duplicate to 881 with 881 with count 3
+Found duplicate to 881 with 881 with count 4
+Found duplicate to 881 with 881 with count 5
+Found duplicate to 881 with 881 with count 7
+Found duplicate to 881 with 881 with count 8
+Found duplicate to 881 with 881 with count 6
+Found duplicate to 881 with 881 with count 8
+Found duplicate to 881 with 881 with count 9
+Found duplicate to 881 with 881 with count 7
+Found duplicate to 881 with 881 with count 7
+Found duplicate to 881 with 881 with count 8
+Found duplicate to 881 with 881 with count 9
+Found duplicate to 881 with 881 with count 7
+Found duplicate to 881 with 881 with count 8
+Found duplicate to 881 with 881 with count 9
+Found duplicate to 881 with 881 with count 7
+Found duplicate to 881 with 881 with count 8
+Found duplicate to 881 with 881 with count 9
+890
+Found new entry
+891
+Found duplicate to 891 with 891 with count 1
+Found duplicate to 891 with 891 with count 2
+Found duplicate to 891 with 891 with count 2
+Found duplicate to 891 with 891 with count 3
+Found duplicate to 891 with 891 with count 1
+Found duplicate to 891 with 891 with count 1
+Found duplicate to 891 with 891 with count 2
+Found duplicate to 891 with 891 with count 3
+Found duplicate to 891 with 891 with count 6
+Found duplicate to 891 with 891 with count 7
+Found duplicate to 891 with 891 with count 8
+Found duplicate to 891 with 891 with count 6
+Found duplicate to 891 with 891 with count 7
+Found duplicate to 891 with 891 with count 8
+Found duplicate to 891 with 891 with count 8
+Found duplicate to 891 with 891 with count 9
+Found duplicate to 891 with 891 with count 8
+970
+Found new entry
+971
+Found duplicate to 971 with 971 with count 2
+Found duplicate to 971 with 971 with count 3
+Found duplicate to 971 with 971 with count 4
+Found duplicate to 971 with 971 with count 4
+Found duplicate to 971 with 971 with count 5
+Found duplicate to 971 with 971 with count 3
+Found duplicate to 971 with 971 with count 3
+Found duplicate to 971 with 971 with count 4
+Found duplicate to 971 with 971 with count 5
+980
+Found new entry
+981
+Found duplicate to 981 with 981 with count 1
+Found duplicate to 981 with 981 with count 2
+Found duplicate to 981 with 981 with count 1
+Found duplicate to 981 with 981 with count 2
+Found duplicate to 981 with 981 with count 3
+Found duplicate to 981 with 981 with count 2
+Found duplicate to 981 with 981 with count 3
+Found duplicate to 981 with 981 with count 2
+Found duplicate to 981 with 981 with count 3
+Found duplicate to 981 with 981 with count 4
+Found duplicate to 981 with 981 with count 2
+Found duplicate to 981 with 981 with count 7
+Found duplicate to 981 with 981 with count 8
+Found duplicate to 981 with 981 with count 9
+Found duplicate to 981 with 981 with count 7
+Found duplicate to 981 with 981 with count 8
+Found duplicate to 981 with 981 with count 9
+990
+Found new entry
+991
+Found duplicate to 991 with 991 with count 1
+Found duplicate to 991 with 991 with count 0
+Found duplicate to 991 with 991 with count 1
+Found duplicate to 991 with 991 with count 2
+Found duplicate to 991 with 991 with count 0
+Found duplicate to 991 with 991 with count 7
+Found duplicate to 991 with 991 with count 8
+Found duplicate to 991 with 991 with count 6
+Found duplicate to 991 with 991 with count 7
+Found duplicate to 991 with 991 with count 8
+Found duplicate to 991 with 991 with count 7
+874
+Found new entry
+875
+Found new entry
+876
+Found new entry
+884
+Found new entry
+885
+Found new entry
+886
+Found new entry
+894
+Found new entry
+895
+Found new entry
+896
+Found new entry
+974
+Found new entry
+975
+Found new entry
+976
+Found new entry
+984
+Found new entry
+985
+Found new entry
+986
+Found new entry
+994
+Found new entry
+995
+Found new entry
+996
+Found new entry
+0 3 1	1
+0 4 1	1
+0 5 1	2
+1 3 1	2
+1 4 1	2
+1 5 1	4
+0 3 1	2
+0 4 1	2
+0 5 1	3
+1 3 1	3
+1 4 1	3
+1 5 1	3
+0 3 1	1
+0 4 1	1
+0 5 1	2
+1 3 1	2
+1 4 1	2
+1 5 1	3
+2 3 1	2
+2 4 1	2
+2 5 1	3
+0 3 1	2
+0 4 1	2
+0 5 1	3
+1 3 1	3
+1 4 1	3
+1 5 1	4
+2 3 1	3
+2 4 1	3
+2 5 1	2
+0 4 1	1
+0 5 1	2
+0 6 1	1
+1 4 1	2
+1 5 1	3
+1 6 1	2
+2 4 1	2
+2 5 1	2
+2 6 1	2
+0 4 1	2
+0 5 1	3
+0 6 1	2
+1 4 1	3
+1 5 1	4
+1 6 1	3
+2 4 1	3
+2 5 1	3
+2 6 1	1
+1 7 1	3
+1 8 1	2
+1 9 1	2
+2 7 1	3
+2 8 1	2
+2 9 1	2
+3 7 1	3
+3 8 1	2
+3 9 1	3
+1 7 1	4
+1 8 1	3
+1 9 1	3
+2 7 1	4
+2 8 1	3
+2 9 1	3
+3 7 1	4
+3 8 1	3
+3 9 1	2
+2 6 1	1
+2 7 1	3
+2 8 1	2
+3 6 1	1
+3 7 1	3
+3 8 1	2
+4 6 1	0
+4 7 1	2
+4 8 1	4
+2 6 1	2
+2 7 1	4
+2 8 1	3
+3 6 1	2
+3 7 1	4
+3 8 1	3
+4 6 1	1
+4 7 1	3
+4 8 1	3
+3 6 1	1
+3 7 1	3
+3 8 1	2
+4 6 1	0
+4 7 1	2
+4 8 1	3
+5 6 1	1
+5 7 1	2
+5 8 1	3
+3 6 1	2
+3 7 1	4
+3 8 1	3
+4 6 1	1
+4 7 1	3
+4 8 1	4
+5 6 1	2
+5 7 1	3
+5 8 1	2
+3 8 1	2
+3 9 1	2
+4 8 1	3
+4 9 1	3
+5 8 1	2
+5 9 1	3
+3 8 1	3
+3 9 1	3
+4 8 1	4
+4 9 1	4
+5 8 1	3
+5 9 1	2
+5 0 1	3
+5 2 1	4
+6 0 1	3
+6 2 1	4
+7 0 1	4
+7 1 1	4
+7 2 1	3
+5 0 1	4
+5 2 1	5
+6 0 1	4
+6 2 1	5
+7 0 1	5
+7 2 1	2
+6 2 1	4
+6 3 1	2
+6 4 1	0
+7 2 1	2
+7 3 1	0
+7 4 1	0
+8 2 1	1
+8 3 1	0
+8 4 1	1
+6 2 1	5
+6 3 1	3
+6 4 1	1
+7 2 1	3
+7 3 1	1
+7 4 1	1
+8 2 1	2
+8 3 1	1
+8 4 1	0
+6 3 1	2
+6 4 1	0
+6 5 1	1
+7 3 1	0
+7 4 1	0
+7 5 1	2
+8 3 1	0
+8 4 1	0
+8 5 1	2
+6 3 1	3
+6 4 1	1
+6 5 1	2
+7 3 1	1
+7 4 1	1
+7 5 1	3
+8 3 1	1
+8 4 1	1
+8 5 1	1
+8 0 1	2
+8 1 1	2
+9 0 1	2
+9 1 1	3
+8 0 1	3
+9 0 1	2
+8 4 1	0
+8 5 1	1
+8 6 1	2
+9 4 1	0
+9 5 1	1
+9 6 1	3
+8 4 1	1
+8 5 1	2
+8 6 1	3
+9 4 1	1
+9 5 1	2
+9 6 1	2
+8 8 1	3
+8 9 1	2
+9 8 1	2
+9 9 1	2
+8 8 1	4
+8 9 1	3
+9 8 1	3
+9 9 1	1
+0 1 1	1
+0 2 1	0
+0 3 1	1
+1 2 1	1
+1 3 1	3
+0 1 1	1
+0 2 1	1
+0 3 1	2
+1 1 1	2
+1 2 1	2
+1 3 1	4
+0 1 1	2
+0 2 1	2
+0 3 1	3
+1 1 1	3
+1 2 1	3
+1 3 1	2
+0 2 1	0
+0 3 1	1
+0 4 1	1
+1 2 1	1
+1 3 1	2
+1 4 1	3
+0 2 1	1
+0 3 1	2
+0 4 1	2
+1 2 1	2
+1 3 1	3
+1 4 1	4
+0 2 1	2
+0 3 1	3
+0 4 1	3
+1 2 1	3
+1 3 1	4
+1 4 1	2
+1 3 1	2
+1 4 1	2
+1 5 1	2
+2 3 1	2
+2 4 1	2
+2 5 1	2
+3 3 1	1
+3 4 1	1
+3 5 1	2
+1 3 1	3
+1 4 1	3
+1 5 1	3
+2 3 1	3
+2 4 1	3
+2 5 1	3
+3 3 1	2
+3 4 1	2
+3 5 1	3
+1 3 1	4
+1 4 1	4
+1 5 1	4
+2 3 1	4
+2 4 1	4
+2 5 1	4
+3 3 1	3
+3 4 1	3
+3 5 1	1
+1 4 1	2
+1 5 1	2
+1 6 1	1
+2 4 1	2
+2 5 1	2
+2 6 1	1
+3 4 1	1
+3 5 1	1
+3 6 1	2
+1 4 1	3
+1 5 1	3
+1 6 1	2
+2 4 1	3
+2 5 1	3
+2 6 1	2
+3 4 1	2
+3 5 1	2
+3 6 1	3
+1 4 1	4
+1 5 1	4
+1 6 1	3
+2 4 1	4
+2 5 1	4
+2 6 1	3
+3 4 1	3
+3 5 1	3
+3 6 1	1
+3 0 1	2
+3 2 1	1
+4 0 1	2
+4 2 1	3
+5 0 1	3
+5 2 1	5
+3 0 1	3
+3 2 1	2
+4 0 1	3
+4 2 1	4
+5 0 1	4
+5 2 1	6
+3 0 1	4
+3 2 1	3
+4 0 1	4
+4 2 1	5
+5 0 1	5
+5 2 1	4
+3 8 1	2
+3 9 1	2
+4 8 1	3
+4 9 1	3
+5 8 1	2
+5 9 1	3
+3 8 1	3
+3 9 1	3
+4 8 1	4
+4 9 1	4
+5 8 1	3
+5 9 1	4
+3 8 1	4
+3 9 1	4
+4 8 1	5
+4 9 1	5
+5 8 1	4
+5 9 1	2
+5 3 1	2
+5 4 1	0
+5 5 1	1
+6 3 1	2
+6 4 1	0
+6 5 1	1
+7 3 1	0
+7 4 1	0
+7 5 1	3
+5 3 1	3
+5 4 1	1
+5 5 1	2
+6 3 1	3
+6 4 1	1
+6 5 1	2
+7 3 1	1
+7 4 1	1
+7 5 1	4
+5 3 1	4
+5 4 1	2
+5 5 1	3
+6 3 1	4
+6 4 1	2
+6 5 1	3
+7 3 1	2
+7 4 1	2
+7 5 1	2
+5 7 1	2
+5 8 1	2
+5 9 1	2
+6 7 1	3
+6 8 1	3
+6 9 1	3
+7 7 1	4
+7 8 1	2
+7 9 1	2
+5 7 1	3
+5 8 1	3
+5 9 1	3
+6 7 1	4
+6 8 1	4
+6 9 1	4
+7 7 1	5
+7 8 1	3
+7 9 1	3
+5 7 1	4
+5 8 1	4
+5 9 1	4
+6 7 1	5
+6 8 1	5
+6 9 1	5
+7 7 1	6
+7 8 1	4
+7 9 1	1
+6 2 1	4
+6 3 1	2
+6 4 1	0
+7 2 1	2
+7 3 1	0
+7 4 1	0
+8 2 1	1
+8 3 1	0
+8 4 1	1
+6 2 1	5
+6 3 1	3
+6 4 1	1
+7 2 1	3
+7 3 1	1
+7 4 1	1
+8 2 1	2
+8 3 1	1
+8 4 1	2
+6 2 1	6
+6 3 1	4
+6 4 1	2
+7 2 1	4
+7 3 1	2
+7 4 1	2
+8 2 1	3
+8 3 1	2
+8 4 1	0
+6 7 1	3
+6 8 1	3
+6 9 1	3
+7 7 1	4
+7 8 1	2
+7 9 1	1
+8 7 1	4
+8 8 1	3
+8 9 1	3
+6 7 1	4
+6 8 1	4
+6 9 1	4
+7 7 1	5
+7 8 1	3
+7 9 1	2
+8 7 1	5
+8 8 1	4
+8 9 1	4
+6 7 1	5
+6 8 1	5
+6 9 1	5
+7 7 1	6
+7 8 1	4
+7 9 1	3
+8 7 1	6
+8 8 1	5
+8 9 1	2
+7 8 1	2
+7 9 1	1
+8 8 1	3
+8 9 1	2
+9 8 1	2
+9 9 1	2
+7 8 1	3
+7 9 1	2
+8 8 1	4
+8 9 1	3
+9 8 1	3
+9 9 1	3
+7 8 1	4
+7 9 1	3
+8 8 1	5
+8 9 1	4
+9 8 1	4
+9 9 1	1
+8 6 1	2
+8 7 1	4
+8 8 1	3
+9 6 1	2
+9 7 1	3
+9 8 1	3
+8 6 1	3
+8 7 1	5
+8 8 1	4
+9 6 1	3
+9 7 1	4
+9 8 1	4
+8 6 1	4
+8 7 1	6
+8 8 1	5
+9 6 1	4
+9 7 1	5
+9 8 1	3
+0 0 1	1
+0 1 1	1
+1 0 1	2
+0 0 1	2
+0 1 1	2
+1 0 1	2
+1 1 1	3
+0 0 1	3
+1 0 1	3
+1 1 1	1
+0 2 1	1
+0 3 1	1
+0 4 1	1
+1 2 1	2
+1 3 1	2
+1 4 1	3
+0 2 1	2
+0 3 1	2
+0 4 1	2
+1 2 1	3
+1 3 1	3
+1 4 1	4
+0 2 1	3
+0 3 1	3
+0 4 1	3
+1 2 1	4
+1 3 1	4
+1 4 1	2
+1 2 1	2
+1 3 1	2
+1 4 1	2
+2 2 1	2
+2 3 1	2
+2 4 1	2
+3 2 1	2
+3 3 1	2
+3 4 1	3
+1 2 1	3
+1 3 1	3
+1 4 1	3
+2 2 1	3
+2 3 1	3
+2 4 1	3
+3 2 1	3
+3 3 1	3
+3 4 1	4
+1 2 1	4
+1 3 1	4
+1 4 1	4
+2 2 1	4
+2 3 1	4
+2 4 1	4
+3 2 1	4
+3 3 1	4
+3 4 1	2
+2 0 1	2
+3 0 1	2
+4 0 1	4
+2 0 1	3
+3 0 1	3
+4 0 1	5
+2 0 1	4
+3 0 1	4
+4 0 1	3
+5 0 1	4
+6 0 1	4
+7 0 1	6
+5 0 1	5
+6 0 1	5
+7 0 1	7
+5 0 1	6
+6 0 1	6
+7 0 1	5
+7 0 1	5
+8 0 1	3
+9 0 1	4
+7 0 1	6
+8 0 1	4
+9 0 1	5
+7 0 1	7
+8 0 1	5
+9 0 1	3
+7 5 1	3
+7 6 1	4
+7 7 1	5
+8 5 1	2
+8 6 1	3
+8 7 1	5
+9 5 1	2
+9 6 1	3
+9 7 1	5
+7 5 1	4
+7 6 1	5
+7 7 1	6
+8 5 1	3
+8 6 1	4
+8 7 1	6
+9 5 1	3
+9 6 1	4
+9 7 1	6
+7 5 1	5
+7 6 1	6
+7 7 1	7
+8 5 1	4
+8 6 1	5
+8 7 1	7
+9 5 1	4
+9 6 1	5
+9 7 1	4
+7 6 1	4
+7 7 1	5
+7 8 1	3
+8 6 1	3
+8 7 1	5
+8 8 1	4
+9 6 1	3
+9 7 1	4
+9 8 1	4
+7 6 1	5
+7 7 1	6
+7 8 1	4
+8 6 1	4
+8 7 1	6
+8 8 1	5
+9 6 1	4
+9 7 1	5
+9 8 1	5
+7 6 1	6
+7 7 1	7
+7 8 1	5
+8 6 1	5
+8 7 1	7
+8 8 1	6
+9 6 1	5
+9 7 1	6
+9 8 1	3
+8 3 1	1
+8 4 1	1
+8 5 1	2
+9 3 1	1
+9 4 1	1
+9 5 1	3
+8 3 1	2
+8 4 1	2
+8 5 1	3
+9 3 1	2
+9 4 1	2
+9 5 1	4
+8 3 1	3
+8 4 1	3
+8 5 1	4
+9 3 1	3
+9 4 1	3
+9 5 1	2
+8 4 1	1
+8 5 1	2
+8 6 1	3
+9 4 1	1
+9 5 1	2
+9 6 1	4
+8 4 1	2
+8 5 1	3
+8 6 1	4
+9 4 1	2
+9 5 1	3
+9 6 1	5
+8 4 1	3
+8 5 1	4
+8 6 1	5
+9 4 1	3
+9 5 1	4
+9 6 1	4
+0 2 1	2
+0 3 1	2
+1 1 1	2
+1 2 1	2
+1 3 1	3
+0 2 1	3
+0 3 1	3
+1 1 1	3
+1 2 1	3
+1 3 1	4
+0 2 1	4
+0 3 1	4
+1 1 1	4
+1 2 1	4
+1 3 1	2
+1 8 1	2
+1 9 1	2
+2 8 1	3
+2 9 1	3
+3 8 1	3
+3 9 1	4
+1 8 1	3
+1 9 1	3
+2 8 1	4
+2 9 1	4
+3 8 1	4
+3 9 1	5
+1 8 1	4
+1 9 1	4
+2 8 1	5
+2 9 1	5
+3 8 1	5
+3 9 1	3
+3 8 1	3
+3 9 1	3
+4 8 1	5
+4 9 1	5
+5 8 1	4
+5 9 1	5
+3 8 1	4
+3 9 1	4
+4 8 1	6
+4 9 1	6
+5 8 1	5
+5 9 1	6
+3 8 1	5
+3 9 1	5
+4 8 1	7
+4 9 1	7
+5 8 1	6
+5 9 1	4
+5 7 1	4
+5 8 1	4
+5 9 1	4
+6 7 1	5
+6 8 1	5
+6 9 1	5
+7 7 1	6
+7 8 1	4
+7 9 1	4
+5 7 1	5
+5 8 1	5
+5 9 1	5
+6 7 1	6
+6 8 1	6
+6 9 1	6
+7 7 1	7
+7 8 1	5
+7 9 1	5
+5 7 1	6
+5 8 1	6
+5 9 1	6
+6 7 1	7
+6 8 1	7
+6 9 1	7
+7 7 1	8
+7 8 1	6
+7 9 1	3
+7 2 1	4
+7 3 1	2
+8 2 1	3
+8 3 1	2
+9 2 1	3
+9 3 1	3
+7 2 1	5
+7 3 1	3
+8 2 1	4
+8 3 1	3
+9 2 1	4
+9 3 1	4
+7 2 1	6
+7 3 1	4
+8 2 1	5
+8 3 1	4
+9 2 1	5
+9 3 1	3
+0 7 1	3
+0 8 1	3
+0 9 1	3
+1 7 1	3
+1 8 1	3
+1 9 1	3
+2 7 1	3
+2 8 1	3
+2 9 1	4
+0 7 1	4
+0 8 1	4
+0 9 1	4
+1 7 1	4
+1 8 1	4
+1 9 1	4
+2 7 1	4
+2 8 1	4
+2 9 1	5
+0 7 1	5
+0 8 1	5
+0 9 1	5
+1 7 1	5
+1 8 1	5
+1 9 1	5
+2 7 1	5
+2 8 1	5
+2 9 1	3
+4 8 1	5
+4 9 1	5
+5 8 1	5
+5 9 1	5
+6 8 1	6
+6 9 1	7
+4 8 1	6
+4 9 1	6
+5 8 1	6
+5 9 1	6
+6 8 1	7
+6 9 1	8
+4 8 1	7
+4 9 1	7
+5 8 1	7
+5 9 1	7
+6 8 1	8
+6 9 1	7
+0 8 1	4
+0 9 1	4
+1 8 1	4
+1 9 1	5
+0 8 1	5
+0 9 1	5
+1 8 1	5
+1 9 1	6
+0 8 1	6
+0 9 1	6
+1 8 1	6
+1 9 1	4
+0 0 1	4
+0 2 1	4
+1 0 1	4
+1 1 1	4
+1 2 1	4
+2 0 1	4
+2 2 1	5
+0 0 1	5
+0 2 1	5
+1 0 1	5
+1 1 1	5
+1 2 1	5
+2 0 1	5
+2 2 1	6
+0 0 1	6
+0 2 1	6
+1 0 1	6
+1 1 1	6
+1 2 1	6
+2 0 1	6
+2 2 1	4
+0 2 1	4
+0 3 1	4
+0 4 1	4
+1 2 1	4
+1 3 1	4
+1 4 1	4
+2 2 1	4
+2 3 1	4
+2 4 1	5
+0 2 1	5
+0 3 1	5
+0 4 1	5
+1 2 1	5
+1 3 1	5
+1 4 1	5
+2 2 1	5
+2 3 1	5
+2 4 1	6
+0 2 1	6
+0 3 1	6
+0 4 1	6
+1 2 1	6
+1 3 1	6
+1 4 1	6
+2 2 1	6
+2 3 1	6
+2 4 1	4
+0 5 1	4
+0 6 1	4
+0 7 1	4
+1 5 1	4
+1 6 1	4
+1 7 1	4
+2 5 1	4
+2 6 1	4
+2 7 1	5
+0 5 1	5
+0 6 1	5
+0 7 1	5
+1 5 1	5
+1 6 1	5
+1 7 1	5
+2 5 1	5
+2 6 1	5
+2 7 1	6
+0 5 1	6
+0 6 1	6
+0 7 1	6
+1 5 1	6
+1 6 1	6
+1 7 1	6
+2 5 1	6
+2 6 1	6
+2 7 1	4
+1 0 1	4
+1 1 1	4
+1 2 1	4
+2 0 1	4
+2 2 1	4
+3 0 1	4
+3 1 1	4
+3 2 1	5
+1 0 1	5
+1 1 1	5
+1 2 1	5
+2 0 1	5
+2 2 1	5
+3 0 1	5
+3 2 1	6
+1 0 1	6
+1 1 1	6
+1 2 1	6
+2 0 1	6
+2 2 1	6
+3 0 1	6
+3 2 1	4
+1 1 1	4
+1 2 1	4
+1 3 1	4
+2 2 1	4
+2 3 1	4
+3 1 1	4
+3 2 1	4
+3 3 1	5
+1 1 1	5
+1 2 1	5
+1 3 1	5
+2 2 1	5
+2 3 1	5
+3 2 1	5
+3 3 1	6
+1 1 1	6
+1 2 1	6
+1 3 1	6
+2 2 1	6
+2 3 1	6
+3 2 1	6
+3 3 1	4
+5 8 1	6
+5 9 1	6
+6 8 1	7
+6 9 1	7
+7 8 1	6
+7 9 1	6
+5 8 1	7
+5 9 1	7
+6 8 1	8
+6 9 1	8
+7 8 1	7
+7 9 1	7
+5 8 1	8
+5 9 1	8
+6 8 1	9
+6 9 1	9
+7 8 1	8
+7 9 1	5
+6 6 1	5
+6 7 1	7
+6 8 1	7
+7 6 1	7
+7 7 1	8
+7 8 1	6
+8 6 1	6
+8 7 1	8
+8 8 1	8
+6 6 1	6
+6 7 1	8
+6 8 1	8
+7 6 1	8
+7 7 1	9
+7 8 1	7
+8 6 1	7
+8 7 1	9
+8 8 1	9
+6 6 1	7
+6 7 1	9
+6 8 1	9
+7 6 1	9
+7 7 1	10
+7 8 1	8
+8 6 1	8
+8 7 1	10
+8 8 1	7
+7 2 1	6
+7 3 1	4
+8 2 1	5
+8 3 1	4
+9 2 1	5
+9 3 1	5
+7 2 1	7
+7 3 1	5
+8 2 1	6
+8 3 1	5
+9 2 1	6
+9 3 1	6
+7 2 1	8
+7 3 1	6
+8 2 1	7
+8 3 1	6
+9 2 1	7
+9 3 1	4
+7 2 1	6
+7 3 1	4
+7 4 1	4
+8 2 1	5
+8 3 1	4
+8 4 1	4
+9 2 1	5
+9 3 1	4
+9 4 1	5
+7 2 1	7
+7 3 1	5
+7 4 1	5
+8 2 1	6
+8 3 1	5
+8 4 1	5
+9 2 1	6
+9 3 1	5
+9 4 1	6
+7 2 1	8
+7 3 1	6
+7 4 1	6
+8 2 1	7
+8 3 1	6
+8 4 1	6
+9 2 1	7
+9 3 1	6
+9 4 1	4
+8 0 1	6
+9 0 1	7
+8 0 1	7
+9 0 1	8
+8 0 1	8
+9 0 1	6
+8 2 1	5
+8 3 1	4
+8 4 1	4
+9 2 1	5
+9 3 1	4
+9 4 1	5
+8 2 1	6
+8 3 1	5
+8 4 1	5
+9 2 1	6
+9 3 1	5
+9 4 1	6
+8 2 1	7
+8 3 1	6
+8 4 1	6
+9 2 1	7
+9 3 1	6
+9 4 1	5
+0 0 1	5
+0 2 1	5
+1 0 1	5
+1 1 1	5
+1 2 1	6
+0 0 1	6
+0 2 1	6
+1 0 1	6
+1 1 1	6
+1 2 1	7
+0 0 1	7
+0 2 1	7
+1 0 1	7
+1 2 1	5
+0 0 1	5
+0 2 1	5
+1 0 1	5
+1 1 1	5
+1 2 1	5
+2 0 1	5
+2 2 1	6
+0 0 1	6
+0 2 1	6
+1 0 1	6
+1 1 1	6
+1 2 1	6
+2 0 1	6
+2 2 1	7
+0 0 1	7
+0 2 1	7
+1 0 1	7
+1 2 1	7
+2 0 1	7
+2 2 1	5
+1 8 1	5
+1 9 1	5
+2 8 1	5
+2 9 1	5
+3 8 1	5
+3 9 1	6
+1 8 1	6
+1 9 1	6
+2 8 1	6
+2 9 1	6
+3 8 1	6
+3 9 1	7
+1 8 1	7
+1 9 1	7
+2 8 1	7
+2 9 1	7
+3 8 1	7
+3 9 1	5
+2 2 1	5
+2 3 1	5
+2 4 1	5
+3 2 1	5
+3 3 1	5
+3 4 1	5
+4 2 1	5
+4 3 1	5
+4 4 1	6
+2 2 1	6
+2 3 1	6
+2 4 1	6
+3 2 1	6
+3 3 1	6
+3 4 1	6
+4 2 1	6
+4 3 1	6
+4 4 1	7
+2 2 1	7
+2 3 1	7
+2 4 1	7
+3 2 1	7
+3 3 1	7
+3 4 1	7
+4 2 1	7
+4 3 1	7
+4 4 1	5
+2 8 1	5
+2 9 1	5
+3 8 1	5
+3 9 1	5
+4 8 1	5
+4 9 1	6
+2 8 1	6
+2 9 1	6
+3 8 1	6
+3 9 1	6
+4 8 1	6
+4 9 1	7
+2 8 1	7
+2 9 1	7
+3 8 1	7
+3 9 1	7
+4 8 1	7
+4 9 1	5
+3 7 1	5
+3 8 1	5
+3 9 1	5
+4 7 1	5
+4 8 1	5
+4 9 1	5
+5 7 1	6
+5 8 1	5
+5 9 1	6
+3 7 1	6
+3 8 1	6
+3 9 1	6
+4 7 1	6
+4 8 1	6
+4 9 1	6
+5 7 1	7
+5 8 1	6
+5 9 1	7
+3 7 1	7
+3 8 1	7
+3 9 1	7
+4 7 1	7
+4 8 1	7
+4 9 1	7
+5 7 1	8
+5 8 1	7
+5 9 1	5
+4 2 1	5
+4 3 1	5
+4 4 1	5
+5 2 1	5
+5 3 1	5
+5 4 1	5
+6 2 1	5
+6 3 1	5
+6 4 1	6
+4 2 1	6
+4 3 1	6
+4 4 1	6
+5 2 1	6
+5 3 1	6
+5 4 1	6
+6 2 1	6
+6 3 1	6
+6 4 1	7
+4 2 1	7
+4 3 1	7
+4 4 1	7
+5 2 1	7
+5 3 1	7
+5 4 1	7
+6 2 1	7
+6 3 1	7
+6 4 1	5
+5 2 1	5
+5 3 1	5
+6 2 1	5
+6 3 1	5
+7 2 1	6
+7 3 1	6
+5 2 1	6
+5 3 1	6
+6 2 1	6
+6 3 1	6
+7 2 1	7
+7 3 1	7
+5 2 1	7
+5 3 1	7
+6 2 1	7
+6 3 1	7
+7 2 1	8
+7 3 1	5
+5 7 1	5
+5 8 1	5
+5 9 1	5
+6 7 1	6
+6 8 1	6
+6 9 1	6
+7 7 1	8
+7 8 1	7
+7 9 1	7
+5 7 1	6
+5 8 1	6
+5 9 1	6
+6 7 1	7
+6 8 1	7
+6 9 1	7
+7 7 1	9
+7 8 1	8
+7 9 1	8
+5 7 1	7
+5 8 1	7
+5 9 1	7
+6 7 1	8
+6 8 1	8
+6 9 1	8
+7 7 1	10
+7 8 1	9
+7 9 1	6
+6 6 1	5
+6 7 1	6
+6 8 1	6
+7 6 1	7
+7 7 1	8
+7 8 1	7
+8 6 1	7
+8 7 1	9
+8 8 1	9
+6 6 1	6
+6 7 1	7
+6 8 1	7
+7 6 1	8
+7 7 1	9
+7 8 1	8
+8 6 1	8
+8 7 1	10
+8 8 1	10
+6 6 1	7
+6 7 1	8
+6 8 1	8
+7 6 1	9
+7 7 1	10
+7 8 1	9
+8 6 1	9
+8 7 1	11
+8 8 1	8
+7 4 1	5
+7 5 1	6
+7 6 1	7
+8 4 1	5
+8 5 1	6
+8 6 1	7
+9 4 1	5
+9 5 1	6
+9 6 1	8
+7 4 1	6
+7 5 1	7
+7 6 1	8
+8 4 1	6
+8 5 1	7
+8 6 1	8
+9 4 1	6
+9 5 1	7
+9 6 1	9
+7 4 1	7
+7 5 1	8
+7 6 1	9
+8 4 1	7
+8 5 1	8
+8 6 1	9
+9 4 1	7
+9 5 1	8
+9 6 1	8
+0 4 1	6
+0 5 1	6
+0 6 1	6
+1 4 1	6
+1 5 1	6
+1 6 1	6
+2 4 1	6
+2 5 1	6
+2 6 1	7
+0 4 1	7
+0 5 1	7
+0 6 1	7
+1 4 1	7
+1 5 1	7
+1 6 1	7
+2 4 1	7
+2 5 1	7
+2 6 1	8
+0 4 1	8
+0 5 1	8
+0 6 1	8
+1 4 1	8
+1 5 1	8
+1 6 1	8
+2 4 1	8
+2 5 1	8
+2 6 1	6
+0 6 1	6
+0 7 1	6
+0 8 1	6
+1 6 1	6
+1 7 1	6
+1 8 1	6
+2 6 1	6
+2 7 1	6
+2 8 1	7
+0 6 1	7
+0 7 1	7
+0 8 1	7
+1 6 1	7
+1 7 1	7
+1 8 1	7
+2 6 1	7
+2 7 1	7
+2 8 1	8
+0 6 1	8
+0 7 1	8
+0 8 1	8
+1 6 1	8
+1 7 1	8
+1 8 1	8
+2 6 1	8
+2 7 1	8
+2 8 1	6
+1 4 1	6
+1 5 1	6
+1 6 1	6
+2 4 1	6
+2 5 1	6
+2 6 1	6
+3 4 1	6
+3 5 1	6
+3 6 1	7
+1 4 1	7
+1 5 1	7
+1 6 1	7
+2 4 1	7
+2 5 1	7
+2 6 1	7
+3 4 1	7
+3 5 1	7
+3 6 1	8
+1 4 1	8
+1 5 1	8
+1 6 1	8
+2 4 1	8
+2 5 1	8
+2 6 1	8
+3 4 1	8
+3 5 1	8
+3 6 1	6
+2 3 1	6
+2 4 1	6
+2 5 1	6
+3 3 1	6
+3 4 1	6
+3 5 1	6
+4 3 1	6
+4 4 1	6
+4 5 1	7
+2 3 1	7
+2 4 1	7
+2 5 1	7
+3 3 1	7
+3 4 1	7
+3 5 1	7
+4 3 1	7
+4 4 1	7
+4 5 1	8
+2 3 1	8
+2 4 1	8
+2 5 1	8
+3 3 1	8
+3 4 1	8
+3 5 1	8
+4 3 1	8
+4 4 1	8
+4 5 1	6
+5 5 1	6
+5 6 1	6
+5 7 1	6
+6 5 1	6
+6 6 1	6
+6 7 1	7
+7 5 1	7
+7 6 1	8
+7 7 1	10
+5 5 1	7
+5 6 1	7
+5 7 1	7
+6 5 1	7
+6 6 1	7
+6 7 1	8
+7 5 1	8
+7 6 1	9
+7 7 1	11
+5 5 1	8
+5 6 1	8
+5 7 1	8
+6 5 1	8
+6 6 1	8
+6 7 1	9
+7 5 1	9
+7 6 1	10
+7 7 1	9
+7 2 1	7
+7 3 1	6
+8 2 1	7
+8 3 1	6
+9 2 1	7
+9 3 1	7
+7 2 1	8
+7 3 1	7
+8 2 1	8
+8 3 1	7
+9 2 1	8
+9 3 1	8
+7 2 1	9
+7 3 1	8
+8 2 1	9
+8 3 1	8
+9 2 1	9
+9 3 1	6
+7 8 1	7
+7 9 1	6
+8 8 1	8
+8 9 1	7
+9 8 1	8
+9 9 1	8
+7 8 1	8
+7 9 1	7
+8 8 1	9
+8 9 1	8
+9 8 1	9
+9 9 1	9
+7 8 1	9
+7 9 1	8
+8 8 1	10
+8 9 1	9
+9 8 1	10
+9 9 1	7
+8 8 1	8
+8 9 1	7
+9 8 1	8
+9 9 1	8
+8 8 1	9
+8 9 1	8
+9 8 1	9
+9 9 1	9
+8 8 1	10
+8 9 1	9
+9 8 1	10
+9 9 1	8
+0 2 1	7
+0 3 1	7
+1 2 1	7
+1 3 1	8
+0 2 1	8
+0 3 1	8
+1 2 1	8
+1 3 1	9
+0 2 1	9
+0 3 1	9
+1 2 1	9
+1 3 1	7
+0 0 1	7
+0 2 1	7
+1 0 1	7
+1 2 1	7
+2 0 1	7
+2 2 1	8
+0 0 1	8
+0 2 1	8
+1 0 1	8
+1 2 1	8
+2 0 1	8
+2 2 1	9
+0 0 1	9
+0 2 1	9
+1 0 1	9
+1 2 1	9
+2 0 1	9
+2 2 1	7
+0 3 1	7
+0 4 1	7
+0 5 1	7
+1 3 1	7
+1 4 1	7
+1 5 1	7
+2 3 1	7
+2 4 1	7
+2 5 1	8
+0 3 1	8
+0 4 1	8
+0 5 1	8
+1 3 1	8
+1 4 1	8
+1 5 1	8
+2 3 1	8
+2 4 1	8
+2 5 1	9
+0 3 1	9
+0 4 1	9
+0 5 1	9
+1 3 1	9
+1 4 1	9
+1 5 1	9
+2 3 1	9
+2 4 1	9
+2 5 1	7
+2 4 1	7
+2 5 1	7
+2 6 1	7
+3 4 1	7
+3 5 1	7
+3 6 1	7
+4 4 1	7
+4 5 1	7
+4 6 1	8
+2 4 1	8
+2 5 1	8
+2 6 1	8
+3 4 1	8
+3 5 1	8
+3 6 1	8
+4 4 1	8
+4 5 1	8
+4 6 1	9
+2 4 1	9
+2 5 1	9
+2 6 1	9
+3 4 1	9
+3 5 1	9
+3 6 1	9
+4 4 1	9
+4 5 1	9
+4 6 1	7
+4 3 1	7
+4 4 1	7
+4 5 1	7
+5 3 1	7
+5 4 1	7
+5 5 1	7
+6 3 1	7
+6 4 1	7
+6 5 1	8
+4 3 1	8
+4 4 1	8
+4 5 1	8
+5 3 1	8
+5 4 1	8
+5 5 1	8
+6 3 1	8
+6 4 1	8
+6 5 1	9
+4 3 1	9
+4 4 1	9
+4 5 1	9
+5 3 1	9
+5 4 1	9
+5 5 1	9
+6 3 1	9
+6 4 1	9
+6 5 1	7
+5 0 1	7
+6 0 1	7
+7 0 1	8
+5 0 1	8
+6 0 1	8
+7 0 1	9
+5 0 1	9
+6 0 1	9
+7 0 1	7
+6 0 1	7
+7 0 1	7
+8 0 1	8
+6 0 1	8
+7 0 1	8
+8 0 1	9
+6 0 1	9
+7 0 1	9
+8 0 1	7
+6 8 1	7
+6 9 1	7
+7 8 1	7
+7 9 1	7
+8 8 1	8
+8 9 1	9
+6 8 1	8
+6 9 1	8
+7 8 1	8
+7 9 1	8
+8 8 1	9
+8 9 1	10
+6 8 1	9
+6 9 1	9
+7 8 1	9
+7 9 1	9
+8 8 1	10
+8 9 1	9
+0 8 1	8
+0 9 1	8
+1 8 1	8
+1 9 1	9
+0 8 1	9
+0 9 1	9
+1 8 1	9
+1 9 1	8
+0 2 1	8
+0 3 1	8
+0 4 1	8
+1 2 1	8
+1 3 1	8
+1 4 1	8
+2 2 1	8
+2 3 1	8
+2 4 1	9
+0 2 1	9
+0 3 1	9
+0 4 1	9
+1 2 1	9
+1 3 1	9
+1 4 1	9
+2 2 1	9
+2 3 1	9
+2 4 1	8
+7 0 1	8
+8 0 1	8
+9 0 1	9
+7 0 1	9
+8 0 1	9
+9 0 1	8
+7 4 1	8
+7 5 1	8
+7 6 1	8
+8 4 1	8
+8 5 1	8
+8 6 1	8
+9 4 1	8
+9 5 1	8
+9 6 1	9
+7 4 1	9
+7 5 1	9
+7 6 1	9
+8 4 1	9
+8 5 1	9
+8 6 1	9
+9 4 1	9
+9 5 1	9
+9 6 1	0
+Found neighbours in 0.010062 s
+Reducing neighbour array to 21644 bytes
+Generation done in 0.000778 s
+Freed volume in 0.000003 s
+Freed volume in 0.000003 s

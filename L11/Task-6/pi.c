@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
     sum += dx*4.0/(1.0 + x*x);
   }
 
-  printf("PI is approx. %.16f\n",  sum);
+  printf("PI is approx. %.20f\n",  sum);
 
   return 0;
 }

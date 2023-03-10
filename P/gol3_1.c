@@ -8,12 +8,14 @@
 char*** generateVolume(int x, int y, int z);
 char*** generateZeroVolume(int x, int y, int z);
 char* generateContigousVolume(int x, int y, int z);
+int** generateCoordinateArrays(int x, int y, int z);
 void freeVolume(char*** volume, int x, int y, int z);
+void freeCoordinateArrays(int** arr);
 void printVolume(char*** volume, int x, int y, int z);
-int* findAlive(char*** volume, int x, int y, int z);
+int** findAlive(char*** volume, int x, int y, int z);
 int* findAlive2(char* volume, int x, int y, int z);
 
-int* processNeighbours(int* dest, char*** neigh_count, int* all, int x, int y, int z);
+void processNeighbours(int** dest, char*** neigh_count, int** all, int x, int y, int z);
 double get_wall_seconds();
 
 int main(int argc, char* argv[]){
@@ -25,22 +27,23 @@ int main(int argc, char* argv[]){
 	char*** neigh_count = generateZeroVolume(size,size,size);
 	char*** new_states = generateZeroVolume(size, size, size);
 	char* contVol = generateContigousVolume(size, size, size);
-	int* alive;
-	int* updated = (int*)malloc(sizeof(int)*size*size*size*3+4);;
-	char R[4] = {5,7,6,6};
+	int** alive;
+	int** updated = generateCoordinateArrays(size, size, size);
 //	printf("Initial state: \n");
 //	printVolume(states, size, size, size);
 	int* alive2 = findAlive2(contVol,size,size,size);
 	alive = findAlive(states,size,size,size);
-	int* all = (int*)malloc(sizeof(int)*alive[0]*27+4);
+//	int* all = (int*)malloc(sizeof(int)*alive[0]*27+4);
+	int** all = generateCoordinateArrays(alive[0][0]*27, 1, 1);
+
+
 	processNeighbours(all, neigh_count, alive, size,size,size);
 	printf("Setup complete\n\n");
 	while(1){
 		double time = get_wall_seconds();
 
-		int update_count = 1;
-//		memset(updated, 0, sizeof(int)*size*size*size*3+4);
-//		memset(alive, 0, sizeof(int)*size*size*size*3+4);
+		int update_count = 0;
+
 /*		printf("Number of alive cells: %i\n", (alive[0]-1)/3);
 		for(int e = 1; e < alive[0]; e+=3){
 			printf("Alive %i%i%i\n", alive[e], alive[e+1], alive[e+2]);
@@ -53,32 +56,31 @@ int main(int argc, char* argv[]){
 //		printf("Count:\n");
 //		printVolume(neigh_count, size, size, size);
 //		printVolume(states, size, size, size);
-		int counter = 1;
-		for(int r = 1; r < all[0]; r += 3){
-			int i = all[r];
-			int j = all[r+1];
-			int k = all[r+2];
+		int counter = 0;
+		for(int r = 0; r < all[0][0]; r++){
+			int i = all[1][r];
+			int j = all[2][r];
+			int k = all[3][r];
 			int count = neigh_count[i][j][k];
-			if(count) {
+//			printf("Cell %i%i%i count %i\n", i, j, k, count);
+//			if(count) {
 				if(states[i][j][k]){
 					if(count != 5 && count != 6 && count !=7){
 						new_states[i][j][k] = 0;
-						updated[update_count] = i;
-	                                        updated[update_count+1] = j;
-	                                        updated[update_count+2] = k;
-	                                        update_count += 3;
-					} /*else{
-					
-					}*/
+						updated[1][update_count] = i;
+	                                        updated[2][update_count] = j;
+	                                        updated[3][update_count] = k;
+	                                        update_count++;
+					}
 				} else if(count==6){
 					new_states[i][j][k] = 1;
-					updated[update_count] = i;
-					updated[update_count+1] = j;
-					updated[update_count+2] = k;
-					update_count += 3;
+					updated[1][update_count] = i;
+					updated[2][update_count] = j;
+					updated[3][update_count] = k;
+					update_count++;
 				}
 				neigh_count[i][j][k] = 0;
-			}
+//			}
 		}
 //		printf("Step %i: \n", incr);
 //		printVolume(states, size, size, size);
@@ -88,7 +90,7 @@ int main(int argc, char* argv[]){
 		//for(int e = 1; e < alive[0]; e+=3){
 		//	printf("Alive %i%i%i\n", alive[e], alive[e+1], alive[e+2]);
 		//}
-		updated[0] = update_count;
+		updated[0][0] = update_count;
 		processNeighbours(all, neigh_count, updated, size, size, size);
 
 		char*** temp = states;
@@ -96,18 +98,21 @@ int main(int argc, char* argv[]){
 		new_states = temp;
 //		free(all);
 
-		if((updated[0]-1)/3==0){
+		if(updated[0][0]==0){
 			printf("Everyone has died\n");
 			break;
 		}
 //		free(alive);
 		incr++;
 		printf("Generation done in %lf s\n\n", get_wall_seconds()-time);
-		if (incr == 1) break;
+		if (incr == 1){
+			printf("Time steps maxed out\n");
+			break;
+		}
 	}
-	free(alive);
-	free(all);
-	free(updated);
+	freeCoordinateArrays(alive);
+	freeCoordinateArrays(all);
+	freeCoordinateArrays(updated);
 	freeVolume(new_states, size, size, size);
 	freeVolume(states, size, size, size);
 	freeVolume(neigh_count, size, size, size);
@@ -161,6 +166,27 @@ char*** generateZeroVolume(int x, int y, int z){
 
 }
 
+int** generateCoordinateArrays(int x, int y, int z){
+	int** arr = (int**)malloc(sizeof(int*)*4);
+	long int size = sizeof(int)*x*y*z;
+	arr[0] = (int*)malloc(sizeof(int));
+	arr[1] = (int*)malloc(size);
+	arr[2] = (int*)malloc(size);
+	arr[3] = (int*)malloc(size);
+
+	return arr;
+}
+
+void freeCoordinateArrays(int** arr){
+	free(arr[0]);
+	free(arr[1]);
+	free(arr[2]);
+	free(arr[3]);
+	free(arr);
+	return;
+}
+
+
 void freeVolume(char*** volume, int x, int y, int z){
 	double time = get_wall_seconds();
 	for(int i = 0; i < z; i++){
@@ -188,27 +214,28 @@ void printVolume(char*** volume, int x, int y, int z){
 	printf("Printed volume in %lf s\n", get_wall_seconds()-time);
 }
 
-int* findAlive(char*** volume, int x, int y, int z){
+int** findAlive(char*** volume, int x, int y, int z){
 	double time = get_wall_seconds();
-	int* alive =(int*) malloc(sizeof(int)*x*y*z*3+4);
-	int counter  = 1;
+
+	int** alive = generateCoordinateArrays(x,y,z);
+	int counter  = 0;
 	for(int i = 0; i < z; i++){
                 for(int j = 0; j < y; j++){
                         for(int k = 0; k < x; k++){
 				//printf("Checking life at %i %i %i\n", i,j,k);
 //				assert(volume[i][j][k] == (volume + z*i + y*j + x*k));
 				if(volume[i][j][k]){
-					alive[counter] = i;
-					alive[counter + 1] = j;
-					alive[counter + 2] = k;
-					counter += 3;
+					alive[1][counter] = i;
+					alive[2][counter] = j;
+					alive[3][counter] = k;
+					counter++;
 				}
 
 
                         }
                 }
         }
-	alive[0] = counter;
+	alive[0][0] = counter;
 //	printf("Number of alive cells of total %i/%i\n", (counter/3), x*y*z);
 	printf("Found alive in %lf s\n", get_wall_seconds()-time);
 	return alive;
@@ -231,9 +258,9 @@ int* findAlive2(char* volume, int x, int y, int z){
 }
 
 // TODO: When loopin through neighbours, count how many times a neighbour is mentioned. This can replace the neighbour checking in the main loop
-int* processNeighbours(int* dest, char*** neigh_count, int* alive,  int x, int y, int z){
+void processNeighbours(int** dest, char*** neigh_count, int** alive,  int x, int y, int z){
 	double time = get_wall_seconds();
-	int* all = dest;
+	int** all = dest;
 
 //	printf("Allocated %li bytes for neighbors\n", sizeof(int)*alive[0]*27+4);
 	int counter = 1;
@@ -244,10 +271,11 @@ int* processNeighbours(int* dest, char*** neigh_count, int* alive,  int x, int y
 //	char mask = 0xc;
 //	if(mask & a) printf("This would birth\n");
 //	printf("%x\n",a);
-	for(int i = 1; i < alive[0]; i+=3){
-		int z_coord = alive[i];
-		int y_coord = alive[i+1];
-		int x_coord = alive[i+2];
+	int limit = alive[0][0];
+	for(int i = 0; i < limit; i++){
+		int z_coord = alive[1][i];
+		int y_coord = alive[2][i];
+		int x_coord = alive[3][i];
 	
 
 		double temp = get_wall_seconds();
@@ -279,13 +307,13 @@ int* processNeighbours(int* dest, char*** neigh_count, int* alive,  int x, int y
 		for(char l = l_l; l < l_u; l++){
                         for(char m = m_l; m < m_u; m++){
                                 for(char n = n_l; n < n_u; n++){
-
-					all[counter] = z_coord+l;
-					all[counter+1] = y_coord+m;
-					all[counter+2] = x_coord+n;
-
+					if(!neigh_count[z_coord+l][y_coord+m][x_coord+n]){
+						all[1][counter] = z_coord+l;
+						all[2][counter] = y_coord+m;
+						all[3][counter] = x_coord+n;
+						counter++;
+					}
 					neigh_count[z_coord+l][y_coord+m][x_coord+n] += 1;
-					counter += 3;
 				}
 			}
 		}
@@ -294,13 +322,13 @@ int* processNeighbours(int* dest, char*** neigh_count, int* alive,  int x, int y
 //	printf("Counter: %i\n", counter);
 	printf("Found neighbours in %lf s\n", get_wall_seconds()-time);
 	time = get_wall_seconds();
-	all[0] = counter;
+	all[0][0] = counter;
 //	printf("Reducing neighbour array by %li bytes\n", sizeof(int)*(counter));
 	printf("Conditional statments in %lf s\n", timecon);
-	printf("Number of cells to be counted %i/%i\n", (all[0]-1)/3, x*y*z*27);
+	printf("Number of cells to be counted %i/%i\n", all[0][0], x*y*z*27);
 //	all = realloc(all, sizeof(int)*counter+4);
 
-	return all;
+	return;
 
 }
 

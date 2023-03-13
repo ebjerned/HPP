@@ -1,9 +1,9 @@
 CC = gcc
 LD = gcc
-CFLAGS = -Wall -lm -g -O3 -fopt-info-vec -march=native
-LDFLAGS = -Wall -lm -g -O3 -fopt-info-vec -march=native
+CFLAGS = -Wall -lm -g -O3 -fopt-info-vec -march=native -fopenmp -ffast-math
+LDFLAGS = -Wall -lm -g -O3 -fopt-info-vec -march=native -fopenmp -ffast-math
 RM = /bin/rm -f
-OBJS = gol3_1.o
+OBJS = gol3_2.o
 EXECUTABLE = gol3
 
 all:$(EXECUTABLE)
@@ -11,8 +11,8 @@ all:$(EXECUTABLE)
 $(EXECUTABLE): $(OBJS)
 	$(LD) $(OBJS) -o $(EXECUTABLE) $(LDFLAGS)
 
-galsim.o: gol3_1.c
-	$(CC) -c gol3_1.c $(CFLAGS)
+galsim.o: gol3_2.c
+	$(CC) -c gol3_2.c $(CFLAGS)
 
 clean:
 	$(RM) $(EXECUTABLE) $(OBJS)

@@ -13,12 +13,13 @@ unsigned char* generateContigousZeroVolume(const unsigned int x, const unsigned 
 unsigned int** generateCoordinateArrays(const unsigned int x, const unsigned int y, const unsigned int z);
 void freeVolume(unsigned char*** restrict volume, const unsigned int x, const unsigned int y, const unsigned int z);
 void freeCoordinateArrays(unsigned int** restrict arr);
-void printVolume(unsigned char*** restrict volume, const unsigned int x, const unsigned int y, const unsigned int z, char hide_wrapping);
+void printVolume(unsigned char*** restrict volume, const unsigned int x, const unsigned int y, const unsigned int z, char hide_wrapping, char hide_count);
 unsigned int** findAlive(unsigned char*** restrict volume, const unsigned int x, const unsigned int y, const unsigned int z);
 unsigned int** findAlive2(unsigned char* restrict volume, const unsigned int x, const unsigned int y, const unsigned int z);
 unsigned char*** wrappedVolume(const unsigned int x, const unsigned int y, const unsigned int z);
+unsigned char*** wrappedZeroVolume(const unsigned int x, const unsigned int y, const unsigned int z);
 void copyPadding(unsigned char*** restrict vol, const unsigned int x, const unsigned int y, const unsigned int z);
-void processNeighbours(unsigned int** restrict dest, unsigned int** restrict all, const unsigned int x, const unsigned int y, const unsigned int z, unsigned char*** restrict test_byte);
+void processNeighbours(unsigned int** restrict dest, unsigned int** restrict all, const unsigned int x, const unsigned int y, const unsigned int z, unsigned char*** restrict test_byte, unsigned int*** s_updates, unsigned char*** restrict partition);
 void processNeighbours2(unsigned int** restrict dest, unsigned int** restrict all, const unsigned int x, const unsigned int y, const unsigned int z, unsigned char* restrict test_byte);
 void cellLoop(unsigned char*** restrict vol, unsigned int** restrict updated, unsigned int** restrict all, unsigned int*** restrict s_updates);
 double get_wall_seconds();
@@ -30,10 +31,10 @@ int main(int argc, char* argv[]){
 	
 	
 	
-	unsigned int timesteps = 1;
-	const unsigned size = 50;
+	unsigned int timesteps = 2;
+	const unsigned size = 5;
 	const unsigned wrapped_size = size + 2;
-	unsigned int** updated = generateCoordinateArrays(wrapped_size, wrapped_size, wrapped_size);
+//	unsigned int** updated = generateCoordinateArrays(wrapped_size, wrapped_size, wrapped_size);
 
 	unsigned char*** wrapped = wrappedVolume(wrapped_size, wrapped_size, wrapped_size);
 
@@ -41,20 +42,44 @@ int main(int argc, char* argv[]){
 	unsigned char n_threads = 1;
 	unsigned int** all = generateCoordinateArrays(wrapped_size*3, wrapped_size*3, wrapped_size*3);
 
-	processNeighbours(all, alive, wrapped_size, wrapped_size, wrapped_size, wrapped);
+//	processNeighbours(all, alive, wrapped_size, wrapped_size, wrapped_size, wrapped);
 
 	unsigned int*** s_updates = (unsigned int***)malloc(n_threads*sizeof(unsigned int**));
 	for(int i = 0; i < n_threads; i++)
 		s_updates[i] = generateCoordinateArrays(wrapped_size, wrapped_size, wrapped_size);
 
+
+	unsigned char*** partition = wrappedZeroVolume(wrapped_size,wrapped_size,wrapped_size);
+	unsigned int partition_counter = 0;
+	unsigned char ID = 0;
+
+	for(int i = 0; i < wrapped_size; i++){
+		for(int j = 0; j < wrapped_size; j++){
+			for(int k = 0; k < wrapped_size; k++){
+				if(wrapped[i][j][k]) partition_counter++;
+				partition[i][j][k] = ID;
+				if(partition_counter == (alive[0][0]/n_threads+1)) {
+					ID++;
+					partition_counter = 0;
+				}
+				printf("%i", ID);
+				if(k%5==4) printf("\n");
+			}
+		}
+	}
+
+	unsigned int** updated = alive;
 	printf("Setup complete\n\n");
 	for(unsigned int t = 0; t < timesteps; t++){
 		double time = get_wall_seconds();
-//		printVolume(wrapped,size,size,size, 1);	
+//		printVolume(partition, wrapped_size, wrapped_size, wrapped_size, 1, 1);
+
+		processNeighbours(all, updated, wrapped_size, wrapped_size, wrapped_size, wrapped, s_updates, partition);
+
+		printVolume(wrapped,size,size,size, 1,0);	
 
 		cellLoop(wrapped, updated, all, s_updates);
 		printf("Looping done in %lf s, %.16lf per cell\n", get_wall_seconds()-time, (get_wall_seconds()-time)/all[0][0]);
-		processNeighbours(all, updated, wrapped_size, wrapped_size, wrapped_size, wrapped);
 		copyPadding(wrapped, wrapped_size, wrapped_size, wrapped_size);
 
 
@@ -63,8 +88,9 @@ int main(int argc, char* argv[]){
 	}
 	freeCoordinateArrays(alive);
 	freeCoordinateArrays(all);
-	freeCoordinateArrays(updated);
+//	freeCoordinateArrays(updated);
  	freeVolume(wrapped,wrapped_size,wrapped_size,wrapped_size);
+	freeVolume(partition, wrapped_size, wrapped_size, wrapped_size);
 	freeCoordinateArrays(s_updates[0]);
 //	freeCoordinateArrays(s_updates[1]);
 //	freeCoordinateArrays(s_updates[2]);
@@ -198,23 +224,32 @@ unsigned int** findAlive2(unsigned char* restrict volume, const unsigned int x, 
 }
 
 // TODO: When loopin through neighbours, count how many times a neighbour is mentioned. This can replace the neighbour checking in the main loop
-void processNeighbours(unsigned int** restrict dest, unsigned int** restrict alive,  const unsigned int x, const unsigned int y, const unsigned int z, unsigned char*** restrict test_byte){
+void processNeighbours(unsigned int** restrict dest, unsigned int** restrict alive,  const unsigned int x, const unsigned int y, const unsigned int z, unsigned char*** restrict test_byte, unsigned int*** restrict s_updates, unsigned char*** partition){
 	double time = get_wall_seconds();
 	unsigned int** all = dest;
-
-	unsigned int counter = 0;
-
-	
+	unsigned char n_threads = 1;
 	unsigned int limit = alive[0][0];
 	printf("Limit neighbors: %i\n", alive[0][0]);
+	unsigned char*** n_counter_thread[n_threads];
+	for(int i = 0; i < n_threads; i++)
+		n_counter_thread[i] = generateZeroVolume(x, y, z);
 
+	#pragma omp parallel num_threads(n_threads)
+	{
+	unsigned int** updated = s_updates[omp_get_thread_num()];
 	char l_l,l,l_u,m_l,m,m_u,n_l,n,n_u;
 	unsigned char* cell;
 	const unsigned int* z_axis = alive[1];
 	const unsigned int* y_axis = alive[2];
 	const unsigned int* x_axis = alive[3];
 	unsigned int z_coord, y_coord, x_coord, i;
-	for(i = 0; i < limit; i++){
+	unsigned int counter = 0;
+	char thread_ID = omp_get_thread_num();
+	int section = limit/n_threads;
+	int start = thread_ID*section;
+	int end = (thread_ID == (n_threads -1)) ? limit : (thread_ID+1)*section;
+	printf("Thread %i on interval %i - %i\n", thread_ID, start, end);
+	for(i = start; i < end; i++){
 		z_coord = z_axis[i];
 		y_coord = y_axis[i];
 		x_coord = x_axis[i];
@@ -249,29 +284,53 @@ void processNeighbours(unsigned int** restrict dest, unsigned int** restrict ali
                                 for(n = n_l; n < n_u; n++){
 //					printf("\tAt %i%i%i\n", z_coord+l, y_coord+m, x_coord+n);
 
-					cell = &(test_byte[z_coord+l][y_coord+m][x_coord+n]);
-
-					if(!(((*cell)&62) >> 1)){
-						all[1][counter] = z_coord+l;
-						all[2][counter] = y_coord+m;
-						all[3][counter] = x_coord+n;
+//					cell = &(test_byte[z_coord+l][y_coord+m][x_coord+n]);
+					cell = &(n_counter_thread[omp_get_thread_num()][z_coord +l][y_coord +m][x_coord +n]);
+					char allowed = (partition[z_coord+l][y_coord+m][x_coord+n] == thread_ID);
+					if(!(*cell) && allowed){
+						s_updates[omp_get_thread_num()][1][counter] = z_coord+l;
+						s_updates[omp_get_thread_num()][2][counter] = y_coord+m;
+						s_updates[omp_get_thread_num()][3][counter] = x_coord+n;
 						counter++;
 					}
-
-					*cell = (((((*cell) & 62) >> 1) + 1) << 1) + ((*cell) & 1);
+					*cell += 1;
+					
+//					char val = (((((*cell) & 62) >> 1) + 1) << 1) + ((*cell) & 1);
+					
+//					*cell = val;
 
 				}
 			}
 		}
 	}
-	for(i = 0; i < counter; i++){
-		z_coord = all[1][i];
-		y_coord = all[2][i];
-		x_coord = all[3][i];
-		cell = &(test_byte[z_coord][y_coord][x_coord]);
-		*cell = (((((*cell) & 62) >> 1) - ((*cell)&1)) << 1) +((*cell)&1);
+	s_updates[omp_get_thread_num()][0][0] = counter;
+	printf("Thread %i with count %i\n", thread_ID, s_updates[thread_ID][0][0]);
 	}
-	all[0][0] = counter;
+
+	all[0][0] = 0;
+	for(int i = 0; i < n_threads; i++){
+//		printf("Thread unique count: %i\n", counter);
+		//s_updates[i][0][0] = counter;
+		memcpy(&all[1][all[0][0]], s_updates[i][1], s_updates[i][0][0]*sizeof(unsigned int));
+		memcpy(&all[2][all[0][0]], s_updates[i][2], s_updates[i][0][0]*sizeof(unsigned int));
+		memcpy(&all[3][all[0][0]], s_updates[i][3], s_updates[i][0][0]*sizeof(unsigned int));
+		all[0][0] += s_updates[i][0][0];
+
+	}
+	for(int i = 0; i < all[0][0]; i++){
+		unsigned int z_coord = all[1][i];
+		unsigned int y_coord = all[2][i];
+		unsigned int x_coord = all[3][i];
+		unsigned char* cell = &(test_byte[z_coord][y_coord][x_coord]);
+		unsigned char thread_sum = 0;
+		for(int j = 0; j < n_threads; j++){
+			thread_sum += n_counter_thread[j][z_coord][y_coord][x_coord];
+		}
+		*cell = (((((*cell) & 62) >> 1) - ((*cell)&1) + thread_sum) << 1) +((*cell)&1);
+	}
+	freeVolume(n_counter_thread[0],x,y,z);
+//	freeVolume(n_counter_thread[1],x,y,z);
+	printf("Count: %i\n", all[0][0]);
 	printf("Found neighbours in %lf s\n", get_wall_seconds()-time);
 	return;
 
@@ -422,6 +481,27 @@ unsigned char*** wrappedVolume(const unsigned int x, const unsigned int y, const
 
 }
 
+unsigned char*** wrappedZeroVolume(const unsigned int x, const unsigned int y, const unsigned int z){
+	srand(0);
+        double time = get_wall_seconds();
+        unsigned char*** z_slices = (unsigned char***)malloc(z*sizeof(unsigned char**));
+        for(unsigned int i = 0; i < z; i++){
+                z_slices[i] = (unsigned char**)malloc(y*sizeof(unsigned char*));
+                unsigned char** y_slice = z_slices[i];
+                for(unsigned int j = 0; j <y; j++){
+                        y_slice[j] = (unsigned char*)malloc(x*sizeof(unsigned char));
+                        unsigned char* x_slice = y_slice[j];
+                        for(unsigned int k =0; k < x; k++){
+                                x_slice[k] = 0; //(unsigned char)round(0.75*(double)rand()/RAND_MAX);
+                        }
+		}
+        }
+	printf("Generated wrapped zero volume in %lf s\n", get_wall_seconds()-time);
+        return z_slices;
+	
+
+}
+
 void copyPadding(unsigned char*** restrict vol, const unsigned int x, const unsigned int y, const unsigned int z){
         double time = get_wall_seconds();
 
@@ -520,7 +600,7 @@ void freeVolume(unsigned char*** restrict volume, const unsigned int x, const un
 	return;
 }
 
-void printVolume(unsigned char*** restrict volume, const unsigned int x, const unsigned int y, const unsigned int z, char hide_wrapping){
+void printVolume(unsigned char*** restrict volume, const unsigned int x, const unsigned int y, const unsigned int z, char hide_wrapping, char hide_count){
 	double time = get_wall_seconds();
 	int offset = 2;
 	if (hide_wrapping) offset = 1;
@@ -530,10 +610,11 @@ void printVolume(unsigned char*** restrict volume, const unsigned int x, const u
 				printf("%i ", volume[i][j][k]&1);
                                 if(k%(x+offset) == (x-1+offset)) printf("\t");
 			}
-
-			for(unsigned int k = hide_wrapping; k < x+offset; k++){
-				printf("%i ", (volume[i][j][k]&62) >> 1);
-                                if(k%(x+offset) == (x-1+offset)) printf("\n");
+			if(!hide_count){
+				for(unsigned int k = hide_wrapping; k < x+offset; k++){
+					printf("%i ", (volume[i][j][k]&62) >> 1);
+	                                if(k%(x+offset) == (x-1+offset)) printf("\n");
+				}
 			}
 		}
 		printf("\n");

@@ -1,0 +1,590 @@
+desc: --time-unit=B
+cmd: ./gol3
+time_unit: B
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=2186336
+mem_heap_B=1987890
+mem_heap_extra_B=132798
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=5066304
+mem_heap_B=4687418
+mem_heap_extra_B=313238
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=7376520
+mem_heap_B=6852858
+mem_heap_extra_B=458014
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=9165376
+mem_heap_B=8529660
+mem_heap_extra_B=570068
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=42182848
+mem_heap_B=41541156
+mem_heap_extra_B=576044
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=75155592
+mem_heap_B=74510788
+mem_heap_extra_B=579156
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=108128336
+mem_heap_B=107480420
+mem_heap_extra_B=582268
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=998312024
+mem_heap_B=997660520
+mem_heap_extra_B=585856
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=1888495648
+mem_heap_B=1887840584
+mem_heap_extra_B=589416
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=2778679272
+mem_heap_B=2778020648
+mem_heap_extra_B=592976
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=2811652104
+mem_heap_B=2810990332
+mem_heap_extra_B=596124
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=2844624848
+mem_heap_B=2843959964
+mem_heap_extra_B=599236
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=2877597592
+mem_heap_B=2876929596
+mem_heap_extra_B=602348
+mem_stacks_B=0
+heap_tree=detailed
+n10: 2876929596 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 890180064 0x10BF0E: generateCoordinateArrays (gol3_2.c:611)
+  n0: 890180064 0x10924F: main (gol3_2.c:50)
+ n1: 890180064 0x10BF1B: generateCoordinateArrays (gol3_2.c:612)
+  n0: 890180064 0x10924F: main (gol3_2.c:50)
+ n1: 890180064 0x10BF28: generateCoordinateArrays (gol3_2.c:613)
+  n0: 890180064 0x10924F: main (gol3_2.c:50)
+ n1: 32969632 0x109285: generateCoordinateArrays (gol3_2.c:611)
+  n0: 32969632 0x109285: main (gol3_2.c:56)
+ n1: 32969632 0x109293: generateCoordinateArrays (gol3_2.c:612)
+  n0: 32969632 0x109293: main (gol3_2.c:56)
+ n1: 32969632 0x1092A1: generateCoordinateArrays (gol3_2.c:613)
+  n0: 32969632 0x1092A1: main (gol3_2.c:56)
+ n1: 32969632 0x10A1FB: generateCoordinateArrays (gol3_2.c:611)
+  n1: 32969632 0x10A1FB: findAlive (gol3_2.c:183)
+   n0: 32969632 0x109238: main (gol3_2.c:48)
+ n1: 32969632 0x10A20A: generateCoordinateArrays (gol3_2.c:612)
+  n1: 32969632 0x10A20A: findAlive (gol3_2.c:183)
+   n0: 32969632 0x109238: main (gol3_2.c:48)
+ n1: 32969632 0x10A219: generateCoordinateArrays (gol3_2.c:613)
+  n1: 32969632 0x10A219: findAlive (gol3_2.c:183)
+   n0: 32969632 0x109238: main (gol3_2.c:48)
+ n0: 8571612 in 13 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=14
+#-----------
+time=2910570400
+mem_heap_B=2909899264
+mem_heap_extra_B=605488
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=2943543144
+mem_heap_B=2942868896
+mem_heap_extra_B=608600
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=2976515888
+mem_heap_B=2975838528
+mem_heap_extra_B=611712
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=2978458120
+mem_heap_B=2977659154
+mem_heap_extra_B=733318
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=2980539248
+mem_heap_B=2979609868
+mem_heap_extra_B=863732
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=2982621024
+mem_heap_B=2981561188
+mem_heap_extra_B=994188
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=2985570336
+mem_heap_B=2984325760
+mem_heap_extra_B=1178928
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=2987476168
+mem_heap_B=2986112248
+mem_heap_extra_B=1298272
+mem_stacks_B=0
+heap_tree=detailed
+n10: 2986112248 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 890180064 0x10BF0E: generateCoordinateArrays (gol3_2.c:611)
+  n0: 890180064 0x10924F: main (gol3_2.c:50)
+ n1: 890180064 0x10BF1B: generateCoordinateArrays (gol3_2.c:612)
+  n0: 890180064 0x10924F: main (gol3_2.c:50)
+ n1: 890180064 0x10BF28: generateCoordinateArrays (gol3_2.c:613)
+  n0: 890180064 0x10924F: main (gol3_2.c:50)
+ n1: 65939264 0x109285: generateCoordinateArrays (gol3_2.c:611)
+  n0: 65939264 0x109285: main (gol3_2.c:56)
+ n1: 65939264 0x109293: generateCoordinateArrays (gol3_2.c:612)
+  n0: 65939264 0x109293: main (gol3_2.c:56)
+ n1: 65939264 0x1092A1: generateCoordinateArrays (gol3_2.c:613)
+  n0: 65939264 0x1092A1: main (gol3_2.c:56)
+ n1: 32969632 0x10A1FB: generateCoordinateArrays (gol3_2.c:611)
+  n1: 32969632 0x10A1FB: findAlive (gol3_2.c:183)
+   n0: 32969632 0x109238: main (gol3_2.c:48)
+ n1: 32969632 0x10A20A: generateCoordinateArrays (gol3_2.c:612)
+  n1: 32969632 0x10A20A: findAlive (gol3_2.c:183)
+   n0: 32969632 0x109238: main (gol3_2.c:48)
+ n1: 32969632 0x10A219: generateCoordinateArrays (gol3_2.c:613)
+  n1: 32969632 0x10A219: findAlive (gol3_2.c:183)
+   n0: 32969632 0x109238: main (gol3_2.c:48)
+ n0: 18845368 in 24 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=22
+#-----------
+time=2989555352
+mem_heap_B=2988061144
+mem_heap_extra_B=1428560
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=2991636264
+mem_heap_B=2990011656
+mem_heap_extra_B=1558960
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=2993718040
+mem_heap_B=2991962976
+mem_heap_extra_B=1689416
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=2996838112
+mem_heap_B=2994887532
+mem_heap_extra_B=1884932
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=2998917296
+mem_heap_B=2996836428
+mem_heap_extra_B=2015220
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=3000996480
+mem_heap_B=2998785324
+mem_heap_extra_B=2145508
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=3003948264
+mem_heap_B=3001552192
+mem_heap_extra_B=2330424
+mem_stacks_B=0
+heap_tree=peak
+n10: 3001552192 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 890180064 0x10BF0E: generateCoordinateArrays (gol3_2.c:611)
+  n0: 890180064 0x10924F: main (gol3_2.c:50)
+ n1: 890180064 0x10BF1B: generateCoordinateArrays (gol3_2.c:612)
+  n0: 890180064 0x10924F: main (gol3_2.c:50)
+ n1: 890180064 0x10BF28: generateCoordinateArrays (gol3_2.c:613)
+  n0: 890180064 0x10924F: main (gol3_2.c:50)
+ n1: 65939264 0x109285: generateCoordinateArrays (gol3_2.c:611)
+  n0: 65939264 0x109285: main (gol3_2.c:56)
+ n1: 65939264 0x109293: generateCoordinateArrays (gol3_2.c:612)
+  n0: 65939264 0x109293: main (gol3_2.c:56)
+ n1: 65939264 0x1092A1: generateCoordinateArrays (gol3_2.c:613)
+  n0: 65939264 0x1092A1: main (gol3_2.c:56)
+ n0: 34285312 in 30 places, all below massif's threshold (1.00%)
+ n1: 32969632 0x10A1FB: generateCoordinateArrays (gol3_2.c:611)
+  n1: 32969632 0x10A1FB: findAlive (gol3_2.c:183)
+   n0: 32969632 0x109238: main (gol3_2.c:48)
+ n1: 32969632 0x10A20A: generateCoordinateArrays (gol3_2.c:612)
+  n1: 32969632 0x10A20A: findAlive (gol3_2.c:183)
+   n0: 32969632 0x109238: main (gol3_2.c:48)
+ n1: 32969632 0x10A219: generateCoordinateArrays (gol3_2.c:613)
+  n1: 32969632 0x10A219: findAlive (gol3_2.c:183)
+   n0: 32969632 0x109238: main (gol3_2.c:48)
+#-----------
+snapshot=29
+#-----------
+time=3036921032
+mem_heap_B=2968582556
+mem_heap_extra_B=2327292
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=3069893776
+mem_heap_B=2935612924
+mem_heap_extra_B=2324180
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=3102866520
+mem_heap_B=2902643292
+mem_heap_extra_B=2321068
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=3993050208
+mem_heap_B=2012463192
+mem_heap_extra_B=2317480
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=4883233832
+mem_heap_B=1122283128
+mem_heap_extra_B=2313920
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=5773417456
+mem_heap_B=232103064
+mem_heap_extra_B=2310360
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=5774803688
+mem_heap_B=230803768
+mem_heap_extra_B=2223424
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=5776882872
+mem_heap_B=228854872
+mem_heap_extra_B=2093136
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=5780348144
+mem_heap_B=225606712
+mem_heap_extra_B=1876024
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=5783120320
+mem_heap_B=223008184
+mem_heap_extra_B=1702376
+mem_stacks_B=0
+heap_tree=detailed
+n5: 223008184 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 65939264 0x109285: generateCoordinateArrays (gol3_2.c:611)
+  n0: 65939264 0x109285: main (gol3_2.c:56)
+ n1: 65939264 0x109293: generateCoordinateArrays (gol3_2.c:612)
+  n0: 65939264 0x109293: main (gol3_2.c:56)
+ n1: 65939264 0x1092A1: generateCoordinateArrays (gol3_2.c:613)
+  n0: 65939264 0x1092A1: main (gol3_2.c:56)
+ n0: 17452984 in 35 places, all below massif's threshold (1.00%)
+ n1: 7737408 0x10B64F: wrappedZeroVolume (gol3_2.c:520)
+  n0: 7737408 0x1094D6: main (gol3_2.c:62)
+#-----------
+snapshot=39
+#-----------
+time=5785893032
+mem_heap_B=220409252
+mem_heap_extra_B=1528596
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=5787972216
+mem_heap_B=218460356
+mem_heap_extra_B=1398308
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=5791437488
+mem_heap_B=215212196
+mem_heap_extra_B=1181196
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=5824676936
+mem_heap_B=181992484
+mem_heap_extra_B=1161460
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=5857649680
+mem_heap_B=149022852
+mem_heap_extra_B=1158348
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=5890622424
+mem_heap_B=116053220
+mem_heap_extra_B=1155236
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=5892008656
+mem_heap_B=114753924
+mem_heap_extra_B=1068300
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=5894087840
+mem_heap_B=112805028
+mem_heap_extra_B=938012
+mem_stacks_B=0
+heap_tree=detailed
+n12: 112805028 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 32969632 0x109285: generateCoordinateArrays (gol3_2.c:611)
+  n0: 32969632 0x109285: main (gol3_2.c:56)
+ n1: 32969632 0x109293: generateCoordinateArrays (gol3_2.c:612)
+  n0: 32969632 0x109293: main (gol3_2.c:56)
+ n1: 32969632 0x1092A1: generateCoordinateArrays (gol3_2.c:613)
+  n0: 32969632 0x1092A1: main (gol3_2.c:56)
+ n1: 1653370 0x109370: generateZeroVolume (gol3_2.c:582)
+  n0: 1653370 0x109370: main (gol3_2.c:60)
+ n1: 1653370 0x10938A: generateZeroVolume (gol3_2.c:582)
+  n0: 1653370 0x10938A: main (gol3_2.c:60)
+ n1: 1653370 0x10939D: generateZeroVolume (gol3_2.c:582)
+  n0: 1653370 0x10939D: main (gol3_2.c:60)
+ n1: 1653370 0x1093B0: generateZeroVolume (gol3_2.c:582)
+  n0: 1653370 0x1093B0: main (gol3_2.c:60)
+ n1: 1653370 0x1093C3: generateZeroVolume (gol3_2.c:582)
+  n0: 1653370 0x1093C3: main (gol3_2.c:60)
+ n1: 1653370 0x1093D6: generateZeroVolume (gol3_2.c:582)
+  n0: 1653370 0x1093D6: main (gol3_2.c:60)
+ n1: 1653370 0x1093E9: generateZeroVolume (gol3_2.c:582)
+  n0: 1653370 0x1093E9: main (gol3_2.c:60)
+ n1: 1653370 0x1093FC: generateZeroVolume (gol3_2.c:582)
+  n0: 1653370 0x1093FC: main (gol3_2.c:60)
+ n0: 669172 in 28 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=47
+#-----------
+time=5896167024
+mem_heap_B=110856132
+mem_heap_extra_B=807724
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=5899632296
+mem_heap_B=107607972
+mem_heap_extra_B=590612
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=5932738568
+mem_heap_B=74513096
+mem_heap_extra_B=579216
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=5965711312
+mem_heap_B=41543464
+mem_heap_extra_B=576104
+mem_stacks_B=0
+heap_tree=detailed
+n10: 41543464 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 32969632 0x1092A1: generateCoordinateArrays (gol3_2.c:613)
+  n0: 32969632 0x1092A1: main (gol3_2.c:56)
+ n1: 1020100 0x109370: generateZeroVolume (gol3_2.c:582)
+  n0: 1020100 0x109370: main (gol3_2.c:60)
+ n1: 1020100 0x10938A: generateZeroVolume (gol3_2.c:582)
+  n0: 1020100 0x10938A: main (gol3_2.c:60)
+ n1: 1020100 0x10939D: generateZeroVolume (gol3_2.c:582)
+  n0: 1020100 0x10939D: main (gol3_2.c:60)
+ n1: 1020100 0x1093B0: generateZeroVolume (gol3_2.c:582)
+  n0: 1020100 0x1093B0: main (gol3_2.c:60)
+ n1: 1020100 0x1093C3: generateZeroVolume (gol3_2.c:582)
+  n0: 1020100 0x1093C3: main (gol3_2.c:60)
+ n1: 1020100 0x1093D6: generateZeroVolume (gol3_2.c:582)
+  n0: 1020100 0x1093D6: main (gol3_2.c:60)
+ n1: 1020100 0x1093E9: generateZeroVolume (gol3_2.c:582)
+  n0: 1020100 0x1093E9: main (gol3_2.c:60)
+ n1: 1020100 0x1093FC: generateZeroVolume (gol3_2.c:582)
+  n0: 1020100 0x1093FC: main (gol3_2.c:60)
+ n0: 413032 in 30 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=51
+#-----------
+time=5998684056
+mem_heap_B=8573832
+mem_heap_extra_B=572992
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=6000070288
+mem_heap_B=7274536
+mem_heap_extra_B=486056
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=6001456592
+mem_heap_B=5975070
+mem_heap_extra_B=399218
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=6002843000
+mem_heap_B=4675604
+mem_heap_extra_B=312276
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=6004229304
+mem_heap_B=3376138
+mem_heap_extra_B=225438
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=6005615608
+mem_heap_B=2076672
+mem_heap_extra_B=138600
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=6007002016
+mem_heap_B=777206
+mem_heap_extra_B=51658
+mem_stacks_B=0
+heap_tree=empty

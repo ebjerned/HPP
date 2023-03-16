@@ -1,7 +1,7 @@
 CC = gcc
 LD = gcc
-CFLAGS = -Wall -lm -g -O3 -fopt-info-vec -march=native -fopenmp -ffast-math
-LDFLAGS = -Wall -lm -g -O3 -fopt-info-vec -march=native -fopenmp -ffast-math
+CFLAGS = -Wall -lm -g -fopt-info-vec -fopenmp -O3 -march=native -ffast-math
+LDFLAGS = -Wall -lm -g -fopt-info-vec -fopenmp -O3 -march=native -ffast-math
 RM = /bin/rm -f
 OBJS = gol3_2.o
 EXECUTABLE = gol3

@@ -6,25 +6,23 @@
 #include <assert.h>
 #include <omp.h>
 
-typedef struct dimesions {
+typedef struct dimensions {
 	const unsigned int x;
 	const unsigned int y;
 	const unsigned int z;
 } dim_t;
 
-unsigned char*** generateVolume(const dim_t size);
-unsigned char*** generateZeroVolume(const dim_t size);
+
 unsigned int** generateCoordinateArrays(const unsigned int x, const unsigned int y, const unsigned int z);
 void freeVolume(unsigned char*** restrict volume, const dim_t size);
 void freeCoordinateArrays(unsigned int** restrict arr);
+void resizeCoordinateArrays(unsigned int** arr, unsigned int value);
 void printVolume(unsigned char*** restrict volume, dim_t size, char hide_wrapping, char hide_count);
 unsigned int countAlive(unsigned char*** restrict volume, const dim_t size);
 unsigned char*** wrappedVolume(const dim_t size);
-unsigned char*** wrappedZeroVolume(const dim_t size);
 void copyPadding(unsigned char*** restrict vol, const dim_t size);
-void processNeighbours(unsigned int** restrict dest, unsigned int*** restrict s_alive, const dim_t size,  unsigned char*** restrict test_byte, unsigned int*** s_updates, unsigned int*** i_updates, unsigned char**** restrict partition, unsigned const char n_threads, unsigned char**** n_counter_thread, unsigned int* partition_break);
-void cellLoop(unsigned char*** restrict vol, unsigned int*** restrict s_alive, unsigned int** restrict all, unsigned int*** restrict s_updates, unsigned const char n_threads, unsigned int* partition_break);
-void resizeCoordinateArrays(unsigned int** arr);
+void processNeighbours(unsigned int*** restrict s_alive, const dim_t size,  unsigned char*** restrict test_byte, unsigned int*** s_updates, unsigned int*** i_updates, unsigned char**** restrict partition, unsigned const char n_threads, unsigned int* partition_break);
+unsigned int cellLoop(unsigned char*** restrict vol, unsigned int*** restrict s_alive, unsigned int*** restrict s_updates, unsigned const char n_threads, unsigned int* partition_break);
 void partitions(unsigned char**** restrict partitions, unsigned int*** restrict s_alive,  const dim_t size, unsigned char*** restrict test_byte, unsigned const char n_threads, unsigned int* partition_break, unsigned int n_alive);
 unsigned char*** partialWrappedVolume(unsigned char*** restrict vol, const dim_t size, unsigned z_start, unsigned z_end);
 double get_wall_seconds();
@@ -34,75 +32,85 @@ double get_wall_seconds();
 
 int main(int argc, char* argv[]){
 
+	if(argc != 6){
+		printf("ERROR: Not enough arguments\n");
+		printf("\tProgram uses following format\n");
+		printf("\tSIZE_X SIZE_Y SIZE_Z N_TIMESTEPS N_THREADS\n");
+		return -1;
+	} 
+
+
+	//  SIZEX SIZEY SIZEZ TIMESTEPS THREADS
+	unsigned int size_x = atoi(argv[1]) + 2;
+	unsigned int size_y = atoi(argv[2]) + 2;
+	unsigned int size_z = atoi(argv[3]) + 2;	
+	unsigned int timesteps = atoi(argv[4]);
+	unsigned char n_threads = atoi(argv[5]);
+	
 	
 
-	unsigned int timesteps = 2;
-	const unsigned size = 10;
-	const unsigned wrapped_size = size + 2;
-	const dim_t wrapped_dim = {wrapped_size, wrapped_size, wrapped_size};
+	const dim_t wrapped_dim = {size_x, size_y, size_z};
+
 	unsigned char*** wrapped = wrappedVolume(wrapped_dim);
 
 	unsigned int n_alive = countAlive(wrapped,wrapped_dim);
-	unsigned char n_threads = atoi(argv[1]);
-	unsigned int** all = generateCoordinateArrays(n_alive*27, 1, 1);
+	if(!n_alive){
+		printf("ERROR: No alive cells found when initializing\n");
+		return -1;
 
-	unsigned char*** n_counter_thread[n_threads];
+	}
+
 	unsigned int*** s_updates = (unsigned int***)malloc(n_threads*sizeof(unsigned int**));	
 	unsigned int*** i_updates = (unsigned int***)malloc(n_threads*sizeof(unsigned int**));
 	unsigned int*** s_alive = (unsigned int***)malloc(n_threads*sizeof(unsigned int**));
+	
+
 	for(int i = 0; i < n_threads; i++){
-		s_updates[i] = generateCoordinateArrays(wrapped_size, wrapped_size, wrapped_size);
-		i_updates[i] = generateCoordinateArrays(wrapped_size, wrapped_size, wrapped_size);
-		s_alive[i] = generateCoordinateArrays(wrapped_size, wrapped_size, wrapped_size);
-		n_counter_thread[i] = generateZeroVolume(wrapped_dim);
+		s_updates[i] = generateCoordinateArrays(27*n_alive/n_threads, 1, 1);
+		i_updates[i] = generateCoordinateArrays(27*n_alive/n_threads, 1, 1);
+		s_alive[i] = generateCoordinateArrays(n_alive, 1, 1);
 	}
 
-
-	unsigned char*** partition = wrappedZeroVolume(wrapped_dim);
 
 	unsigned char**** parts = (unsigned char****)malloc(n_threads*sizeof(unsigned char***));
 	unsigned int* partition_break = (unsigned int*)malloc(n_threads*sizeof(int));
 	printf("Setup complete\n\n");
-	partitions(parts, s_alive, wrapped_dim, wrapped, n_threads, partition_break, n_alive);
-
 	for(unsigned int t = 0; t < timesteps; t++){
 		double gen_start_time = get_wall_seconds();
-
-//		printVolume(partition, wrapped_dim, 1, 1);
-//		printVolume(wrapped, wrapped_dim, 1,0);
-		processNeighbours(all, s_alive, wrapped_dim, wrapped, s_updates, i_updates, parts, n_threads, n_counter_thread, partition_break);
-
-	//	printVolume(wrapped, wrapped_dim, 1, 0);	
-		cellLoop(wrapped, s_alive, all, s_updates, n_threads, partition_break);
-	//	printVolume(wrapped, wrapped_dim, 1, 0);	
-
-		copyPadding(wrapped, wrapped_dim);
-
 		for(int i = 0; i < n_threads; i++){
-//			resizeCoordinateArrays(s_updates[i]);
-//			resizeCoordinateArrays(s_alive[i]);
+			resizeCoordinateArrays(s_alive[i], n_alive/n_threads);
 
-		
 		}
-	//	resizeCoordinateArrays(all);
+		partitions(parts, s_alive, wrapped_dim, wrapped, n_threads, partition_break, n_alive);
+//		printVolume(wrapped, wrapped_dim, 1, 0);
+		processNeighbours(s_alive, wrapped_dim, wrapped, s_updates, i_updates, parts, n_threads, partition_break);
+//		printVolume(wrapped, wrapped_dim, 1, 0);
 
-		//TODO: Swap all[0][0] for something better below
-		partitions(parts, s_alive, wrapped_dim, wrapped, n_threads, partition_break, all[0][0]);
-
-		printf("Generation done in %lf s\n\n", get_wall_seconds()-gen_start_time);
+		unsigned int n_alive_approx = cellLoop(wrapped, s_alive, s_updates, n_threads, partition_break);
+//		printVolume(wrapped, wrapped_dim, 1, 0);
+		copyPadding(wrapped, wrapped_dim);
+		//n_alive = countAlive(wrapped, wrapped_dim);
+		//printVolume(wrapped, wrapped_dim, 0, 0);
+		for(int i = 0; i < n_threads; i++){
+			const dim_t temp_dim ={size_x, size_y, partition_break[i]};
+			freeVolume(parts[i], temp_dim);
+			resizeCoordinateArrays(s_updates[i], n_alive*27/n_threads);
+			resizeCoordinateArrays(i_updates[i], n_alive*27/n_threads);
+		}
+		n_alive = n_alive_approx*1.1;
+		if(!n_alive){
+			printf("EARLY EXIT: All cells are dead");
+			return 0;
+		}
+		printf("Generation done in %lf s with %i alive \n\n", get_wall_seconds()-gen_start_time, n_alive);
 	}
 
-	freeCoordinateArrays(all);
 	freeVolume(wrapped,wrapped_dim);
-	freeVolume(partition, wrapped_dim);
 	for(int i = 0; i < n_threads; i++){
 		freeCoordinateArrays(s_updates[i]);
 		freeCoordinateArrays(i_updates[i]);
-		freeVolume(n_counter_thread[i], wrapped_dim);
-		const dim_t temp_dim ={wrapped_size, wrapped_size, partition_break[i]};
-		freeVolume(parts[i], temp_dim);
 		freeCoordinateArrays(s_alive[i]);
-		
+
 	}
 	free(s_updates);
 	free(i_updates);
@@ -113,7 +121,7 @@ int main(int argc, char* argv[]){
 }
 
 
-void cellLoop(unsigned char*** restrict vol, unsigned int*** restrict s_alive, unsigned int** restrict all, unsigned int*** restrict s_updates, unsigned const char n_threads, unsigned int* partition_break){
+unsigned int cellLoop(unsigned char*** restrict vol, unsigned int*** restrict s_alive, unsigned int*** restrict s_updates, unsigned const char n_threads, unsigned int* partition_break){
 		double time = get_wall_seconds();
 		unsigned int cum_z[n_threads];
 		unsigned int z_offset = 0;
@@ -121,28 +129,31 @@ void cellLoop(unsigned char*** restrict vol, unsigned int*** restrict s_alive, u
 			z_offset += i==0 ? 0 : partition_break[i-1]-2;
 			cum_z[i] = z_offset;
 		}
-		
-		#pragma omp parallel num_threads(n_threads)
-		{
+		unsigned int n_alive = 0;
 		int alive_count = 0;
-		int r, i, j, k;
-		char cell, count;
-		char thread_ID = omp_get_thread_num();
-		unsigned int** s_updated = s_updates[omp_get_thread_num()];
-		unsigned int** s_living = s_alive[omp_get_thread_num()];
-		int limit = s_updated[0][0];
 
+		#pragma omp parallel num_threads(n_threads) firstprivate(alive_count) reduction(+:n_alive)
+		{
+		int r, i, j, k, offset_i;
+		char cell, count;
+		unsigned int thread_ID = omp_get_thread_num();
+		unsigned int** s_updated = s_updates[thread_ID];
+		unsigned int** s_living = s_alive[thread_ID];
+		int limit = s_updated[0][0];
+		unsigned int offset = cum_z[thread_ID];
 		for(r = 0; r < limit; r++){
 
 			i = s_updated[1][r];
 			j = s_updated[2][r];
 			k = s_updated[3][r];
+			offset_i = i + offset;
 
-			cell = vol[i+cum_z[thread_ID]][j][k];
+			cell = vol[offset_i][j][k];
 			if(cell&1){
-				count = ((cell & 62) >> 1) - 1;
+				count = ((cell & 62) >> 1);
+
 				if(count < 5 || count > 7){
-					vol[i+cum_z[thread_ID]][j][k] = count << 1;
+					vol[offset_i][j][k] = 0;
 				} else {
 					s_living[1][alive_count] = i;
 					s_living[2][alive_count] = j;
@@ -158,30 +169,20 @@ void cellLoop(unsigned char*** restrict vol, unsigned int*** restrict s_alive, u
 					s_living[2][alive_count] = j;
 					s_living[3][alive_count] = k;
 					alive_count++;
-					vol[i+ cum_z[thread_ID]][j][k] = (count << 1) + 1;
+					vol[offset_i][j][k] = 1;
 				}
 			}
-			vol[i+cum_z[thread_ID]][j][k] &= ~62;
-
+			vol[offset_i][j][k] &= ~62;
 
 
 		}
 
 		s_living[0][0] = alive_count;
+		n_alive += alive_count;
 		}
-		printf("Parallel loop in %lf s\n", get_wall_seconds()-time);
-		all[0][0] = 0;
-		for(int i = 0; i < n_threads; i++){
-			memcpy(&all[1][all[0][0]], s_alive[i][1], s_alive[i][0][0]*sizeof(unsigned int));
-			memcpy(&all[2][all[0][0]], s_alive[i][2], s_alive[i][0][0]*sizeof(unsigned int));
-			memcpy(&all[3][all[0][0]], s_alive[i][3], s_alive[i][0][0]*sizeof(unsigned int));
-			all[0][0] += s_alive[i][0][0];
 
-		}
-		printf("Updates: %i\n", all[0][0]);
-
-		printf("Looping done in %lf s, %.16lf per cell\n", get_wall_seconds()-time, (get_wall_seconds()-time)/all[0][0]);
-
+		printf("Looping done in %lf s, %.16lf per cell\n", get_wall_seconds()-time, (get_wall_seconds()-time)/n_alive);
+		return n_alive;
 }
 
 
@@ -196,29 +197,23 @@ unsigned int countAlive(unsigned char*** restrict volume, const dim_t size){
                 for(unsigned int j = 0; j < y; j++)
                         for(unsigned int k = 0; k < x; k++)
 				counter += volume[i][j][k];
-	printf("Found alive in %lf s\n", get_wall_seconds()-time);
+	printf("Counted alive in %lf s\n", get_wall_seconds()-time);
 	return counter;
 }
 
 
 
 // TODO: When loopin through neighbours, count how many times a neighbour is mentioned. This can replace the neighbour checking in the main loop
-void processNeighbours(unsigned int** restrict dest, unsigned int*** restrict s_alive,  const dim_t size, unsigned char*** restrict test_byte, unsigned int*** restrict s_updates, unsigned int*** restrict i_updates, unsigned char**** partition, unsigned const char n_threads, unsigned char**** n_counter_thread, unsigned int* partition_break){
+void processNeighbours(unsigned int*** restrict s_alive,  const dim_t size, unsigned char*** restrict test_byte, unsigned int*** restrict s_updates, unsigned int*** restrict i_updates, unsigned char**** partition, unsigned const char n_threads, unsigned int* partition_break){
 	double time = get_wall_seconds();
 	unsigned int x = size.x;
 	unsigned int y = size.y;
-	unsigned int cum_z[n_threads];
-/*	unsigned int z_offset = 0;
-	cum_z[0] = 0;
-	for(int i = 1; i < n_threads; i++){
-		z_offset += partition_break[i-1]-2;
-		cum_z[i] = z_offset;
-	}*/
 	#pragma omp parallel num_threads(n_threads)
 	{
-	char thread_ID = omp_get_thread_num();
-	unsigned int** updated = s_updates[omp_get_thread_num()];
-	unsigned int** alive = s_alive[omp_get_thread_num()];
+	unsigned int thread_ID = omp_get_thread_num();
+	unsigned int** i_updated = i_updates[thread_ID];
+	unsigned int** alive = s_alive[thread_ID];
+	unsigned char*** part = partition[thread_ID];
 	char l_l,l,l_u,m_l,m,m_u,n_l,n,n_u;
 	unsigned char* cell;
 	const unsigned int* z_axis = alive[1];
@@ -226,9 +221,9 @@ void processNeighbours(unsigned int** restrict dest, unsigned int*** restrict s_
 	const unsigned int* x_axis = alive[3];
 	unsigned int z_coord, y_coord, x_coord;
 	unsigned int counter = 0;
-	unsigned int s_counter = 0;	
 	unsigned int limit = alive[0][0];
 	unsigned int z = partition_break[thread_ID];
+
 	for(int i=0; i < limit; i++){
 		z_coord = z_axis[i];
 		y_coord = y_axis[i];
@@ -257,86 +252,92 @@ void processNeighbours(unsigned int** restrict dest, unsigned int*** restrict s_
 			n_u = 1;
 		}
 
-
+		
 		for(l = l_l; l < l_u; l++){
                         for(m = m_l; m < m_u; m++){
                                 for(n = n_l; n < n_u; n++){
-					cell = &(partition[omp_get_thread_num()][z_coord +l][y_coord +m][x_coord +n]);
-					char bounce = 0;
-					if( z_coord + l == 0 || z_coord+l == z-1) bounce = 1;
+
+					cell = &(part[z_coord+l][y_coord+m][x_coord+n]);
+
 					if(!(((*cell)&62))){
-						i_updates[omp_get_thread_num()][1][counter] = z_coord+l;// + cum_z[thread_ID];
-						i_updates[omp_get_thread_num()][2][counter] = y_coord+m;
-						i_updates[omp_get_thread_num()][3][counter] = x_coord+n;
+						i_updated[1][counter] = z_coord + l;
+						i_updated[2][counter] = y_coord + m;
+						i_updated[3][counter] = x_coord + n;
 						counter++;
-						if(!bounce){
-							s_updates[omp_get_thread_num()][1][s_counter] = z_coord+l;// + cum_z[thread_ID];
-							s_updates[omp_get_thread_num()][2][s_counter] = y_coord+m;
-							s_updates[omp_get_thread_num()][3][s_counter] = x_coord+n;
-							s_counter++;
-						}
 					}
 
-					char val = (((((*cell) & 62) >> 1) + 1) << 1) + ((*cell) & 1);
-					*cell = val;
+//					char val = (((((*cell) & 62) >> 1) + 1) << 1) + ((*cell) & 1);
+//					*cell = val;
+					*cell += 2;
 
 				}
 			}
 		}
+		
 	}
-	i_updates[omp_get_thread_num()][0][0] = counter;
-	s_updates[omp_get_thread_num()][0][0] = s_counter;
-
+	i_updated[0][0] = counter;
 
 	}
 	int z_offset = 0;
+	int total_updates = 0;
 	for(int i = 0; i < n_threads; i++){
+		unsigned int s_counter = 0;
 		z_offset += i==0 ? 0 : partition_break[i-1]-2;
-//		const dim_t temp_size = {size.x, size.y, partition_break[i]};
-//		printVolume(partition[i], temp_size, 0, 0);
-
+		unsigned int* z_axis = i_updates[i][1];
+		unsigned int* y_axis = i_updates[i][2];
+		unsigned int* x_axis = i_updates[i][3];
+		unsigned char*** part = partition[i];
 		for(int j = 0; j < i_updates[i][0][0]; j++){
-			unsigned int z_coord = i_updates[i][1][j];
-			unsigned int y_coord = i_updates[i][2][j];
-			unsigned int x_coord = i_updates[i][3][j];
-			unsigned char* cell = &(test_byte[z_coord + z_offset][y_coord][x_coord]);
-			unsigned char thread_sum = (partition[i][z_coord][y_coord][x_coord] & 62)>>1;
-			*cell = (((((*cell) & 62) >> 1) + thread_sum) << 1) +((*cell)&1);
+			unsigned int z_coord = z_axis[j];
+			unsigned int y_coord = y_axis[j];
+			unsigned int x_coord = x_axis[j];
+			
+//			*cell = (((((*cell) & 62) >> 1) + thread_sum) << 1) +((*cell)&1);
+			if(!(test_byte[z_coord + z_offset][y_coord][x_coord]&62)){
+				s_updates[i][1][s_counter] = z_coord;
+                                s_updates[i][2][s_counter] = y_coord;
+                                s_updates[i][3][s_counter] = x_coord;
+                                s_counter++;
+
+			}
+			test_byte[z_coord + z_offset][y_coord][x_coord] += (part[z_coord][y_coord][x_coord] & 62);
+
 		}
+		s_updates[i][0][0] = s_counter++;
+		total_updates += i_updates[i][0][0];
 	}
 	printf("Found neighbours in %lf s\n", get_wall_seconds()-time);
 	return;
 
 }
+
+
 void partitions(unsigned char**** restrict partitions, unsigned int*** restrict s_alive,  const dim_t size, unsigned char*** restrict vol, unsigned const char n_threads, unsigned int* partitions_break, unsigned int n_alive){
 	double time = get_wall_seconds();
 	unsigned int alive_counter = 0;
-//	unsigned int alive_per_thread =size.x*size.y*size.z*0.33/n_threads;// alive[0][0]/n_threads;
 	unsigned int alive_per_thread = n_alive/n_threads;
 	unsigned int z_start = 0;
 	unsigned int part = 0;
 	for(int i = 0; i < size.z; i++){
+
 		for(int j = 0; j < size.y; j++){
 			for(int k = 0; k < size.x; k++){
 				if(vol[i][j][k]&1){
-					s_alive[part][1][alive_counter] = i - z_start;// + (part==0 && n_threads != 1);
+					s_alive[part][1][alive_counter] = i - z_start;
 					s_alive[part][2][alive_counter] = j;
 					s_alive[part][3][alive_counter] = k;
 					alive_counter++;
-
 				}
 			}
 		}
-		if((alive_counter >= alive_per_thread && (n_threads-part) > 1) || i == size.z-1){
+
+		if(((alive_counter >= alive_per_thread)) || (i+(n_threads-part-1)) == size.z-1){
 			unsigned int z_s = z_start == 0 ? 0 : (z_start);
 			unsigned int z_e = i == (size.z-1) ? size.z - 1 : i+1 ;
-
-//			printf("For thread %i: Interval %i - %i with %i alive\n", part, z_s, z_e, alive_counter);
 			partitions_break[part] = z_e - z_s + 1;
 			partitions[part] = partialWrappedVolume(vol, size, z_s, z_e);
-			const dim_t temp_size = {size.x, size.y, z_e - z_s + 1};
-			//printVolume(partitions[part], temp_size, 0, 1);
 			s_alive[part][0][0] = alive_counter;
+//			printf("Partition %i with %i alive between z %i-%i\n", part, alive_counter, z_s, z_e);
 			part++;
 			alive_counter = 0;
 			z_start = i;
@@ -350,11 +351,9 @@ void partitions(unsigned char**** restrict partitions, unsigned int*** restrict 
 }
 
 unsigned char*** partialWrappedVolume(unsigned char*** restrict vol, const dim_t size, unsigned z_start, unsigned z_end){
-	double time = get_wall_seconds();
 	unsigned int x = size.x;
 	unsigned int y = size.y;
-	unsigned int z = z_end - z_start +1;
-
+	unsigned int z = z_end - z_start + 1;
         unsigned char*** z_slices = (unsigned char***)malloc(z*sizeof(unsigned char**));
         for(unsigned int i = z_start; i <= z_end; i++){
 		z_slices[i-z_start] = (unsigned char**)malloc(y*sizeof(unsigned char*));
@@ -363,13 +362,8 @@ unsigned char*** partialWrappedVolume(unsigned char*** restrict vol, const dim_t
                         memcpy(z_slices[i - z_start][j], vol[i][j], x*sizeof(unsigned char));
                 }
         }
-//	printf("Generated partial wrapped volume in %lf s of size %li B\n", get_wall_seconds()-time, x*y*z*sizeof(unsigned char)+y*z*sizeof(unsigned char*)+z*sizeof(unsigned char**));
         return z_slices;
-	
-
-
 }
-
 
 double get_wall_seconds() {
   struct timeval tv;
@@ -377,34 +371,6 @@ double get_wall_seconds() {
   double seconds = tv.tv_sec + (double)tv.tv_usec / 1000000;
   return seconds;
 }
-
-// TODO: Better approch is instead of storing is alive or not, is to store the number of adjacent alive cells directly.
-// Loop through all cell and set all cells outside E to 0, if in F set a all adjacent cells to 1 in an change matrix 
-
-unsigned char*** generateVolume(dim_t size){
-	double time = get_wall_seconds();
-	srand(0);
-	unsigned int x = size.x;
-	unsigned int y = size.y;
-	unsigned int z = size.z;
-	unsigned char*** z_slices = (unsigned char***)malloc(z*sizeof(unsigned char**));
-	for(unsigned int i = 0; i < z; i++){
-		z_slices[i] = (unsigned char**)malloc(y*sizeof(unsigned char*));
-		unsigned char** y_slice = z_slices[i];
-		for(unsigned int j = 0; j <y; j++){
-			y_slice[j] = (unsigned char*)malloc(x*sizeof(unsigned char));
-			unsigned char* x_slice = y_slice[j];
-			for(unsigned int k =0; k< x; k++){
-				x_slice[k] = (unsigned char)round((double)rand()/RAND_MAX);
-//				printf("%i\n", x_slice[k]);
-			}
-		}
-	}
-	printf("Generated volume in %lf s\n", get_wall_seconds()-time);
-	return z_slices;
-
-}
-
 
 unsigned char*** wrappedVolume(const dim_t size){
         double time = get_wall_seconds();
@@ -438,30 +404,6 @@ unsigned char*** wrappedVolume(const dim_t size){
 
 }
 
-unsigned char*** wrappedZeroVolume(const dim_t size){
-        double time = get_wall_seconds();
-	srand(0);
-	unsigned int x = size.x;
-	unsigned int y = size.y;
-	unsigned int z = size.z;
-        unsigned char*** z_slices = (unsigned char***)malloc(z*sizeof(unsigned char**));
-        for(unsigned int i = 0; i < z; i++){
-                z_slices[i] = (unsigned char**)malloc(y*sizeof(unsigned char*));
-                unsigned char** y_slice = z_slices[i];
-                for(unsigned int j = 0; j <y; j++){
-                        y_slice[j] = (unsigned char*)malloc(x*sizeof(unsigned char));
-                        unsigned char* x_slice = y_slice[j];
-                        for(unsigned int k =0; k < x; k++){
-                                x_slice[k] = 0; //(unsigned char)round(0.75*(double)rand()/RAND_MAX);
-                        }
-		}
-        }
-	printf("Generated wrapped zero volume in %lf s of size %li B\n", get_wall_seconds()-time, x*y*z*sizeof(unsigned char)+y*z*sizeof(unsigned char*)+z*sizeof(unsigned char**));
-        return z_slices;
-	
-
-}
-
 void copyPadding(unsigned char*** restrict vol, const dim_t size){
         double time = get_wall_seconds();
 	unsigned int x = size.x;
@@ -486,23 +428,14 @@ void copyPadding(unsigned char*** restrict vol, const dim_t size){
 
 
 }
-unsigned char*** generateZeroVolume(const dim_t size){
-	double time = get_wall_seconds();
-	unsigned int x = size.x;
-	unsigned int y = size.y;
-	unsigned int z = size.z;
-        unsigned char*** z_slices = (unsigned char***)malloc(z*sizeof(unsigned char**));
-        for(int i = 0; i < z; i++){
-                z_slices[i] = (unsigned char**)malloc(y*sizeof(unsigned char*));
-                unsigned char** y_slice = z_slices[i];
-                for(int j = 0; j <y; j++){
-                        y_slice[j] = (unsigned char*)malloc(x*sizeof(unsigned char));
-                        memset(y_slice[j], 0, x*sizeof(unsigned char));
-                }
-        }
-        printf("Generated zero volume in %lf s of size %li B\n", get_wall_seconds()-time, x*y*z*sizeof(unsigned char)+y*z*sizeof(unsigned char*)+z*sizeof(unsigned char**));;
-        return z_slices;
 
+
+void resizeCoordinateArrays(unsigned int** arr, unsigned int value){
+	int new_size = ((int)(1.2*value)*sizeof(unsigned int));
+	arr[1] = realloc(arr[1], new_size);
+	arr[2] = realloc(arr[2], new_size);
+	arr[3] = realloc(arr[3], new_size);
+	
 }
 
 unsigned int** generateCoordinateArrays(const unsigned int x, const unsigned int y, const unsigned int z){
@@ -512,17 +445,10 @@ unsigned int** generateCoordinateArrays(const unsigned int x, const unsigned int
 	arr[1] = (unsigned int*)malloc(size);
 	arr[2] = (unsigned int*)malloc(size);
 	arr[3] = (unsigned int*)malloc(size);
-	printf("Allocated %li B for coordinate arrays\n", (x*y*z)*sizeof(unsigned int)+sizeof(unsigned int)+sizeof(unsigned int*)*4);
+//	printf("Allocated %li B for coordinate arrays\n", (x*y*z)*sizeof(unsigned int)+sizeof(unsigned int)+sizeof(unsigned int*)*4);
 	return arr;
 }
 
-void resizeCoordinateArrays(unsigned int** arr){
-	int new_size = ((int)(1.5*arr[0][0]))*sizeof(unsigned int);
-	arr[1] = realloc(arr[1], new_size);
-	arr[2] = realloc(arr[2], new_size);
-	arr[3] = realloc(arr[3], new_size);
-	
-}
 
 void freeCoordinateArrays(unsigned int** restrict arr){
 	free(arr[0]);
@@ -535,8 +461,6 @@ void freeCoordinateArrays(unsigned int** restrict arr){
 
 
 void freeVolume(unsigned char*** restrict volume, const dim_t size){
-	double time = get_wall_seconds();
-//	unsigned int x = size.x;
 	unsigned int y = size.y;
 	unsigned int z = size.z;
 	for(unsigned int i = 0; i < z; i++){
@@ -546,7 +470,6 @@ void freeVolume(unsigned char*** restrict volume, const dim_t size){
 		free(volume[i]);
 	}
 	free(volume);
-	printf("Freed volume in %lf s\n", get_wall_seconds()-time);
 	return;
 }
 
@@ -575,3 +498,4 @@ void printVolume(unsigned char*** restrict volume, const dim_t size, char hide_w
 	}
 	printf("Printed volume in %lf s\n", get_wall_seconds()-time);
 }
+

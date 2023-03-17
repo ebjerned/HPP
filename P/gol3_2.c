@@ -24,9 +24,11 @@ void printVolume(uchar_t*** restrict volume, dim_t size, uchar_t hide_wrapping, 
 uint_t countAlive(uchar_t*** restrict volume, const dim_t size);
 uchar_t*** wrappedVolume(const dim_t size);
 void copyPadding(uchar_t*** restrict vol, const dim_t size);
-void processNeighbours(uint_t*** restrict s_alive, const dim_t size,  uchar_t*** restrict test_byte, uint_t*** s_updates, uint_t*** i_updates, uchar_t**** restrict partition, const uchar_t n_threads, uint_t* partition_break);
+void processNeighbours(uint_t*** restrict s_alive, const dim_t size,  uchar_t*** restrict test_byte, uint_t*** s_updates, uchar_t**** restrict partition, const uchar_t n_threads, uint_t* partition_break);
 uint_t cellLoop(uchar_t*** restrict vol, uint_t*** restrict s_alive, uint_t*** restrict s_updates, const uchar_t n_threads, uint_t* partition_break);
 void partitions(uchar_t**** restrict partitions, uint_t*** restrict s_alive,  const dim_t size, uchar_t*** restrict test_byte, const uchar_t n_threads, uint_t* partition_break, uint_t n_alive);
+void updatePartitions(uchar_t**** restrict partitions, uchar_t*** restrict vol, const dim_t size, uint_t* partition_break, uchar_t n_threads, uint_t*** restrict s_alive, uint_t* points);
+void partitionsPara(uchar_t**** restrict partitions, uint_t*** restrict s_alive,  const dim_t size, uchar_t*** restrict vol, const uchar_t n_threads, uint_t* restrict partitions_break, uint_t n_alive);
 uchar_t*** partialWrappedVolume(uchar_t*** restrict vol, const dim_t size, uint_t z_start, uint_t z_end);
 double get_wall_seconds();
 
@@ -64,13 +66,11 @@ int main(int argc, char* argv[]){
 	}
 
 	uint_t*** s_updates = (uint_t***)malloc(n_threads*sizeof(uint_t**));	
-	uint_t*** i_updates = (uint_t***)malloc(n_threads*sizeof(uint_t**));
 	uint_t*** s_alive = (uint_t***)malloc(n_threads*sizeof(uint_t**));
 	
 
 	for(uint_t i = 0; i < n_threads; i++){
 		s_updates[i] = generateCoordinateArrays(27*n_alive/n_threads, 1, 1);
-		i_updates[i] = generateCoordinateArrays(27*n_alive/n_threads, 1, 1);
 		s_alive[i] = generateCoordinateArrays(n_alive, 1, 1);
 	}
 
@@ -78,31 +78,38 @@ int main(int argc, char* argv[]){
 	uchar_t**** parts = (uchar_t****)malloc(n_threads*sizeof(uchar_t***));
 	uint_t* partition_break = (uint_t*)malloc(n_threads*sizeof(uint_t));
 	printf("Setup complete\n\n");
+//
+//	uint_t* points = partitions(parts, s_alive, wrapped_dim, wrapped, n_threads, partition_break, n_alive);
+
+
 	for(uint_t t = 0; t < timesteps; t++){
 		double gen_start_time = get_wall_seconds();
-		for(uint_t i = 0; i < n_threads; i++){
-			resizeCoordinateArrays(s_alive[i], n_alive/n_threads);
-
-		}
-		partitions(parts, s_alive, wrapped_dim, wrapped, n_threads, partition_break, n_alive);
-//		printVolume(wrapped, wrapped_dim, 1, 0);
-		processNeighbours(s_alive, wrapped_dim, wrapped, s_updates, i_updates, parts, n_threads, partition_break);
-//		printVolume(wrapped, wrapped_dim, 1, 0);
+		partitionsPara(parts, s_alive, wrapped_dim, wrapped, n_threads, partition_break, n_alive);
+//		printVolume(wrapped, wrapped_dim, 0, 0);
+		processNeighbours(s_alive, wrapped_dim, wrapped, s_updates, parts, n_threads, partition_break);
+//		printVolume(wrapped, wrapped_dim, 0, 0);
 
 		uint_t n_alive_approx = cellLoop(wrapped, s_alive, s_updates, n_threads, partition_break);
-//		printVolume(wrapped, wrapped_dim, 1, 0);
+//		printVolume(wrapped, wrapped_dim, 0, 0);
 		copyPadding(wrapped, wrapped_dim);
-		//n_alive = countAlive(wrapped, wrapped_dim);
-		//printVolume(wrapped, wrapped_dim, 0, 0);
+//		printVolume(wrapped, wrapped_dim, 0, 0);
+
+//		n_alive = countAlive(wrapped, wrapped_dim);
+
+		n_alive = n_alive_approx*1.1;
+		double time = get_wall_seconds();
+
+		#pragma omp parallel for num_threads(n_threads)
 		for(uint_t i = 0; i < n_threads; i++){
 			const dim_t temp_dim ={size_x, size_y, partition_break[i]};
 			freeVolume(parts[i], temp_dim);
 			resizeCoordinateArrays(s_updates[i], n_alive*27/n_threads);
-			resizeCoordinateArrays(i_updates[i], n_alive*27/n_threads);
+			resizeCoordinateArrays(s_alive[i], n_alive/n_threads);
+
 		}
-		n_alive = n_alive_approx*1.1;
+		printf("Reallocated memory in %lf s\n", get_wall_seconds()-time);
 		if(!n_alive){
-			printf("EARLY EXIT: All cells are dead");
+			printf("EARLY EXIT: All cells are dead\n");
 			return 0;
 		}
 		printf("Generation done in %lf s with %i alive \n\n", get_wall_seconds()-gen_start_time, n_alive);
@@ -111,12 +118,10 @@ int main(int argc, char* argv[]){
 	freeVolume(wrapped,wrapped_dim);
 	for(uint_t i = 0; i < n_threads; i++){
 		freeCoordinateArrays(s_updates[i]);
-		freeCoordinateArrays(i_updates[i]);
 		freeCoordinateArrays(s_alive[i]);
 
 	}
 	free(s_updates);
-	free(i_updates);
 	free(s_alive);
 	free(parts);
 	free(partition_break);
@@ -164,6 +169,7 @@ uint_t cellLoop(uchar_t*** restrict vol, uint_t*** restrict s_alive, uint_t*** r
 					alive_count++;
 				}
 
+
 			} else {
 				count = (cell & 62) >> 1;
 
@@ -182,6 +188,7 @@ uint_t cellLoop(uchar_t*** restrict vol, uint_t*** restrict s_alive, uint_t*** r
 
 		s_living[0][0] = alive_count;
 		n_alive += alive_count;
+//		printf("Alive %i\n", alive_count);
 		}
 
 		printf("Looping done in %lf s, %.16lf per cell\n", get_wall_seconds()-time, (get_wall_seconds()-time)/n_alive);
@@ -207,14 +214,14 @@ uint_t countAlive(uchar_t*** restrict volume, const dim_t size){
 
 
 // TODO: When loopin through neighbours, count how many times a neighbour is mentioned. This can replace the neighbour checking in the main loop
-void processNeighbours(uint_t*** restrict s_alive,  const dim_t size, uchar_t*** restrict vol, uint_t*** restrict s_updates, uint_t*** restrict i_updates, uchar_t**** restrict partition, const uchar_t n_threads, uint_t* restrict partition_break){
+void processNeighbours(uint_t*** restrict s_alive,  const dim_t size, uchar_t*** restrict vol, uint_t*** restrict s_updates, uchar_t**** restrict partition, const uchar_t n_threads, uint_t* restrict partition_break){
 	double time = get_wall_seconds();
 	const uint_t x = size.x;
 	const uint_t y = size.y;
 	#pragma omp parallel num_threads(n_threads)
 	{
 	const uint_t thread_ID = omp_get_thread_num();
-	uint_t** i_updated = i_updates[thread_ID];
+	uint_t** s_updated = s_updates[thread_ID];
 	uint_t** alive = s_alive[thread_ID];
 	uchar_t*** part = partition[thread_ID];
 	char l_l,l,l_u,m_l,m,m_u,n_l,n,n_u;
@@ -263,9 +270,9 @@ void processNeighbours(uint_t*** restrict s_alive,  const dim_t size, uchar_t***
 					cell = &(part[z_coord+l][y_coord+m][x_coord+n]);
 
 					if(!(((*cell)&62))){
-						i_updated[1][counter] = z_coord + l;
-						i_updated[2][counter] = y_coord + m;
-						i_updated[3][counter] = x_coord + n;
+						s_updated[1][counter] = z_coord + l;
+						s_updated[2][counter] = y_coord + m;
+						s_updated[3][counter] = x_coord + n;
 						counter++;
 					}
 
@@ -278,7 +285,7 @@ void processNeighbours(uint_t*** restrict s_alive,  const dim_t size, uchar_t***
 		}
 		
 	}
-	i_updated[0][0] = counter;
+	s_updated[0][0] = counter;
 
 	}
 
@@ -289,12 +296,11 @@ void processNeighbours(uint_t*** restrict s_alive,  const dim_t size, uchar_t***
 
 		uint_t s_counter = 0;
 		z_offset += i==0 ? 0 : partition_break[i-1]-2;
-		uint_t* z_axis = i_updates[i][1];
-		uint_t* y_axis = i_updates[i][2];
-		uint_t* x_axis = i_updates[i][3];
-		uint_t** updated = s_updates[i];
+		uint_t* z_axis = s_updates[i][1];
+		uint_t* y_axis = s_updates[i][2];
+		uint_t* x_axis = s_updates[i][3];
 		uchar_t*** part = partition[i];
-		for(uint_t j = 0; j < i_updates[i][0][0]; j++){
+		for(uint_t j = 0; j < s_updates[i][0][0]; j++){
 			uint_t z_coord = z_axis[j];
 			uint_t y_coord = y_axis[j];
 			uint_t x_coord = x_axis[j];
@@ -303,9 +309,9 @@ void processNeighbours(uint_t*** restrict s_alive,  const dim_t size, uchar_t***
 			uchar_t value = (vol[z_coord + z_offset][y_coord][x_coord] & 62);
 			
 			if(!(value)){
-				updated[1][s_counter] = z_coord;
-                                updated[2][s_counter] = y_coord;
-                                updated[3][s_counter] = x_coord;
+				z_axis[s_counter] = z_coord;
+                                y_axis[s_counter] = y_coord;
+                                x_axis[s_counter] = x_coord;
                                 s_counter++;
 
 			}
@@ -315,7 +321,7 @@ void processNeighbours(uint_t*** restrict s_alive,  const dim_t size, uchar_t***
 
 		}
 		s_updates[i][0][0] = s_counter;
-		total_updates += i_updates[i][0][0];
+		total_updates += s_updates[i][0][0];
 	}
 	printf("Found neighbours in %lf s, serial %lf\n", get_wall_seconds()-time, get_wall_seconds()-serial_time);
 	return;
@@ -333,7 +339,11 @@ void partitions(uchar_t**** restrict partitions, uint_t*** restrict s_alive,  co
 
 		for(uint_t j = 0; j < size.y; j++){
 			for(uint_t k = 0; k < size.x; k++){
+//				printf("%i %i %i\n", i, j, k);
+
 				if(vol[i][j][k]&1){
+					printf("%i %i %i %i\n",part, i-z_start, j, k);
+
 					s_alive[part][1][alive_counter] = i - z_start;
 					s_alive[part][2][alive_counter] = j;
 					s_alive[part][3][alive_counter] = k;
@@ -343,12 +353,14 @@ void partitions(uchar_t**** restrict partitions, uint_t*** restrict s_alive,  co
 		}
 
 		if(((alive_counter >= alive_per_thread)) || (i+(n_threads-part-1)) == size.z-1){
-			uint_t z_s = z_start == 0 ? 0 : (z_start);
+			uint_t z_s = z_start;
 			uint_t z_e = i == (size.z-1) ? size.z - 1 : i+1 ;
 			partitions_break[part] = z_e - z_s + 1;
 			partitions[part] = partialWrappedVolume(vol, size, z_s, z_e);
 			s_alive[part][0][0] = alive_counter;
-//			printf("Partition %i with %i alive between z %i-%i\n", part, alive_counter, z_s, z_e);
+			const dim_t temp_size = {size.x,size.y, partitions_break[part]};
+			printVolume(partitions[part], temp_size, 0, 0);
+			printf("Partition %i with %i alive between z %i-%i, size %i\n", part, alive_counter, z_s, z_e, partitions_break[part]);
 			part++;
 			alive_counter = 0;
 			z_start = i;
@@ -360,6 +372,51 @@ void partitions(uchar_t**** restrict partitions, uint_t*** restrict s_alive,  co
 	return;
 
 }
+void partitionsPara(uchar_t**** restrict partitions, uint_t*** restrict s_alive,  const dim_t size, uchar_t*** restrict vol, const uchar_t n_threads, uint_t* restrict partitions_break, uint_t n_alive){
+	double time = get_wall_seconds();
+	uint_t section = size.z / n_threads;
+
+	#pragma omp parallel num_threads(n_threads)
+	{
+	uint_t alive_counter = 0;
+	const uint_t thread_ID = omp_get_thread_num();
+
+	const uint_t z_start = (thread_ID==0)? 0 : thread_ID*section+1;
+	const uint_t offset = (thread_ID==0)?0:1;
+	const uint_t limit = (thread_ID == (n_threads -1)) ? size.z : section*(thread_ID+1)+1;
+	for(uint_t i = z_start; i < limit; i++){
+
+		for(uint_t j = 0; j < size.y; j++){
+			for(uint_t k = 0; k < size.x; k++){
+
+				if(vol[i][j][k]&1){
+					s_alive[thread_ID][1][alive_counter] = i - z_start + offset;
+					s_alive[thread_ID][2][alive_counter] = j;
+					s_alive[thread_ID][3][alive_counter] = k;
+					alive_counter++;
+				}
+			}
+		}
+
+
+	}
+		uint_t z_s = thread_ID == 0 ? 0 : z_start-1;
+		uint_t z_e = (limit == (size.z)) ? size.z-1 : limit;
+		partitions_break[thread_ID] = z_e - z_s + 1;
+		partitions[thread_ID] = partialWrappedVolume(vol, size, z_s, z_e);
+		s_alive[thread_ID][0][0] = alive_counter;
+
+
+
+
+
+	}
+	printf("Partitioned volume in %lf s\n", get_wall_seconds()-time);
+
+	return;
+
+}
+
 
 uchar_t*** partialWrappedVolume(uchar_t*** restrict vol, const dim_t size, uint_t z_start, uint_t z_end){
 	const uint_t x = size.x;
